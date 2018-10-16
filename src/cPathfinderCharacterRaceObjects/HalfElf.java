@@ -21,6 +21,10 @@ public class HalfElf extends Race{
 		this.speed = 30;
 		this.vision = "Low-Light";
 		
+		this.racialTraits = new RacialTrait[] {new RacialTrait("ELF_BLOOD"), new RacialTrait("ELVEN_IMMUNITIES"), new RacialTrait("ADAPTABILIY"), 
+				new RacialTrait("KEEN_SENSES"), new RacialTrait("MULTITALENTED")};
+		
+		/*
 		this.racialBonuses = new RacialTraits[] {RacialTraits.ELF_BLOOD, RacialTraits.ELVEN_IMMUNITIES, RacialTraits.ADAPTABILIY, 
 				RacialTraits.KEEN_SENSES, RacialTraits.MULTITALENTED};
 		
@@ -30,6 +34,7 @@ public class HalfElf extends Race{
 		this.savingThrowBonuses = new RacialTraits[] {RacialTraits.ELVEN_IMMUNITIES};
 		this.featBonuses = new RacialTraits[] {};
 		this.miscBonuses = new RacialTraits[] {RacialTraits.ELF_BLOOD, RacialTraits.MULTITALENTED};
+		*/
 		
 		this.familiarWeapons = new String[] {};
 		this.knownLanguages = new String[] {"Common", "Elven"};

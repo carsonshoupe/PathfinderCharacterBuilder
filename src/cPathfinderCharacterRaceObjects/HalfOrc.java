@@ -20,6 +20,9 @@ public class HalfOrc extends Race {
 		this.speed = 30;
 		this.vision = "Dark";
 		
+		this.racialTraits = new RacialTrait[] {new RacialTrait("ORC_BLOOD"), new RacialTrait("INTIMIDATING"), new RacialTrait("ORC_FEROCITY")};
+		
+		/*
 		this.racialBonuses = new RacialTraits[] {RacialTraits.ORC_BLOOD, RacialTraits.INTIMIDATING, RacialTraits.ORC_FEROCITY};
 		
 		this.skillBonuses = new RacialTraits[] {RacialTraits.INTIMIDATING};
@@ -28,6 +31,7 @@ public class HalfOrc extends Race {
 		this.savingThrowBonuses = new RacialTraits[] {};
 		this.featBonuses = new RacialTraits[] {RacialTraits.ORC_FEROCITY};
 		this.miscBonuses = new RacialTraits[] {RacialTraits.ORC_BLOOD};
+		*/
 		
 		this.familiarWeapons = new String[] {"great axes", "falchions"};
 		this.knownLanguages = new String[] {"Common", "Orc"};

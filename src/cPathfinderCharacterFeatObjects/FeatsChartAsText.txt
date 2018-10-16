@@ -1,0 +1,176 @@
+ACROBATIC:: — :+2 bonus on Acrobatics and Fly checks:true:ACROBATICS,2;FLY,2
+AGILE_MANEUVERS:*: — :Use your Dex bonus when calculating your CMB:false:
+ALERTNESS:: — :+2 bonus on Perception and Sense Motive checks:true:PERCEPTION,2;SENSE_MOTIVE,2
+ALIGNMENT_CHANNEL:: Channel energy class feature :Channel energy can heal or harm outsiders:false:
+ANIMAL_AFFINITY:: — :+2 bonus on Handle Animal and Ride checks:true:HANDLE_ANIMAL,2;RIDE,2
+ARCANE_ARMOR_TRAINING:*: Armor Proficiency, Light, caster level 3 :Reduce your arcane spell failure chance by 10%:false:
+ARCANE_ARMOR_MASTERY:*: Arcane Armor Training, Armor Proficiency, Medium, caster level 7 :Reduce your arcane spell failure chance by 20%:false:
+ARCANE_STRIKE:*: Ability to cast arcane spells :+1 damage and weapons are considered magic:false:
+ARMOR_PROFICIENCY,_LIGHT:: — :No penalties on attack rolls while wearing light armor:false:
+ARMOR_PROFICIENCY,_MEDIUM:: Armor Proficiency, Light :No penalties on attack rolls while wearing medium armor:false:
+ARMOR_PROFICIENCY,_HEAVY:: Armor Proficiency, Medium :No penalties on attack rolls while wearing heavy armor:false:
+ATHLETIC:: — :+2 bonus on Climb and Swim checks::true:CLIMB,2;SWIM,2
+AUGMENT_SUMMONING:: Spell Focus (conjuration) :Summoned creatures gain +4 Str and Con:false:
+BLIND_FIGHT:*: — :Reroll miss chances for concealment:false:
+CATCH_OFF_GUARD:*: — :No penalties for improvised melee weapons:false:
+CHANNEL_SMITE:*: Channel energy class feature :Channel energy through your attack:false:
+COMBAT_CASTING:: — :+4 bonus on concentration checks for defensive casting:false:
+COMBAT_EXPERTISE:*: Int 13 :Trade attack bonus for AC bonus:false:
+IMPROVED_DISARM:*: Combat Expertise :+2 bonus on disarm attempts, no attack of opportunity:false:
+GREATER_DISARM:*: Improved Disarm, base attack bonus +6 :Disarmed weapons are knocked away from your enemy:false:
+IMPROVED_FEINT:*: Combat Expertise :Feint as a move action:false:
+GREATER_FEINT:*: Improved Feint, base attack bonus +6 :Enemies you feint lose their Dex bonus for 1 round:false:
+IMPROVED_TRIP:*: Combat Expertise :+2 bonus on trip attempts, no attack of opportunity:false:
+GREATER_TRIP:*: Improved Trip, base attack bonus +6 :Enemies you trip provoke attacks of opportunity:false:
+WHIRLWIND_ATTACK:*: Dex 13, Combat Expertise, Spring Attack, base attack bonus +4 :Make one melee attack against all foes within reach:false:
+COMBAT_REFLEXES:*: — :Make additional attacks of opportunity:false:
+STAND_STILL:*: Combat Reflexes :Stop enemies from moving past you:false:
+COMMAND_UNDEAD:: Channel negative energy class feature :Channel energy can be used to control undead:false:
+CRITICAL_FOCUS:*: Base attack bonus +9 :+4 bonus on attack rolls made to confirm critical hits:false:
+BLEEDING_CRITICAL:*: Critical Focus, base attack bonus +11 :Whenever you score a critical hit, the target takes 2d6 bleed:false:
+BLINDING_CRITICAL:*: Critical Focus, base attack bonus +15 :Whenever you score a critical hit, the target is blinded:false:
+CRITICAL_MASTERY:*: Any two critical feats, 14th-level fighter :Apply two effects to your critical hits:false:
+DEAFENING_CRITICAL:*: Critical Focus, base attack bonus +13 :Whenever you score a critical hit, the target is deafened:false:
+SICKENING_CRITICAL:*: Critical Focus, base attack bonus +11 :Whenever you score a critical hit, the target is sickened:false:
+STAGGERING_CRITICAL:*: Critical Focus, base attack bonus +13 :Whenever you score a critical hit, the target is staggered:false:
+STUNNING_CRITICAL:*: Staggering Critical, base attack bonus +17 :Whenever you score a critical hit, the target is stunned:false:
+TIRING_CRITICAL:*: Critical Focus, base attack bonus +13 :Whenever you score a critical hit, the target is fatigued:false:
+EXHAUSTING_CRITICAL:*: Tiring Critical, base attack bonus +15 :Whenever you score a critical hit, the target is exhausted:false:
+DEADLY_AIM:*: Dex 13, base attack bonus +1 :Trade ranged attack bonus for damage:false:
+DECEITFUL:: — :+2 bonus on Bluff and Disguise checks:true:BLUFF,2;DISGUISE,2
+DEFENSIVE_COMBAT_TRAINING:*: — :Use your total Hit Dice as your base attack bonus for CMD:false:
+DEFT_HANDS:: — :+2 bonus on Disable Device and Sleight of Hand checks:true:DISABLE_DEVICE,2;SLIGHT_OF_HAND,2
+DISRUPTIVE:*: 6th-level fighter :Increases the DC to cast spells adjacent to you:false:
+SPELLBREAKER:*: Disruptive, 10th-level fighter :Enemies provoke attacks if their spells fail:false:
+DODGE:*: Dex 13 :+1 dodge bonus to AC:true:AC,1
+MOBILITY:*: Dodge :+4 AC against attacks of opportunity from movement:false:
+SPRING_ATTACK:*: Mobility, base attack bonus +4 :Move before and after melee attack:false:
+WIND_STANCE:*: Dex 15, Dodge, base attack bonus +6 :Gain 20% concealment if you move:false:
+LIGHTNING_STANCE:*: Dex 17, Wind Stance, base attack bonus +11 :Gain 50% concealment if you move:false:
+ELEMENTAL_CHANNEL:: Channel energy class feature :Channel energy can harm or heal elementals:false:
+ENDURANCE:: — :+4 bonus on checks to avoid nonlethal damage:false:
+DIEHARD:: Endurance :Automatically stabilize and remain conscious below 0 hp:false:
+ESCHEW_MATERIALS:: — :Cast spells without material components:false:
+EXOTIC_WEAPON_PROFICIENCY:*: Base attack bonus +1 :No penalty on attacks made with one exotic weapon:false:
+EXTRA_CHANNEL:: Channel energy class feature :Channel energy two additional times per day:false:
+EXTRA_KI:: Ki pool class feature :Increase your ki pool by 2 points:false:
+EXTRA_LAY_ON_HANDS:: Lay on hands class feature :Use lay on hands two additional times per day:false:
+EXTRA_MERCY:: Mercy class feature :Your lay on hands benefits from one additional mercy:false:
+EXTRA_PERFORMANCE:: Bardic performance class feature :Use bardic performance for 6 additional rounds per day:false:
+EXTRA_RAGE:: Rage class feature :Use rage for 6 additional rounds per day:false:
+FLEET:: — :Your base speed increases by 5 feet:true:SPEED,5
+GREAT_FORTITUDE:: — :+2 on Fortitude saves:true:FORTITUDE_SAVE,2
+IMPROVED_GREAT_FORTITUDE:: Great Fortitude :Once per day, you may reroll a Fortitude save:false:
+IMPROVED_CHANNEL:: Channel energy class feature :+2 bonus on channel energy DC:false:
+IMPROVED_COUNTERSPELL:: — :Counterspell with spell of the same school:false:
+IMPROVED_CRITICAL:*: Proficiency with weapon, base attack bonus +8 :Double the threat range of one weapon:false:
+IMPROVED_FAMILIAR:: Ability to acquire a familiar, see feat :Gain a more powerful familiar:false:
+IMPROVED_INITIATIVE:*: — :+4 bonus on initiative checks:true:INITIATIVE,4
+IMPROVED_UNARMED_STRIKE:*: — :Always considered armed:false:
+DEFLECT_ARROWS:*: Dex 13, Improved Unarmed Strike :Avoid one ranged attack per round:false:
+SNATCH_ARROWS:*: Dex 15, Deflect Arrows :Catch one ranged attack per round:false:
+IMPROVED_GRAPPLE:*: Dex 13, Improved Unarmed Strike :+2 bonus on grapple attempts, no attack of opportunity:false:
+GREATER_GRAPPLE:*: Improved Grapple, base attack bonus +6 :Maintain your grapple as a move action:false:
+SCORPION_STYLE:*: Improved Unarmed Strike :Reduce target's speed to 5 ft.:false:
+GORGON'S_FIST:*: Scorpion Style, base attack bonus +6 :Stagger a foe whose speed is reduced:false:
+MEDUSA'S_WRATH:*: Gorgon's Fist, base attack bonus +11 :Make 2 extra attacks against a hindered foe:false:
+STUNNING_FIST:*: Dex 13, Wis 13, Improved Unarmed Strike, base attack bonus +8 :Stun opponent with an unarmed strike:false:
+IMPROVISED_WEAPON_MASTERY:*: Catch Off-Guard or Throw Anything, base attack bonus +8 :Make an improvised weapon deadly:false:
+INTIMIDATING_PROWESS:*: — :Add Str to Intimidate in addition to Cha:true:INTIMIDATE,Str
+IRON_WILL:: — :+2 bonus on Will saves:true:WILL_SAVE,2
+IMPROVED_IRON_WILL:: Iron Will :Once per day, you may reroll a Will save:false:
+LEADERSHIP:: Character level 7th :Gain a cohort and followers:false:
+LIGHTNING_REFLEXES:: — :+2 bonus on Reflex saves:true:REFFLEX_SAVE,2
+IMPROVED_LIGHTNING_REFLEXES:: Lightning Reflexes :Once per day, you may reroll a Reflex save:false:
+LUNGE:*: Base attack bonus +6 :Take a –2 penalty to your AC to attack with reach:false:
+MAGICAL_APTITUDE:: — :+2 bonus on Spellcraft and Use Magic Device checks:true:SPELLCRAFT,2;USE_MAGICAL_DEVICE,2
+MARTIAL_WEAPON_PROFICIENCY:: — :No penalty on attacks made with one martial weapon:false:
+MASTER_CRAFTSMAN:: Rank 5 Craft or Rank 5 Profession :You can craft magic items without being a spellcaster:false:
+MOUNTED_COMBAT:*: Rank 1 Ride :Avoid attacks on mount with Ride check:false:
+MOUNTED_ARCHERY:*: Mounted Combat :Halve the penalty for ranged attacks while mounted:false:
+RIDE_BY_ATTACK:*: Mounted Combat :Move before and after a charge attack while mounted:false:
+SPIRITED_CHARGE:*: Ride-By Attack :Double damage on a mounted charge:false:
+TRAMPLE:*: Mounted Combat :Overrun targets while mounted:false:
+UNSEAT:*: Improved Bull Rush, Mounted Combat :Knock opponents from their mounts:false:
+NATURAL_SPELL:: Wild shape class feature, Wis 13 :Cast spells while using wild shape:false:
+NIMBLE_MOVES:: Dex 13 :Ignore 5 feet of difficult terrain when you move:false:
+ACROBATIC_STEPS:: Dex 15, Nimble Moves :Ignore 20 feet of difficult terrain when you move:false:
+PERSUASIVE:: — :+2 bonus on Diplomacy and Intimidate checks:true:DIPLOMACY,2;INTIMIDATE,2
+POINT_BLANK_SHOT:*: — :+1 attack and damage on targets within 30 feet:false:
+FAR_SHOT:*: Point-Blank Shot :Decrease ranged penalties by half:false:
+PRECISE_SHOT:*: Point-Blank Shot :No penalty for shooting into melee:false:
+IMPROVED_PRECISE_SHOT:*: Dex 19, Precise Shot, base attack bonus +11 :No cover or concealment chance on ranged attacks:false:
+PINPOINT_TARGETING:*: Improved Precise Shot, base attack bonus +16 :No armor or shield bonus on one ranged attack:false:
+SHOT_ON_THE_RUN:*: Dex 13, Mobility, Point-Blank Shot, base attack bonus +4 :Make ranged attack at any point during movement:false:
+RAPID_SHOT:*: Dex 13, Point-Blank Shot :Make one extra ranged attack:false:
+MANYSHOT:*: Dex 17, Rapid Shot, base attack bonus +6 :Shoot two arrows simultaneously:false:
+POWER_ATTACK:*: Str 13, base attack bonus +1 :Trade melee attack bonus for damage:false:
+CLEAVE:*: Power Attack :Make an additional attack if the first one hits:false:
+GREAT_CLEAVE:*: Cleave, base attack bonus +4 :Make an additional attack after each attack hits:false:
+IMPROVED_BULL_RUSH:*: Power Attack :+2 bonus on bull rush attempts, no attack of opportunity:false:
+GREATER_BULL_RUSH:*: Improved Bull Rush, base attack bonus +6 :Enemies you bull rush provoke attacks of opportunity:false:
+IMPROVED_OVERRUN:*: Power Attack :+2 bonus on overrun attempts, no attack of opportunity:false:
+GREATER_OVERRUN:*: Improved Overrun, base attack bonus +6 :Enemies you overrun provoke attacks of opportunity:false:
+IMPROVED_SUNDER:*: Power Attack :+2 bonus on sunder attempts, no attack of opportunity:false:
+GREATER_SUNDER:*: Improved Sunder, base attack bonus +6 :Damage from sunder attempts transfers to your enemy:false:
+QUICK_DRAW:*: Base attack bonus +1 :Draw weapon as a free action:false:
+RAPID_RELOAD:*: Weapon proficiency (crossbow) :Reload crossbow quickly:false:
+RUN:: — :Run at 5 times your normal speed:false:
+SELECTIVE_CHANNELING:: Channel energy class feature, Cha 13 :Choose whom to affect with channel energy:false:
+SELF_SUFFICIENT:: — :+2 bonus on Heal and Survival checks:true:HEAL,2;SURVIVAL,2
+SHIELD_PROFICIENCY:: — :No penalties on attack rolls when using a shield:false:
+IMPROVED_SHIELD_BASH:*: Shield Proficiency :Keep your shield bonus when shield bashing:false:
+SHIELD_SLAM:*: Improved Shield Bash, Two-Weapon Fighting, base attack bonus +6 :Free bull rush with a bash attack:false:
+SHIELD_MASTER:*: Shield Slam, base attack bonus +11 :No two-weapon penalties when attacking with a shield:false:
+SHIELD_FOCUS:*: Shield Proficiency, base attack bonus +1 :Gain a +1 bonus to your AC when using a shield:false:
+GREATER_SHIELD_FOCUS:*: Shield Focus, 8th-level fighter :Gain a +1 bonus to your AC when using a shield:false:
+TOWER_SHIELD_PROFICIENCY:*: Shield Proficiency :No penalties on attack rolls when using a tower shield:false:
+SIMPLE_WEAPON_PROFICIENCY:: — :No penalty on attacks made with simple weapons:false:
+SKILL_FOCUS:: — :+3 bonus on one skill (+6 at 10 ranks):true:ENTER_SKILL,3;ENTER_SKILL,6
+SPELL_FOCUS:: — :+1 bonus on save DCs for one school:false:
+GREATER_SPELL_FOCUS:: Spell Focus :+1 bonus on save DCs for one school:false:
+SPELL_MASTERY:: 1st-level Wizard :Prepare some spells without a spellbook:false:
+SPELL_PENETRATION:: — :+2 bonus on level checks to beat spell resistance:false:
+GREATER_SPELL_PENETRATION:: Spell Penetration :+2 bonus on level checks to beat spell resistance:false:
+STEALTHY:: — :+2 bonus on Escape Artist and Stealth checks:true:ESCAPE_ARTIST,2;STEALTH,2
+STEP_UP:*: Base attack bonus +1 :Take a 5-foot step as an immediate action:false:
+STRIKE_BACK:*: Base attack bonus +11 :Attack foes that strike you while using reach:false:
+THROW_ANYTHING:*: — :No penalties for improvised ranged weapons:false:
+TOUGHNESS:: — :+3 hit points, +1 per Hit Die beyond 3:true:HIT_POINTS,3+1Beyond3HitDie
+TURN_UNDEAD:: Channel positive energy class feature :Channel energy can be used to make undead flee:false:
+TWO_WEAPON_FIGHTING:*: Dex 15 :Reduce two-weapon fighting penalties:false:
+DOUBLE_SLICE:*: Two-Weapon Fighting :Add your Str bonus to off-hand damage rolls:false:
+TWO_WEAPON_REND:*: Double Slice, Improved Two-Weapon Fighting, base attack bonus +11 :Rend a foe hit by both your weapons:false:
+IMPROVED_TWO_WEAPON_FIGHTING:*: Dex 17, Two-Weapon Fighting, base attack bonus +6 :Gain additional off-hand attack :false:
+GREATER_TWO_WEAPON_FIGHTING:*: Dex 19, Improved Two-Weapon Fighting, base attack bonus +11 :Gain a third off-hand attack:false:
+TWO_WEAPON_DEFENSE:*: Two-Weapon Fighting :Gain +1 shield bonus when fighting with two weapons:false:
+VITAL_STRIKE:*: Base attack bonus +6 :Deal twice the normal damage on a single attack:false:
+IMPROVED_VITAL_STRIKE:*: Vital Strike, base attack bonus +11 :Deal three times the normal damage on a single attack:false:
+GREATER_VITAL_STRIKE:*: Improved Vital Strike, base attack bonus +16 :Deal four times the normal damage on a single attack:false:
+WEAPON_FINESSE:*: — :Use Dex instead of Str on attack rolls with light weapons:false:
+WEAPON_FOCUS:*: Proficiency with weapon, base attack bonus +1 :+1 bonus on attack rolls with one weapon:false:
+DAZZLING_DISPLAY:*: Weapon Focus :Intimidate all foes within 30 feet:false:
+SHATTER_DEFENSES:*: Dazzling Display, base attack bonus +6 :Hindered foes are flat-footed:false:
+DEADLY_STROKE:*: Greater Weapon Focus, Shatter Defenses, base attack bonus +11 :Deal double damage plus 1 Con bleed:false:
+GREATER_WEAPON_FOCUS:*: Weapon Focus, 8th-level fighter :+1 bonus on attack rolls with one weapon:false:
+PENETRATING_STRIKE:*: Weapon Focus, 12th-level fighter :Your attacks ignore 5 points of damage reduction:false:
+GREATER_PENETRATING_STRIKE:*: Penetrating Strike, 16th-level fighter :Your attacks ignore 10 points of damage reduction:false:
+WEAPON_SPECIALIZATION:*: Weapon Focus, 4th-level fighter :+2 bonus on damage rolls with one weapon Greater Weapon:false:
+SPECIALIZATION:*: Weapon Specialization, 12th-level fighter :+2 bonus on damage rolls with one weapon:false:
+BREW_POTION:I: Caster level 3 :Create magic potions:false:
+CRAFT_MAGIC:I: Arms and Armor Caster level 5 :Create magic armors, shields, and weapons:false:
+CRAFT_ROD:I: Caster level 9 :Create magic rods:false:
+CRAFT_STAFF:I: Caster level 11 :Create magic staves:false:
+CRAFT_WAND:I: Caster level 5 :Create magic wands:false:
+CRAFT_WONDROUS_ITEM:I: Caster level 3 :Create magic wondrous items:false:
+FORGE_RING:I: Caster level 7 :Create magic rings:false:
+SCRIBE_SCROLL:I: Caster level 1 :Create magic scrolls:false:
+EMPOWER_SPELL:M: — :Increase spell variables by 50%:false:
+ENLARGE_SPELL:M: — :Double spell range:false:
+EXTEND_SPELL:M: — :Double spell duration:false:
+HEIGHTEN_SPELL:M: — :Treat spell as a higher level:false:
+MAXIMIZE_SPELL:M: — :Maximize spell variables:false:
+QUICKEN_SPELL:M: — :Cast spell as a swift action:false:
+SILENT_SPELL:M: — :Cast spell without verbal components:false:
+STILL_SPELL:M: — :Cast spell without somatic components:false:
+WIDEN_SPELL:M: — :Double spell area:false:

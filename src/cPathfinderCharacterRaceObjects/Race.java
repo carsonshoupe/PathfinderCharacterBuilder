@@ -19,14 +19,15 @@ public abstract class Race {
 	protected int speed;
 	protected String vision;
 	
-	protected RacialTraits[] racialBonuses;
+	//protected RacialTraits[] racialBonuses;
+	protected RacialTrait[] racialTraits;
 	
-	protected RacialTraits[] skillBonuses;
-	protected RacialTraits[] combatBonuses;
-	protected RacialTraits[] magicBonuses;
-	protected RacialTraits[] savingThrowBonuses;
-	protected RacialTraits[] featBonuses;
-	protected RacialTraits[] miscBonuses;
+	//protected RacialTraits[] skillBonuses;
+	//protected RacialTraits[] combatBonuses;
+	//protected RacialTraits[] magicBonuses;
+	//protected RacialTraits[] savingThrowBonuses;
+	//protected RacialTraits[] featBonuses;
+	//protected RacialTraits[] miscBonuses;
 	
 	protected String[] familiarWeapons;
 	protected String[] knownLanguages;
@@ -46,14 +47,15 @@ public abstract class Race {
 	public int getSpeed() {return this.speed;}
 	public String getVision() {return this.vision;}
 	
-	public RacialTraits[] getRacialBonuses() {return this.racialBonuses;}
+	public RacialTrait[] getRacialTraits() {return this.racialTraits;}
 	
-	public RacialTraits[] getSkillBonuses() {return this.skillBonuses;}
-	public RacialTraits[] getCombatBonuses() {return this.combatBonuses;}
-	public RacialTraits[] getMagicBonuses() {return this.magicBonuses;}
-	public RacialTraits[] getSavingThrowBonuses() {return this.savingThrowBonuses;}
-	public RacialTraits[] getFeatBonuses() {return this.featBonuses;}
-	public RacialTraits[] getMiscBonuses() {return this.miscBonuses;}
+	//public RacialTraits[] getRacialBonuses() {return this.racialBonuses;}
+	//public RacialTraits[] getSkillBonuses() {return this.skillBonuses;}
+	//public RacialTraits[] getCombatBonuses() {return this.combatBonuses;}
+	//public RacialTraits[] getMagicBonuses() {return this.magicBonuses;}
+	//public RacialTraits[] getSavingThrowBonuses() {return this.savingThrowBonuses;}
+	//public RacialTraits[] getFeatBonuses() {return this.featBonuses;}
+	//public RacialTraits[] getMiscBonuses() {return this.miscBonuses;}
 	
 	public String[] getFamiliarWeapons() {return this.familiarWeapons;}
 	public String[] getKnownLanguages() {return this.knownLanguages;}

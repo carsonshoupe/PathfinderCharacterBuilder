@@ -1,25 +1,25 @@
-Adaptability:Receive Skill Focus as a bonus feat at 1st level.
-Bonus Feat:Select one extra feat at 1st level.
-Defensive Training:+4 dodge bonus to AC against monsters of the giant subtype.
-Elf Blood:Elves count as both elves and humans for any effect related to race.
-Elven Immunities:Elves are immune to magic sleep effects and get a +2 racial saving throw bonus against enchantment spells and effects.
-Elven Magic:Elves receive a +2 racial bonus on caster level checks made to overcome spell resistance. In addition, elves receive a +2 racial bonus on Spellcraft skill checks made to identify the properties of magic items.
-Fearless:Receive a +2 racial bonus on all saving throws against fear. This bonus stacks with the bonus granted by halfling luck.
-Gnome Magic:Gnomes add +1 to the DC of any saving throws against illusion spells that they cast. Gnomes with a Charisma of 11 or higher also gain the following spell-like abilities: 1/day—dancing lights, ghost sound, prestidigitation, and speak with animals. The caster level for these effects is equal to the gnome’s level. The DC for these spells is equal to 10 + the spell’s level + the gnome’s Charisma modifier.
-Greed: Receive a +2 racial bonus on Appraise skill checks made to determine the price of nonmagical goods that contain precious metals or gemstones.
-Halfling Luck:Halflings receive a +1 racial bonus on all saving throws.
-Hardy:Receive a +2 racial bonus on saving throws against poison, spells, and spell-like abilities.
-Hatred - orc goblinoid:Receive a +1 bonus on attack rolls against humanoid creatures of the orc and goblinoid subtypes due to special training against these hated foes.;
-Hatred - reptilian goblinoid:Receive a +1 bonus on attack rolls against humanoid creatures of the reptilian and goblinoid subtypes due to special training against these hated foes.
-Illusion Resistance:+2 racial saving throw bonus against illusion spells and effects.
-Intimidating:Receive a +2 racial bonus on Intimidate skill checks due to their fearsome nature.
-Keen Senses:Receive a +2 racial bonus on Perception skill checks.
-Multitalented:Can choose two favored classes at first level and gain +1 hit point or +1 skill point whenever they take a level in either one of those classes. See Chapter 3 for more information about favored classes.
-Obsessive:Receive a +2 racial bonus on a Craft or Profession skill of their choice.
-Orc Blood:Half-orcs count as both humans and orcs for any effect related to race.
-Orc Ferocity:Once per day, when a half-orc is brought below 0 hit points but not killed, he can fight on for one more round as if disabled. At the end of his next turn, unless brought to above 0 hit points, he immediately falls unconscious and begins dying.
-Slow and Steady:Dwarves have a base speed of 20 feet, but their speed is never modified by armor or encumbrance.
-Skilled:Gain an additional skill rank at 1st level and one additional rank whenever they gain a level.
-Stability:Receive a +4 racial bonus to their Combat Maneuver Defense when resisting a bull rush or trip attempt while standing on the ground.
-Stonecunning:Receive a +2 bonus on Perception checks to potentially notice unusual stonework, such as traps and hidden doors located in stone walls or floors. They receive a check to notice such features whenever they pass within 10 feet of them, whether or not they are actively looking.
-Sure-Footed:Receive a +2 racial bonus on Acrobatics and Climb skill checks.
+ADAPTABILIY:Receive Skill Focus as a bonus feat at 1st level:true
+BONUS_FEAT:Select one extra feat at 1st level:true
+DEFENSIVE_TRAINING:+4 dodge bonus to AC against monsters of the giant subtype:false
+ELF_BLOOD:Elves count as both elves and humans for any effect related to race:false
+ELVEN_IMMUNITIES:Elves are immune to magic sleep effects and get a +2 racial saving throw bonus against enchantment spells and effects:false
+ELVEN_MAGIC:Elves receive a +2 racial bonus on caster level checks made to overcome spell resistance. In addition, elves receive a +2 racial bonus on Spellcraft skill checks made to identify the properties of magic items:false
+FEARLESS:Receive a +2 racial bonus on all saving throws against fear. This bonus stacks with the bonus granted by halfling luck:false
+GNOME_MAGIC:Gnomes add +1 to the DC of any saving throws against illusion spells that they cast. Gnomes with a Charisma of 11 or higher also gain the following spell-like abilities: 1/day—dancing lights, ghost sound, prestidigitation, and speak with animals. The caster level for these effects is equal to the gnome’s level. The DC for these spells is equal to 10 + the spell’s level + the gnome’s Charisma modifier:false
+GREED:Receive a +2 racial bonus on Appraise skill checks made to determine the price of nonmagical goods that contain precious metals or gemstones:false
+HALFLING_LUCK:Halflings receive a +1 racial bonus on all saving throws:true
+HARDY:Receive a +2 racial bonus on saving throws against poison, spells, and spell-like abilities.
+HATRED_ORC_GOBLINOID:Receive a +1 bonus on attack rolls against humanoid creatures of the orc and goblinoid subtypes due to special training against these hated foes:false
+HATRED_REPTILIAN_GOBLINOID:Receive a +1 bonus on attack rolls against humanoid creatures of the reptilian and goblinoid subtypes due to special training against these hated foes:false
+ILLUSION_RESISTANCE:+2 racial saving throw bonus against illusion spells and effects:false
+INTIMIDATING:Receive a +2 racial bonus on Intimidate skill checks due to their fearsome nature:true
+KEEN_SENSES:Receive a +2 racial bonus on Perception skill checks:true
+MULTITALENTED:Can choose two favored classes at first level and gain +1 hit point or +1 skill point whenever they take a level in either one of those classes. See Chapter 3 for more information about favored classes:true
+OBSESSIVE:Receive a +2 racial bonus on a Craft or Profession skill of their choice:true
+ORC_BLOOD:Half-orcs count as both humans and orcs for any effect related to race:false
+ORC_FEROCITY:Once per day, when a half-orc is brought below 0 hit points but not killed, he can fight on for one more round as if disabled. At the end of his next turn, unless brought to above 0 hit points, he immediately falls unconscious and begins dying:true
+SKILLED:Gain an additional skill rank at 1st level and one additional rank whenever they gain a level:true
+SLOW_AND_STEADY:Speed is 20ft, but speed is never modified by armor or encumbrance:false
+STABILITY:Receive a +4 racial bonus to their Combat Maneuver Defense when resisting a bull rush or trip attempt while standing on the ground:false
+STONECUNNING:Receive a +2 bonus on Perception checks to potentially notice unusual stonework, such as traps and hidden doors located in stone walls or floors. They receive a check to notice such features whenever they pass within 10 feet of them, whether or not they are actively looking:false
+SURE_FOOTED:Receive a +2 racial bonus on Acrobatics and Climb skill checks:true

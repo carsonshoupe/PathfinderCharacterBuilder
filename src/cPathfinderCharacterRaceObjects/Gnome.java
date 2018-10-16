@@ -20,6 +20,11 @@ public class Gnome extends Race {
 		this.speed = 20;
 		this.vision = "Low-Light";
 		
+		this.racialTraits = new RacialTrait[] {new RacialTrait("DEFENSIVE_TRAINING"), new RacialTrait("GNOME_MAGIC"), 
+				new RacialTrait("HATRED_REPTILIAN_GOBLINOID"), new RacialTrait("ILLUSION_RESISTANCE"), new RacialTrait("KEEN_SENSES"), 
+				new RacialTrait("OBSESSIVE")};
+		
+		/*
 		this.racialBonuses = new RacialTraits[] {RacialTraits.DEFENSIVE_TRAINING, RacialTraits.GNOME_MAGIC, RacialTraits.HATRED_REPTILIAN_GOBLINOID,
 				RacialTraits.ILLUSION_RESISTANCE, RacialTraits.KEEN_SENSES, RacialTraits.OBSESSIVE};
 		
@@ -29,6 +34,7 @@ public class Gnome extends Race {
 		this.savingThrowBonuses = new RacialTraits[] {RacialTraits.GNOME_MAGIC, RacialTraits.ILLUSION_RESISTANCE};
 		this.featBonuses = new RacialTraits[] {};
 		this.miscBonuses = new RacialTraits[] {};
+		*/
 		
 		this.familiarWeapons = new String[] {};
 		this.knownLanguages = new String[] {"Common", "Gnome", "Sylvan"};

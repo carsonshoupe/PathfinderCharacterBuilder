@@ -21,6 +21,10 @@ public class Dwarf extends Race {
 		this.speed = 20;
 		this.vision = "Dark";
 		
+		this.racialTraits = new RacialTrait[] {new RacialTrait("DEFENSIVE_TRAINING"), new RacialTrait("GREED"), new RacialTrait("HATRED_ORC_GOBLINOID"), 
+				new RacialTrait("HARDY"), new RacialTrait("SLOW_AND_STEADY"), new RacialTrait("STABILITY"), new RacialTrait("STONECUNNING")};
+		
+		/*
 		this.racialBonuses = new RacialTraits[] {RacialTraits.DEFENSIVE_TRAINING, RacialTraits.GREED, RacialTraits.HATRED_ORC_GOBLINOID, 
 				RacialTraits.HARDY, RacialTraits.SLOW_AND_STEADY, RacialTraits.STABILITY, RacialTraits.STONECUNNING};
 		
@@ -30,6 +34,7 @@ public class Dwarf extends Race {
 		this.savingThrowBonuses = new RacialTraits[] {RacialTraits.HARDY};
 		this.featBonuses = new RacialTraits[] {};
 		this.miscBonuses = new RacialTraits[] {RacialTraits.SLOW_AND_STEADY};
+		*/
 		
 		this.familiarWeapons = new String[] {"battleaxes", "heavy picks", "warhammers"};
 		this.knownLanguages = new String[] {"Common", "Dwarven"};

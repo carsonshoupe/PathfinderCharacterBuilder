@@ -21,6 +21,9 @@ public class Human extends Race {
 		this.speed = 30;
 		this.vision = "Normal";
 		
+		this.racialTraits = new RacialTrait[] {new RacialTrait("SKILLED"), new RacialTrait("BONUS_FEAT")};
+		
+		/*
 		this.racialBonuses = new RacialTraits[] {RacialTraits.SKILLED, RacialTraits.BONUS_FEAT};
 		
 		this.skillBonuses = new RacialTraits[] {RacialTraits.SKILLED};
@@ -29,6 +32,7 @@ public class Human extends Race {
 		this.savingThrowBonuses = new RacialTraits[] {};
 		this.featBonuses = new RacialTraits[] {RacialTraits.BONUS_FEAT};
 		this.miscBonuses = new RacialTraits[] {};
+		*/
 		
 		this.familiarWeapons = new String[] {};
 		this.knownLanguages = new String[] {"Common"};

@@ -20,6 +20,10 @@ public class Halfling extends Race{
 		this.speed = 20;
 		this.vision = "Normal";
 		
+		this.racialTraits = new RacialTrait[] {new RacialTrait("FEARLESS"), new RacialTrait("HALFLING_LUCK"), new RacialTrait("KEEN_SENSES"), 
+				new RacialTrait("SURE_FOOTED")};
+		
+		/*
 		this.racialBonuses = new RacialTraits[] {RacialTraits.FEARLESS, RacialTraits.HALFLING_LUCK, RacialTraits.KEEN_SENSES, RacialTraits.SURE_FOOTED};
 		
 		this.skillBonuses = new RacialTraits[] {RacialTraits.KEEN_SENSES, RacialTraits.SURE_FOOTED};
@@ -28,6 +32,7 @@ public class Halfling extends Race{
 		this.savingThrowBonuses = new RacialTraits[] {RacialTraits.FEARLESS, RacialTraits.HALFLING_LUCK};
 		this.featBonuses = new RacialTraits[] {};
 		this.miscBonuses = new RacialTraits[] {};
+		*/
 		
 		this.familiarWeapons = new String[] {"slings"};
 		this.knownLanguages = new String[] {"Common", "Halfling"};
