@@ -1,4 +1,4 @@
-package cPathfinderCharacterObjects;
+package cPathfinderCharacterClassObjects;
 
 public class ClassFeature {
 	//Instance Variables:
@@ -24,7 +24,9 @@ public class ClassFeature {
 	
 	
 	//Methods:
-	public String getName() {return this.getName();}
+	public String getName() {return this.name;}
+	public int getLevelAccessable() {return this.levelAccessible;}
+	public String getFullDescription() {return this.fullDescription;}
 	
 	@Override
 	public boolean equals(Object classFeature) {

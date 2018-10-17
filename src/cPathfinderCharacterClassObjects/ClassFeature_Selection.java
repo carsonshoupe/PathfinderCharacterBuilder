@@ -1,4 +1,4 @@
-package cPathfinderCharacterObjects;
+package cPathfinderCharacterClassObjects;
 
 public class ClassFeature_Selection extends ClassFeature {
 	//Instance Variables:

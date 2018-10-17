@@ -12,7 +12,7 @@ public class RacialTrait {
 	protected static final Map<String, String[]> racialTraitsMap;
 	static {
 		HashMap<String, String[]> outputMap = new HashMap<String, String[]>();
-		String filePath = "RacialSkillTraits.txt"; 
+		String filePath = "C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterRaceObjects/RacialSkillTraits.txt"; 
 		String line;
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader(filePath));
@@ -23,8 +23,8 @@ public class RacialTrait {
 				value[0] = parts[1];
 				value[1] = parts[2];
 				outputMap.put(key, value);
-				reader.close();
 			}
+			reader.close();
 		}
 		catch (IOException e) {
 			System.out.println("Failed to load racialTraitsMap");
@@ -49,4 +49,9 @@ public class RacialTrait {
 	public String getName() {return this.name;}
 	public String getracialTraitDescription() {return this.racialTraitDescription;}
 	public boolean shouldUpdateCharacterSheet() {return this.updateCharacterSheet;}
+	
+	@Override
+	public String toString() {
+		return this.name;
+	}
 }

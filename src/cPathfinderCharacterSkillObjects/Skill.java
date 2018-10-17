@@ -86,7 +86,9 @@ public class Skill {
 	
 	public void setClassSkill() {this.classSkill = true;}
 	public void incrementSkillRank() {this.skillRanks++;}
+	public void incrementSkillRank(int value) {this.skillRanks += value;}
 	public void decrementSkillRank() {this.skillRanks--;}
+	public void decrementSkillRank(int value) {this.skillRanks -= value;}
 	
 	@Override
 	public boolean equals(Object skill) {
@@ -100,7 +102,7 @@ public class Skill {
 	}
 	@Override
 	public String toString() {
-		String outputString = this.name + " (" + this.abilityModifier + "): " + this.skillDescription;
+		String outputString = this.name;
 		return outputString;
 				
 	}

@@ -1,4 +1,4 @@
-ADAPTABILIY:Receive Skill Focus as a bonus feat at 1st level:true
+ADAPTABILITY:Receive Skill Focus as a bonus feat at 1st level:true
 BONUS_FEAT:Select one extra feat at 1st level:true
 DEFENSIVE_TRAINING:+4 dodge bonus to AC against monsters of the giant subtype:false
 ELF_BLOOD:Elves count as both elves and humans for any effect related to race:false
@@ -8,16 +8,16 @@ FEARLESS:Receive a +2 racial bonus on all saving throws against fear. This bonus
 GNOME_MAGIC:Gnomes add +1 to the DC of any saving throws against illusion spells that they cast. Gnomes with a Charisma of 11 or higher also gain the following spell-like abilities: 1/day—dancing lights, ghost sound, prestidigitation, and speak with animals. The caster level for these effects is equal to the gnome’s level. The DC for these spells is equal to 10 + the spell’s level + the gnome’s Charisma modifier:false
 GREED:Receive a +2 racial bonus on Appraise skill checks made to determine the price of nonmagical goods that contain precious metals or gemstones:false
 HALFLING_LUCK:Halflings receive a +1 racial bonus on all saving throws:true
-HARDY:Receive a +2 racial bonus on saving throws against poison, spells, and spell-like abilities.
+HARDY:Receive a +2 racial bonus on saving throws against poison, spells, and spell-like abilities:false
 HATRED_ORC_GOBLINOID:Receive a +1 bonus on attack rolls against humanoid creatures of the orc and goblinoid subtypes due to special training against these hated foes:false
 HATRED_REPTILIAN_GOBLINOID:Receive a +1 bonus on attack rolls against humanoid creatures of the reptilian and goblinoid subtypes due to special training against these hated foes:false
 ILLUSION_RESISTANCE:+2 racial saving throw bonus against illusion spells and effects:false
 INTIMIDATING:Receive a +2 racial bonus on Intimidate skill checks due to their fearsome nature:true
 KEEN_SENSES:Receive a +2 racial bonus on Perception skill checks:true
-MULTITALENTED:Can choose two favored classes at first level and gain +1 hit point or +1 skill point whenever they take a level in either one of those classes. See Chapter 3 for more information about favored classes:true
+MULTITALENTED:Can choose two favored classes at first level and gain +1 hit point or +1 skill point whenever they take a level in either one of those classes. See Chapter 3 for more information about favored classes:false
 OBSESSIVE:Receive a +2 racial bonus on a Craft or Profession skill of their choice:true
 ORC_BLOOD:Half-orcs count as both humans and orcs for any effect related to race:false
-ORC_FEROCITY:Once per day, when a half-orc is brought below 0 hit points but not killed, he can fight on for one more round as if disabled. At the end of his next turn, unless brought to above 0 hit points, he immediately falls unconscious and begins dying:true
+ORC_FEROCITY:Once per day, when a half-orc is brought below 0 hit points but not killed, he can fight on for one more round as if disabled. At the end of his next turn, unless brought to above 0 hit points, he immediately falls unconscious and begins dying:false
 SKILLED:Gain an additional skill rank at 1st level and one additional rank whenever they gain a level:true
 SLOW_AND_STEADY:Speed is 20ft, but speed is never modified by armor or encumbrance:false
 STABILITY:Receive a +4 racial bonus to their Combat Maneuver Defense when resisting a bull rush or trip attempt while standing on the ground:false

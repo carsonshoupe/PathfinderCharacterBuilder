@@ -156,7 +156,7 @@ Greater Weapon Focus
 Penetrating Strike
 Greater Penetrating Strike
 Weapon Specialization
-Specialization
+Specialization^
 Brew Potion
 Craft Magic
 Craft Rod

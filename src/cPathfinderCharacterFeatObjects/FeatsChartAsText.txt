@@ -42,7 +42,7 @@ DEFENSIVE_COMBAT_TRAINING:*: — :Use your total Hit Dice as your base attack bo
 DEFT_HANDS:: — :+2 bonus on Disable Device and Sleight of Hand checks:true:DISABLE_DEVICE,2;SLIGHT_OF_HAND,2
 DISRUPTIVE:*: 6th-level fighter :Increases the DC to cast spells adjacent to you:false:
 SPELLBREAKER:*: Disruptive, 10th-level fighter :Enemies provoke attacks if their spells fail:false:
-DODGE:*: Dex 13 :+1 dodge bonus to AC:true:AC,1
+DODGE:*: Dex 13 :+1 dodge bonus to AC:true:*AC,1
 MOBILITY:*: Dodge :+4 AC against attacks of opportunity from movement:false:
 SPRING_ATTACK:*: Mobility, base attack bonus +4 :Move before and after melee attack:false:
 WIND_STANCE:*: Dex 15, Dodge, base attack bonus +6 :Gain 20% concealment if you move:false:
@@ -58,14 +58,14 @@ EXTRA_LAY_ON_HANDS:: Lay on hands class feature :Use lay on hands two additional
 EXTRA_MERCY:: Mercy class feature :Your lay on hands benefits from one additional mercy:false:
 EXTRA_PERFORMANCE:: Bardic performance class feature :Use bardic performance for 6 additional rounds per day:false:
 EXTRA_RAGE:: Rage class feature :Use rage for 6 additional rounds per day:false:
-FLEET:: — :Your base speed increases by 5 feet:true:SPEED,5
-GREAT_FORTITUDE:: — :+2 on Fortitude saves:true:FORTITUDE_SAVE,2
+FLEET:: — :Your base speed increases by 5 feet:true:*SPEED,5
+GREAT_FORTITUDE:: — :+2 on Fortitude saves:true:*FORTITUDE_SAVE,2
 IMPROVED_GREAT_FORTITUDE:: Great Fortitude :Once per day, you may reroll a Fortitude save:false:
 IMPROVED_CHANNEL:: Channel energy class feature :+2 bonus on channel energy DC:false:
 IMPROVED_COUNTERSPELL:: — :Counterspell with spell of the same school:false:
 IMPROVED_CRITICAL:*: Proficiency with weapon, base attack bonus +8 :Double the threat range of one weapon:false:
 IMPROVED_FAMILIAR:: Ability to acquire a familiar, see feat :Gain a more powerful familiar:false:
-IMPROVED_INITIATIVE:*: — :+4 bonus on initiative checks:true:INITIATIVE,4
+IMPROVED_INITIATIVE:*: — :+4 bonus on initiative checks:true:*INITIATIVE,4
 IMPROVED_UNARMED_STRIKE:*: — :Always considered armed:false:
 DEFLECT_ARROWS:*: Dex 13, Improved Unarmed Strike :Avoid one ranged attack per round:false:
 SNATCH_ARROWS:*: Dex 15, Deflect Arrows :Catch one ranged attack per round:false:
@@ -76,11 +76,11 @@ GORGON'S_FIST:*: Scorpion Style, base attack bonus +6 :Stagger a foe whose speed
 MEDUSA'S_WRATH:*: Gorgon's Fist, base attack bonus +11 :Make 2 extra attacks against a hindered foe:false:
 STUNNING_FIST:*: Dex 13, Wis 13, Improved Unarmed Strike, base attack bonus +8 :Stun opponent with an unarmed strike:false:
 IMPROVISED_WEAPON_MASTERY:*: Catch Off-Guard or Throw Anything, base attack bonus +8 :Make an improvised weapon deadly:false:
-INTIMIDATING_PROWESS:*: — :Add Str to Intimidate in addition to Cha:true:INTIMIDATE,Str
-IRON_WILL:: — :+2 bonus on Will saves:true:WILL_SAVE,2
+INTIMIDATING_PROWESS:*: — :Add Str to Intimidate in addition to Cha:false:
+IRON_WILL:: — :+2 bonus on Will saves:true:*WILL_SAVE,2
 IMPROVED_IRON_WILL:: Iron Will :Once per day, you may reroll a Will save:false:
 LEADERSHIP:: Character level 7th :Gain a cohort and followers:false:
-LIGHTNING_REFLEXES:: — :+2 bonus on Reflex saves:true:REFFLEX_SAVE,2
+LIGHTNING_REFLEXES:: — :+2 bonus on Reflex saves:true:*REFLEX_SAVE,2
 IMPROVED_LIGHTNING_REFLEXES:: Lightning Reflexes :Once per day, you may reroll a Reflex save:false:
 LUNGE:*: Base attack bonus +6 :Take a –2 penalty to your AC to attack with reach:false:
 MAGICAL_APTITUDE:: — :+2 bonus on Spellcraft and Use Magic Device checks:true:SPELLCRAFT,2;USE_MAGICAL_DEVICE,2
@@ -89,7 +89,7 @@ MASTER_CRAFTSMAN:: Rank 5 Craft or Rank 5 Profession :You can craft magic items 
 MOUNTED_COMBAT:*: Rank 1 Ride :Avoid attacks on mount with Ride check:false:
 MOUNTED_ARCHERY:*: Mounted Combat :Halve the penalty for ranged attacks while mounted:false:
 RIDE_BY_ATTACK:*: Mounted Combat :Move before and after a charge attack while mounted:false:
-SPIRITED_CHARGE:*: Ride-By Attack :Double damage on a mounted charge:false:
+SPIRITED_CHARGE:*: RIde-By Attack :Double damage on a mounted charge:false:
 TRAMPLE:*: Mounted Combat :Overrun targets while mounted:false:
 UNSEAT:*: Improved Bull Rush, Mounted Combat :Knock opponents from their mounts:false:
 NATURAL_SPELL:: Wild shape class feature, Wis 13 :Cast spells while using wild shape:false:
@@ -126,7 +126,7 @@ SHIELD_FOCUS:*: Shield Proficiency, base attack bonus +1 :Gain a +1 bonus to you
 GREATER_SHIELD_FOCUS:*: Shield Focus, 8th-level fighter :Gain a +1 bonus to your AC when using a shield:false:
 TOWER_SHIELD_PROFICIENCY:*: Shield Proficiency :No penalties on attack rolls when using a tower shield:false:
 SIMPLE_WEAPON_PROFICIENCY:: — :No penalty on attacks made with simple weapons:false:
-SKILL_FOCUS:: — :+3 bonus on one skill (+6 at 10 ranks):true:ENTER_SKILL,3;ENTER_SKILL,6
+SKILL_FOCUS:: — :+3 bonus on one skill (+6 at 10 ranks):false:
 SPELL_FOCUS:: — :+1 bonus on save DCs for one school:false:
 GREATER_SPELL_FOCUS:: Spell Focus :+1 bonus on save DCs for one school:false:
 SPELL_MASTERY:: 1st-level Wizard :Prepare some spells without a spellbook:false:
@@ -136,7 +136,7 @@ STEALTHY:: — :+2 bonus on Escape Artist and Stealth checks:true:ESCAPE_ARTIST,
 STEP_UP:*: Base attack bonus +1 :Take a 5-foot step as an immediate action:false:
 STRIKE_BACK:*: Base attack bonus +11 :Attack foes that strike you while using reach:false:
 THROW_ANYTHING:*: — :No penalties for improvised ranged weapons:false:
-TOUGHNESS:: — :+3 hit points, +1 per Hit Die beyond 3:true:HIT_POINTS,3+1Beyond3HitDie
+TOUGHNESS:: — :+3 hit points, +1 per Hit Die beyond 3:false:
 TURN_UNDEAD:: Channel positive energy class feature :Channel energy can be used to make undead flee:false:
 TWO_WEAPON_FIGHTING:*: Dex 15 :Reduce two-weapon fighting penalties:false:
 DOUBLE_SLICE:*: Two-Weapon Fighting :Add your Str bonus to off-hand damage rolls:false:
@@ -156,7 +156,7 @@ GREATER_WEAPON_FOCUS:*: Weapon Focus, 8th-level fighter :+1 bonus on attack roll
 PENETRATING_STRIKE:*: Weapon Focus, 12th-level fighter :Your attacks ignore 5 points of damage reduction:false:
 GREATER_PENETRATING_STRIKE:*: Penetrating Strike, 16th-level fighter :Your attacks ignore 10 points of damage reduction:false:
 WEAPON_SPECIALIZATION:*: Weapon Focus, 4th-level fighter :+2 bonus on damage rolls with one weapon Greater Weapon:false:
-SPECIALIZATION:*: Weapon Specialization, 12th-level fighter :+2 bonus on damage rolls with one weapon:false:
+SPECIALIZATION^:*: Weapon Specialization, 12th-level fighter :+2 bonus on damage rolls with one weapon:false:
 BREW_POTION:I: Caster level 3 :Create magic potions:false:
 CRAFT_MAGIC:I: Arms and Armor Caster level 5 :Create magic armors, shields, and weapons:false:
 CRAFT_ROD:I: Caster level 9 :Create magic rods:false:

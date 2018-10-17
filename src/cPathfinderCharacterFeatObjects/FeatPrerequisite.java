@@ -3,9 +3,10 @@ package cPathfinderCharacterFeatObjects;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 
-import cPathfinderCharacterObjects.ClassFeature;
+import cPathfinderCharacterClassObjects.ClassFeature;
 import cPathfinderCharacterSkillObjects.Skill;
 
 public class FeatPrerequisite {
@@ -13,7 +14,7 @@ public class FeatPrerequisite {
 	protected static final String[] featNames;
 	static {
 		String[] outputStringArr = new String[176];
-		String filePath = "FeatsChartAsText.txt"; 
+		String filePath = "C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterFeatObjects/FeatNames.txt"; 
 		String line;
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader(filePath));
@@ -32,18 +33,19 @@ public class FeatPrerequisite {
 	
 	//Instance Variables:
 	private String featPrerequisiteAsText;
-	private ArrayList<Feat> requiredFeats;
-	private int[] requiredAbilityPoints;
+	private ArrayList<Feat> requiredFeats = new ArrayList<Feat>();
+	private int[] requiredAbilityPoints = {0, 0, 0, 0, 0, 0};
 	private int requiredAttackBonus;
 	private ClassFeature requiredClassFeature;
 	private int requiredCasterLevel;
-	private Map<Skill, Integer> requiredSkills; //TODO: When there are multiple required skills, sometimes you need all, sometimes you only need one.  Need to figure out a way to handle 'and' and 'or' relations.
+	private Map<Skill, Integer> requiredSkills = new HashMap<Skill, Integer>(); //TODO: When there are multiple required skills, sometimes you need all, sometimes you only need one.  Need to figure out a way to handle 'and' and 'or' relations.
 	private int requiredFighterLevel;
 	private int requiredWizardLevel;
 	
 	
 	//Constructors:
-	FeatPrerequisite() {
+	FeatPrerequisite(String prerequisiteText) {
+		setFeatPrerequisiteText(prerequisiteText);
 		setRequiredFeats();
 		setRequiredAbilityPoints();
 		setRequiredAttackBonus();
@@ -58,15 +60,17 @@ public class FeatPrerequisite {
 	
 	private void setRequiredFeats() {
 		for (String featName : featNames) {
+			//System.out.println(featName + " -- featPrerequisitieAsTest: " + this.featPrerequisiteAsText);
 			if (this.featPrerequisiteAsText.contains(featName)) {
+				//System.out.println(featName);
 				String updatedFeatName = featName.replace(" ", "_").replace("-", "_").toUpperCase(); 
+				//System.out.println(this.featPrerequisiteAsText = "requires: " + featName);
 				this.requiredFeats.add(new Feat(updatedFeatName));
 			}
 			
 		}
 	}
 	private void setRequiredAbilityPoints() {
-		this.requiredAbilityPoints = new int[6];
 		if (this.featPrerequisiteAsText.contains("Str")) {
 			try {
 				int index = this.featPrerequisiteAsText.indexOf("Str");
@@ -220,6 +224,7 @@ public class FeatPrerequisite {
 			if (this.featPrerequisiteAsText.contains(skillName)) {
 				try {
 					int index = this.featPrerequisiteAsText.indexOf(skillName);
+					//System.out.println(skillName + ": " + this.featPrerequisiteAsText);
 					String skillRequirement = Character.toString(this.featPrerequisiteAsText.charAt(index - 3)) + 
 							Character.toString(this.featPrerequisiteAsText.charAt(index - 2));
 					skillRequirement.replace(" ", "");

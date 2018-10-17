@@ -98,6 +98,12 @@ public class CharacterSkills {
 	public Skill getSwim() {return this.swim;}
 	public Skill getUseMagicalDevice() {return this.useMagicalDevice;}
 	
+	public Skill[] getCharacterSkillsArr() {return this.characterSkillsArr;}
+	
+	public void incrementSkillRank(Skill skill) {skill.incrementSkillRank();}
+	public void incrementSkillRank(Skill skill, int value) {skill.incrementSkillRank(value);}
+	public void decrementSkillRank(Skill skill) {skill.decrementSkillRank();}
+	public void decrementSkillRank(Skill skill, int value) {skill.decrementSkillRank(value);}
 	
 	public void setClassSkills(Skill[] classSkills) {
 		for (Skill classSkill : classSkills) {
@@ -107,7 +113,6 @@ public class CharacterSkills {
 					break;
 				}
 			}
-			
 		}
 	}
 	
