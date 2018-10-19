@@ -31,7 +31,7 @@ public class Gnome extends Race {
 		this.knownLanguages = new String[] {"Common", "Gnome", "Sylvan"};
 		this.potentialLanguages = new String[] {"Draconic", "Dwarven", "Elven", "Giant", "Goblin", "Orc"};	
 		
-		setCharacterModifierObject(createCharacterModifierObject());
+		applyRacialTraitModifications();
 	}
 	
 	//Methods:

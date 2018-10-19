@@ -5,10 +5,14 @@ import static org.junit.Assert.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.junit.Test;
 
 import cPathfinderCharacterClassObjects.Barbarian;
+import cPathfinderCharacterFeatObjects.CharacterFeats;
 import cPathfinderCharacterFeatObjects.Feat;
 import cPathfinderCharacterObjects.PathfinderCharacter;
 import cPathfinderCharacterRaceObjects.Dwarf;
@@ -38,19 +42,19 @@ public class TestPathfinderCharacter {
 		PathfinderCharacter humanCharacter = new PathfinderCharacter();
 		PathfinderCharacter halflingCharacter = new PathfinderCharacter();
 		dwarfCharacter.setRace(new Dwarf());
-		System.out.println(dwarfCharacter.getRace().toString());
+		System.out.println(dwarfCharacter.getRace().modificationsToString());
 		elfCharacter.setRace(new Elf());
-		System.out.println(elfCharacter.getRace().toString());
+		System.out.println(elfCharacter.getRace().modificationsToString());
 		gnomeCharacter.setRace(new Gnome());
-		System.out.println(gnomeCharacter.getRace().toString());
+		System.out.println(gnomeCharacter.getRace().modificationsToString());
 		halfElfCharacter.setRace(new HalfElf());
-		System.out.println(halfElfCharacter.getRace().toString());
+		System.out.println(halfElfCharacter.getRace().modificationsToString());
 		halfOrcCharacter.setRace(new HalfOrc());
-		System.out.println(halfOrcCharacter.getRace().toString());
+		System.out.println(halfOrcCharacter.getRace().modificationsToString());
 		humanCharacter.setRace(new Human());
-		System.out.println(humanCharacter.getRace().toString());
+		System.out.println(humanCharacter.getRace().modificationsToString());
 		halflingCharacter.setRace(new Halfling());
-		System.out.println(halflingCharacter.getRace().toString());
+		System.out.println(halflingCharacter.getRace().modificationsToString());
 		
 		
 	}
@@ -61,29 +65,30 @@ public class TestPathfinderCharacter {
 		CharacterSkills charSkills = chad.getCharacterSkills(); 
 		System.out.println(chad.getCharacterSkills().toString()); 
 		
-		Skill[] charSkillsArr = charSkills.getCharacterSkillsArr();
+		Skill[] charSkillsArr = charSkills.getCharacterSkills();
 		for (Skill skill : charSkillsArr) {
 			charSkills.incrementSkillRank(skill, 4);
 		}
 		System.out.println(chad.getCharacterSkills().toString()); 
 		for (Skill skill : charSkillsArr) {
-			charSkills.decrementSkillRank(skill, 5);
+			charSkills.incrementSkillRank(skill, -5);
 		}
 		System.out.println(chad.getCharacterSkills().toString()); 
 		
-		Skill[] classSkills = {new Skill("ACROBATICS"), new Skill("CLIMB"), new Skill("CRAFT1"), 
+		Set<Skill> classSkills = new HashSet<Skill>(Arrays.asList(new Skill("ACROBATICS"), new Skill("CLIMB"), new Skill("CRAFT1"), 
 				new Skill("CRAFT2"), new Skill("CRAFT3"), new Skill("HANDLE_ANIMAL"), new Skill("INTIMIDATE"), new Skill("KNOWLEDGE_NATURE"), 
-				new Skill("PERCEPTION"), new Skill("RIDE"), new Skill("SURVIVAL"), new Skill("SWIM")};
+				new Skill("PERCEPTION"), new Skill("RIDE"), new Skill("SURVIVAL"), new Skill("SWIM")));
 		
 		chad.getCharacterSkills().setClassSkills(classSkills);
 		for (Skill skill : charSkillsArr) {
-			System.out.println(skill.getName() + ": " + skill.isClassSkill());
+			System.out.println(skill.getName() + ": " + charSkills.getClassSkillsMap().get(skill));
 		}
 	}
 	
 	@Test
 	public void testCharacterFeats () {
 		PathfinderCharacter pete = new PathfinderCharacter();
+		CharacterFeats charFeats = new CharacterFeats();
 		
 		String filePath = "C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterFeatObjects/FeatNames.txt"; 
 		String line; 
@@ -94,22 +99,22 @@ public class TestPathfinderCharacter {
 				String featName = line.replace(" ", "_").replace("-", "_").toUpperCase();
 				featNames.add(featName);
 			}
+			reader.close();
 		}
 		catch (Exception ex) {
 			System.out.println("Something went wrong");
 		}
 		for (String featName : featNames) {
-			pete.getCharacterFeats().addFeat(new Feat(featName));
+			charFeats.addFeat(new Feat(featName));
 		}
-		System.out.println(pete.getCharacterFeats().toString());
-		System.out.println(pete.getCharacterFeats().getCharacterModifierObject());
+		System.out.println(charFeats.modificationsToString());
 	}
 	
 	@Test
 	public void testCharacterClassBarbarian() {
 		PathfinderCharacter james = new PathfinderCharacter();
 		Barbarian testBarbarianClass = new Barbarian(1); 
-		System.out.println(testBarbarianClass.getCharacterModifierObject().toString());
+		System.out.println(testBarbarianClass.modificationsToString());
 	}
 
 }

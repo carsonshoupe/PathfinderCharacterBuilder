@@ -52,6 +52,12 @@ public class RacialTrait {
 	
 	@Override
 	public String toString() {
-		return this.name;
+		return (this.name + ": " + this.racialTraitDescription);
+	}
+	
+	@Override 
+	public RacialTrait clone() throws CloneNotSupportedException {
+		RacialTrait outputRacialTrait = (RacialTrait) super.clone(); 
+		return outputRacialTrait;
 	}
 }

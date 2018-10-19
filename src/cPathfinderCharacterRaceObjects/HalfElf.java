@@ -31,7 +31,7 @@ public class HalfElf extends Race{
 		this.knownLanguages = new String[] {"Common", "Elven"};
 		this.potentialLanguages = new String[] {"any"};	
 		
-		setCharacterModifierObject(createCharacterModifierObject());
+		applyRacialTraitModifications();
 	}
 		
 	//Methods:

@@ -30,7 +30,7 @@ public class Elf extends Race{
 		this.knownLanguages = new String[] {"Common", "Elven"};
 		this.potentialLanguages = new String[] {"Celestial", "Draconic", "Gnoll", "Gnome", "Goblin", "Orc", "Sylvan"};	
 		
-		setCharacterModifierObject(createCharacterModifierObject());
+		applyRacialTraitModifications();
 	}
 	
 	//Methods:

@@ -29,7 +29,7 @@ public class HalfOrc extends Race {
 		this.knownLanguages = new String[] {"Common", "Orc"};
 		this.potentialLanguages = new String[] {"Abyssal", "Draconic", "Giant", "Gnoll", "Goblin"};	
 		
-		setCharacterModifierObject(createCharacterModifierObject());
+		applyRacialTraitModifications();
 	}
 	
 	//Methods:

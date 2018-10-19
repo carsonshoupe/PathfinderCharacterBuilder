@@ -30,7 +30,7 @@ public class Halfling extends Race{
 		this.knownLanguages = new String[] {"Common", "Halfling"};
 		this.potentialLanguages = new String[] {"Dwarven", "Elven", "Gnome", "Goblin"};	
 		
-		setCharacterModifierObject(createCharacterModifierObject());
+		applyRacialTraitModifications();
 	}
 		
 		//Methods:

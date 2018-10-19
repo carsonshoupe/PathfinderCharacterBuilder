@@ -9,7 +9,7 @@ ARCANE_STRIKE:*: Ability to cast arcane spells :+1 damage and weapons are consid
 ARMOR_PROFICIENCY,_LIGHT:: — :No penalties on attack rolls while wearing light armor:false:
 ARMOR_PROFICIENCY,_MEDIUM:: Armor Proficiency, Light :No penalties on attack rolls while wearing medium armor:false:
 ARMOR_PROFICIENCY,_HEAVY:: Armor Proficiency, Medium :No penalties on attack rolls while wearing heavy armor:false:
-ATHLETIC:: — :+2 bonus on Climb and Swim checks::true:CLIMB,2;SWIM,2
+ATHLETIC:: — :+2 bonus on Climb and Swim checks:true:CLIMB,2;SWIM,2
 AUGMENT_SUMMONING:: Spell Focus (conjuration) :Summoned creatures gain +4 Str and Con:false:
 BLIND_FIGHT:*: — :Reroll miss chances for concealment:false:
 CATCH_OFF_GUARD:*: — :No penalties for improvised melee weapons:false:

@@ -31,7 +31,7 @@ public class Dwarf extends Race {
 		this.knownLanguages = new String[] {"Common", "Dwarven"};
 		this.potentialLanguages = new String[] {"Giant", "Gnome", "Goblin", "Orc", "Terran", "Undercommon"};	
 		
-		setCharacterModifierObject(createCharacterModifierObject());
+		applyRacialTraitModifications();
 	}
 	
 	//Methods:

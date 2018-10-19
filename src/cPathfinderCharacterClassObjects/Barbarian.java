@@ -4,9 +4,12 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+
 
 import cPathfinderCharacterObjects.CharacterModifierObject;
 import cPathfinderCharacterObjects.PathfinderCharacter;
@@ -17,10 +20,11 @@ import cPathfinderCharacterSkillObjects.CharacterSkills;
 import cPathfinderCharacterSkillObjects.Skill;
 
 public class Barbarian extends CharacterClass {
-	//Static Variables: 
-	protected static final Skill[] barbarianClassSkills = {new Skill("ACROBATICS"), new Skill("CLIMB"), new Skill("CRAFT1"), 
+	//Static Variables: 	
+	protected static final Set<Skill> barbarianClassSkills = new HashSet<Skill>(Arrays.asList(new Skill("ACROBATICS"), new Skill("CLIMB"), new Skill("CRAFT1"), 
 			new Skill("CRAFT2"), new Skill("CRAFT3"), new Skill("HANDLE_ANIMAL"), new Skill("INTIMIDATE"), new Skill("KNOWLEDGE_NATURE"), 
-			new Skill("PERCEPTION"), new Skill("RIDE"), new Skill("SURVIVAL"), new Skill("SWIM")};
+			new Skill("PERCEPTION"), new Skill("RIDE"), new Skill("SURVIVAL"), new Skill("SWIM")));
+	
 	protected static final Map<String, ClassFeature> barbarianClassFeatures = new HashMap<String, ClassFeature>();
 	static {
 		setBarbarianClassFeatures("C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterClassObjects/BarbarianClassFeatures.txt");
@@ -63,11 +67,6 @@ public class Barbarian extends CharacterClass {
 	//Constructors:
 	public Barbarian(int level) {
 		this.level = level;
-		this.role = "Barbarians excel in combat, possessing the martial prowess and "
-				+ "fortitude to take on foes seemingly far superior to themselves. "
-				+ "With rage granting them boldness and daring beyond that of most "
-				+ "other warriors, barbarians charge furiously into battle and ruin "
-				+ "all who would stand in their way.";
 		this.alignmentRestriction = "Any Nonlawful";
 		this.hitDie = 12;
 		this.classSkills = barbarianClassSkills;
@@ -78,13 +77,12 @@ public class Barbarian extends CharacterClass {
 		Set<String> barbarianClassFeaturesKeys = barbarianClassFeatures.keySet();
 		for (String key : barbarianClassFeaturesKeys) {
 			if (!(barbarianClassFeatures.get(key) instanceof ClassFeature_Selection) && barbarianClassFeatures.get(key).getLevelAccessable() <= this.level) {
-				this.modifierObject.addSpecialAbilitiesDescription(barbarianClassFeatures.get(key).getName().replaceAll("_", " ") + ": " + barbarianClassFeatures.get(key).getFullDescription());
+				this.specialAbilityDescriptions.add(barbarianClassFeatures.get(key).getName().replaceAll("_", " ") + ": " + barbarianClassFeatures.get(key).getFullDescription());
 			}
 		}
 	}
 	
 	//Methods:
-	public CharacterModifierObject getCharacterModifierObject() {return this.modifierObject;}
 
 	
 }

@@ -59,9 +59,6 @@ public class Skill {
 	private int pageInCoreRuleBook;
 	private boolean trainedOnly;
 	private int abilityModifier;
-	
-	private boolean classSkill;
-	private int skillRanks;
 		
 	//Constructors:
 	public Skill(String name) {
@@ -70,8 +67,6 @@ public class Skill {
 		this.trainedOnly = Boolean.parseBoolean(skillDescriptionsMap.get(this.name)[1]);
 		this.abilityModifier = Integer.parseInt(skillDescriptionsMap.get(this.name)[2]);
 		this.pageInCoreRuleBook = Integer.parseInt(skillDescriptionsMap.get(this.name)[3]);
-		
-		this.skillRanks = 0;
 	}
 	
 	//Methods: 
@@ -80,15 +75,6 @@ public class Skill {
 	public int getPageInCoreRuleBOok() {return this.pageInCoreRuleBook;}
 	public boolean getTrainedOnly() {return this.trainedOnly;}
 	public int getAbilityModifier() {return this.abilityModifier;}
-	
-	public boolean isClassSkill() {return this.classSkill;}
-	public int getSkillRanks() {return this.skillRanks;}
-	
-	public void setClassSkill() {this.classSkill = true;}
-	public void incrementSkillRank() {this.skillRanks++;}
-	public void incrementSkillRank(int value) {this.skillRanks += value;}
-	public void decrementSkillRank() {this.skillRanks--;}
-	public void decrementSkillRank(int value) {this.skillRanks -= value;}
 	
 	@Override
 	public boolean equals(Object skill) {
@@ -100,10 +86,16 @@ public class Skill {
 			return false;
 		}
 	}
+	
 	@Override
 	public String toString() {
 		String outputString = this.name;
 		return outputString;
 				
+	}
+	
+	@Override
+	public Object clone() throws CloneNotSupportedException {
+		return super.clone();
 	}
 }

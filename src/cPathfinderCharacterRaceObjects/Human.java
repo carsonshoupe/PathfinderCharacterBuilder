@@ -30,7 +30,7 @@ public class Human extends Race {
 		this.knownLanguages = new String[] {"Common"};
 		this.potentialLanguages = new String[] {"any"};	
 		
-		setCharacterModifierObject(createCharacterModifierObject());
+		applyRacialTraitModifications();
 	}
 	
 	//Methods:
