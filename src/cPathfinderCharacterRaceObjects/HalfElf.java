@@ -22,7 +22,7 @@ public class HalfElf extends Race{
 		setCharismaModifier(0);
 		
 		this.size = Sizes.MEDIUM;
-		this.speed = 30;
+		this.baseSpeed = 30;
 		this.vision = "Low-Light";
 		
 		this.racialTraits = halfElfRacialTraits;

@@ -1,6 +1,7 @@
 package cPathfinderCharacterFeatObjects;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -13,13 +14,11 @@ public class CharacterFeats implements CharacterModifier {
 	//Instance Variables:
 	protected ArrayList<Feat> characterFeats = new ArrayList<Feat>();
 	protected Map<Skill, Integer> skillRanksToAdd = new HashMap<Skill, Integer>();
-	protected int fortitudeSaveBonus = 0;
-	protected int reflexSaveBonus = 0;
-	protected int willSaveBonus = 0;
+	protected int[] savingThrowModifiers = {0, 0, 0};
 	protected int bonusSkillRanks = 0;
 	protected int acBonus = 0;
 	protected int speedBonus = 0;
-	protected int initiativeBonus = 0;
+	protected int initiativeModifier = 0;
 	protected ArrayList<String> featDescriptionsToAdd = new ArrayList<String>();
 	
 	//Constructors:
@@ -28,6 +27,12 @@ public class CharacterFeats implements CharacterModifier {
 	public ArrayList<Feat> getFeats() {return this.characterFeats;}
 	public ArrayList<String> getFeatDescriptions() {return this.featDescriptionsToAdd;}
 	public Map<Skill, Integer> getSkillRanks() {return this.skillRanksToAdd;}
+	
+	public int getFortSaveModifier() {return this.savingThrowModifiers[0];}
+	public int getReflexSaveModifier() {return this.savingThrowModifiers[1];}
+	public int getWillSaveModifier() {return this.savingThrowModifiers[2];}
+	
+	public int getInitiativeModifier() {return this.initiativeModifier;}
 	
 	public void addFeat(Feat feat) {
 		this.characterFeats.add(feat);
@@ -45,16 +50,16 @@ public class CharacterFeats implements CharacterModifier {
 					this.speedBonus += 5;
 				}
 				if (key.equals("*FORTITUDE_SAVE")) {
-					this.fortitudeSaveBonus += 2;
+					this.savingThrowModifiers[0] += 2;
 				}
 				if (key.equals("*WILL_SAVE")) {
-					this.willSaveBonus += 2;
+					this.savingThrowModifiers[1] += 2;
 				}
 				if (key.equals("*REFLEX_SAVE")) {
-					this.reflexSaveBonus += 2;
+					this.savingThrowModifiers[2] += 2;
 				}
 				if (key.equals("*INITIATIVE")) {
-					this.initiativeBonus += 4;
+					this.initiativeModifier += 4;
 				}
 			}
 		}
@@ -80,14 +85,6 @@ public class CharacterFeats implements CharacterModifier {
 			outputCharacter.getCharacterSkills().incrementSkillRank(key, skillRanksToAdd.get(key));
 		}
 		
-		outputCharacter.incrementFortitudeSaveBonus(this.fortitudeSaveBonus);
-		outputCharacter.incrementReflexSaveBonus(this.reflexSaveBonus);
-		outputCharacter.incrementWillSaveBonus(this.willSaveBonus);
-		
-		outputCharacter.incrementAcBonus(this.acBonus);
-		
-		outputCharacter.incrementSpeedBonus(this.speedBonus);
-		
 		for (String featDescription : this.featDescriptionsToAdd) {
 			outputCharacter.getFeatDescriptions().add(featDescription);
 		}
@@ -96,10 +93,10 @@ public class CharacterFeats implements CharacterModifier {
 
 	public String modificationsToString() {
 		String outputString = "Skill to Add: " + this.getSkillRanks().toString() + "\n"
-			+ "Saving Throws Bonus: " + this.fortitudeSaveBonus + ":" + this.reflexSaveBonus + ":" + this.willSaveBonus + "\n"
+			+ "Saving Throws Bonus: " + Arrays.toString(this.savingThrowModifiers) + "\n"
 			+ "AC Bonus: " + this.acBonus + "\n"
 			+ "Speed Bonus: " + this.speedBonus + "\n" 
-			+ "Initiative Bonus: " + this.initiativeBonus + "\n";
+			+ "Initiative Bonus: " + this.initiativeModifier + "\n";
 		
 		String featDescriptions = "Feat Descriptions: \n";
 		for (String featDescription : this.getFeatDescriptions()) {
@@ -111,6 +108,10 @@ public class CharacterFeats implements CharacterModifier {
 		return outputString;
 	}
 	
+	@Override
+	public Object clone() { //TODO
+		return null;
+	}
 	
 	
 

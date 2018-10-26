@@ -21,7 +21,7 @@ public class Human extends Race {
 		setCharismaModifier(0);
 		
 		this.size = Sizes.MEDIUM;
-		this.speed = 30;
+		this.baseSpeed = 30;
 		this.vision = "Normal";
 		
 		this.racialTraits = humanRacialTraits;

@@ -21,7 +21,7 @@ public class Halfling extends Race{
 		setCharismaModifier(2);
 		
 		this.size = Sizes.SMALL;
-		this.speed = 20;
+		this.baseSpeed = 20;
 		this.vision = "Normal";
 		
 		this.racialTraits = halflingRacialTraits;

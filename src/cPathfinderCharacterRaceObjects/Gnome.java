@@ -22,7 +22,7 @@ public class Gnome extends Race {
 		setCharismaModifier(2);
 		
 		this.size = Sizes.SMALL;
-		this.speed = 20;
+		this.baseSpeed = 20;
 		this.vision = "Low-Light";
 		
 		this.racialTraits = gnomeRacialTraits;

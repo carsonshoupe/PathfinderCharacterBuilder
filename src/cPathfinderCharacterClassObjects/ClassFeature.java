@@ -39,5 +39,9 @@ public class ClassFeature {
 		}
 	}
 	
+	@Override
+	public String toString() {
+		return this.name;
+	}
 
 }

@@ -77,6 +77,7 @@ public class Barbarian extends CharacterClass {
 		Set<String> barbarianClassFeaturesKeys = barbarianClassFeatures.keySet();
 		for (String key : barbarianClassFeaturesKeys) {
 			if (!(barbarianClassFeatures.get(key) instanceof ClassFeature_Selection) && barbarianClassFeatures.get(key).getLevelAccessable() <= this.level) {
+				this.classFeatures.add(barbarianClassFeatures.get(key));
 				this.specialAbilityDescriptions.add(barbarianClassFeatures.get(key).getName().replaceAll("_", " ") + ": " + barbarianClassFeatures.get(key).getFullDescription());
 			}
 		}

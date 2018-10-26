@@ -63,6 +63,7 @@ public class Skill {
 	//Constructors:
 	public Skill(String name) {
 		this.name = name;
+		//System.out.println("Creating skill: " + this.name);
 		this.skillDescription = skillDescriptionsMap.get(this.name)[0];
 		this.trainedOnly = Boolean.parseBoolean(skillDescriptionsMap.get(this.name)[1]);
 		this.abilityModifier = Integer.parseInt(skillDescriptionsMap.get(this.name)[2]);
@@ -73,11 +74,16 @@ public class Skill {
 	public String getName() {return this.name;}
 	public String getSkillDescription() {return this.skillDescription;}
 	public int getPageInCoreRuleBOok() {return this.pageInCoreRuleBook;}
-	public boolean getTrainedOnly() {return this.trainedOnly;}
+	public boolean isTrainedOnly() {return this.trainedOnly;}
 	public int getAbilityModifier() {return this.abilityModifier;}
 	
 	@Override
-	public boolean equals(Object skill) {
+	public int hashCode() {
+		return this.getName().hashCode();
+	}
+	
+	@Override
+	public boolean equals(Object skill) { //Add 'instanceOf' if statement
 		Skill typeCastedSkill = (Skill) skill;
 		if (this.getName().equals(typeCastedSkill.getName())) {
 			return true;

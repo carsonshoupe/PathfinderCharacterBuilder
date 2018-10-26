@@ -1,0 +1,198 @@
+*Domain Air
+Deities: Gozreh, Shelyn.
+Granted Powers: You can manipulate lightning, mist, and wind, traffic with air creatures, and are resistant to electricity damage.
+Lightning Arc:(Sp):1: As a standard action, you can unleash an arc of electricity targeting any foe within 30 feet as a ranged touch attack. This arc of electricity deals 1d6 points of electricity damage + 1 point for every two cleric levels you possess. You can use this ability a number of times per day equal to 3 + your Wisdom modifier.
+Electricity Resistance:(Ex):6: At 6th level, you gain resist electricity 10. This resistance increases to 20 at 12th level. At 20th level, you gain immunity to electricity. 
+Domain Spells: 1st—Obscuring Mist, 2nd—Wind Wall, 3rd—Gaseous Form, 4th—Air Walk, 5th—Control Winds, 6th—Chain Lightning, 7th—Elemental Body IV, 8th—Whirlwind, 9th—Elemental Swarm
+*Domain Animal
+Deities: Erastil, Gozreh.
+Granted Powers: You can speak with and befriend animals with ease. In addition, you treat Knowledge (nature) as a class skill.
+Speak with Animals:(Sp):1: You can speak with animals, as per the spell, for a number of rounds per day equal to 3 + your cleric level.
+Animal Companion:(Ex):4: At 4th level, you gain the service of an animal companion. Your effective druid level for this animal companion is equal to your cleric level – 3. (Druids who take this ability through their nature bond class feature use their druid level – 3 to determine the abilities of their animal companions).
+Domain Spells: 1st—Calm Animals, 2nd—Hold Animal, 3rd—Dominate Animal, 4th—Summon Nature's Ally IV, 5th—Beast Shape III, 6th—Antilife Shell, 7th—Animal Shapes, 8th—Summon Nature's Ally VIII, 9th—ShapechangeF
+*Domain Artifice
+Deities: Torag.
+Granted Powers: You can repair damage to objects, animate objects with life, and create objects from nothing. 
+Artificer’s Touch:(Sp):1: You can cast mending at will, using your cleric level as the caster level to repair damaged objects. In addition, you can cause damage to objects and construct creatures by striking them with a melee touch attack. Objects and constructs take 1d6 points of damage +1 for every two cleric levels you possess. This attack bypasses an amount of damage reduction and hardness equal to your cleric level. You can use this ability a number of times per day equal to 3 + your Wisdom modifier.
+Dancing Weapons:(Su):8: At 8th level, you can give a weapon touched the dancing special weapon quality for 4 rounds. You can use this ability once per day at 8th level, and an additional time per day for every four levels beyond 8th. 
+Domain Spells: 1st—Animate Rope, 2nd—Wood Shape, 3rd—Stone Shape, 4th—Minor Creation, 5th—FabricateM, 6th—Major Creation, 7th—Wall of IronM, 8th—Instant SummonsM, 9th—Prismatic Sphere
+*Domain Chaos
+Deities: Calistria, Cayden Cailean, Desna, Gorum, Lamashtu, Rovagug.
+Granted Powers: Your touch infuses life and weapons with chaos, and you revel in all things anarchic. 
+Touch of Chaos:(Sp):1: You can imbue a target with chaos as a melee touch attack. For the next round, anytime the target rolls a d20, he must roll twice and take the less favorable result. You can use this ability a number of times per day equal to 3 + your Wisdom modifier.
+Chaos Blade:(Su):8: At 8th level, you can give a weapon touched the anarchic special weapon quality for a number of rounds equal to 1/2 your cleric level. You can use this ability once per day at 8th level, and an additional time per day for every four levels beyond 8th.
+Domain Spells: 1st—Protection from Law, 2nd—Align Weapon, 3rd—Magic Circle against Law, 4th—Chaos Hammer, 5th—Dispel Law, 6th—Animate Objects, 7th—Word of Chaos, 8th—Cloak of ChaosF, 9th—Summon Monster IX
+*Domain Charm
+Deities: Calistria, Cayden Cailean, Norgorber, Shelyn.
+Granted Powers: You can baff le and befuddle foes with a touch or a smile, and your beauty and grace are divine. 
+Dazing Touch:(Sp):1: You can cause a living creature to become dazed for 1 round as a melee touch attack. Creatures with more Hit Dice than your cleric level are unaffected. You can use this ability a number of times per day equal to 3 + your Wisdom modifier. 
+Charming Smile:(Sp):8: At 8th level, you can cast charm person as a swift action, with a DC of 10 + 1/2 your cleric level + your Wisdom modifier. You can only have one creature charmed in this way at a time. The total number of rounds of this effect per day is equal to your cleric level. The rounds do not need to be consecutive, and you can dismiss the charm at any time as a free action. Each attempt to use this ability consumes 1 round of its duration, whether or not the creature succeeds on its save to resist the effect.
+Domain Spells: 1st—Charm Person, 2nd—Calm Emotions, 3rd—Suggestion, 4th—Heroism, 5th—Charm Monster, 6th—Geas/Quest, 7th—Insanity, 8th—Demand, 9th—Dominate Monster
+*Domain Community
+Deities: Erastil.
+Granted Powers: Your touch can heal wounds, and your presence instills unity and strengthens emotional bonds. 
+Calming Touch:(Sp):1: You can touch a creature as a standard action to heal it of 1d6 points of nonlethal damage + 1 point per cleric level. This touch also removes the fatigued, shaken, and sickened conditions (but has no effect on more severe conditions). You can use this ability a number of times per day equal to 3 + your Wisdom modifier. 
+Unity:(Su):8: At 8th level, whenever a spell or effect targets you and one or more allies within 30 feet, you can use this ability to allow your allies to use your saving throw against the effect in place of their own. Each ally must decide individually before the rolls are made. Using this ability is an immediate action. You can use this ability once per day at 8th level, and one additional time per day for every four cleric levels beyond 8th.
+Domain Spells: 1st—Bless, 2nd—Shield OtherF, 3rd—Prayer, 4th—Imbue with Spell Ability, 5th—Telepathic Bond, 6th—Heroes' Feast, 7th—RefugeM, 8th—Mass Cure Critical Wounds, 9th—MiracleM
+*Domain Darkness
+Deities: Zon-Kuthon.
+Granted Power: You manipulate shadows and darkness. In addition, you receive Blind-Fight as a bonus feat. 
+Touch of Darkness:(Sp):1: As a melee touch attack, you can cause a creature’s vision to be fraught with shadows and darkness. The creature touched treats all other creatures as if they had concealment, suffering a 20% miss chance on all attack rolls. This effect lasts for a number of rounds equal to 1/2 your cleric level (minimum 1). You can use this ability a number of times per day equal to 3 + your Wisdom modifier.
+Eyes of Darkness:(Su):8: At 8th level, your vision is not impaired by lighting conditions, even in absolute darkness and magic darkness. You can use this ability for a number of rounds per day equal to 1/2 your cleric level. These rounds do not need to be consecutive. 
+Domain Spells: 1st—Obscuring Mist, 2nd—Blindness/Deafness, 3rd—Deeper Darkness, 4th—Shadow Conjuration, 5th—Summon Monster V, 6th—Shadow Walk, 7th—Power Word Blind, 8th—Greater Shadow Evocation, 9th—Shades
+*Domain Death
+Deities: Norgorber, Pharasma, Urgathoa, Zon-Kuthon.
+Granted Powers: You can cause the living to bleed at a touch, and find comfort in the presence of the dead. 
+Bleeding Touch:(Sp):1: As a melee touch attack, you can cause a living creature to take 1d6 points of damage per round. This effect persists for a number of rounds equal to 1/2 your cleric level (minimum 1) or until stopped with a DC 15 Heal check or any spell or effect that heals damage. You can use this ability a number of times per day equal to 3 + your Wisdom modifier.
+Death’s Embrace:(Ex):8: At 8th level, you heal damage instead of taking damage from channeled negative energy. If the channeled negative energy targets undead, you heal hit points just like undead in the area.
+Domain Spells: 1st—Cause Fear, 2nd—Death Knell, 3rd—Animate DeadM, 4th—Death Ward, 5th—Slay Living, 6th—Create UndeadM, 7th—DestructionF, 8th—Create Greater UndeadM, 9th—Wail of the Banshee
+*Domain Destruction
+Deities: Gorum, Nethys, Rovagug, Zon-Kuthon.
+Granted Powers: You revel in ruin and devastation, and can deliver particularly destructive attacks. 
+Destructive Smite:(Su):1: You gain the destructive smite power -- the supernatural ability to make a single melee attack with a morale bonus on damage rolls equal to 1/2 your cleric level (minimum 1). You must declare the destructive smite before making the attack. You can use this ability a number of times per day equal to 3 + your Wisdom modifier.
+Destructive Aura:(Su):8: At 8th level, you can emit a 30-foot aura of destruction for a number of rounds per day equal to your cleric level. All attacks made against creatures in this aura (including you) gain a morale bonus on damage equal to 1/2 your cleric level and all critical threats are automatically confirmed. These rounds do not need to be consecutive.
+Domain Spells: 1st—True Strike, 2nd—Shatter, 3rd—Rage, 4th—Inflict Critical Wounds, 5th—Shout, 6th—Harm, 7th—Disintegrate, 8th—Earthquake, 9th—Implosion
+*Domain Earth
+Deities: Abadar, Torag.
+Granted Powers: You have mastery over earth, metal, and stone, can fire darts of acid, and command earth creatures. 
+Acid Dart:(Sp):1: As a standard action, you can unleash an acid dart targeting any foe within 30 feet as a ranged touch attack. This acid dart deals 1d6 points of acid damage + 1 point for every two cleric levels you possess. You can use this ability a number of times per day equal to 3 + your Wisdom modifier.
+Acid Resistance:(Ex):6: At 6th level, you gain resist acid 10. This resistance increases to 20 at 12th level. At 20th level, you gain immunity to acid.
+Domain Spells: 1st—Magic Stone, 2nd—Soften Earth and Stone, 3rd—Stone Shape, 4th—Spike Stones, 5th—Wall of Stone, 6th—StoneskinM, 7th—Elemental Body IV, 8th—Earthquake, 9th—Elemental Swarm
+*Domain Evil
+Deities: Asmodeus, Lamashtu, Norgorber, Rovagug, Urgathoa, Zon-Kuthon.
+Granted Powers: You are sinister and cruel, and have wholly pledged your soul to the cause of evil. 
+Touch of Evil:(Sp):1: You can cause a creature to become sickened as a melee touch attack. Creatures sickened by your touch count as good for the purposes of spells with the evil descriptor. This ability lasts for a number of rounds equal to 1/2 your cleric level (minimum 1). You can use this ability a number of times per day equal to 3 + your Wisdom modifier.
+Scythe of Evil:(Su):8: At 8th level, you can give a weapon touched the unholy special weapon quality for a number of rounds equal to 1/2 your cleric level. You can use this ability once per day at 8th level, and an additional time per day for every four levels beyond 8th. 
+Domain Spells: 1st—Protection from Good, 2nd—Align Weapon, 3rd—Magic Circle against Good, 4th—Unholy Blight, 5th—Dispel Good, 6th—Create UndeadM, 7th—Blasphemy, 8th—Unholy AuraF, 9th—Summon Monster IX
+*Domain Fire
+Deities: Asmodeus, Sarenrae.
+Granted Powers: You can call forth fire, command creatures of the inferno, and your flesh does not burn. 
+Fire Bolt:(Sp):1: As a standard action, you can unleash a scorching bolt of divine fire from your outstretched hand. You can target any single foe within 30 feet as a ranged touch attack with this bolt of fire. If you hit the foe, the fire bolt deals 1d6 points of fire damage + 1 point for every two cleric levels you possess. You can use this ability a number of times per day equal to 3 + your Wisdom modifier.
+Fire Resistance:(Ex):6: At 6th level, you gain resist fire 10. This resistance increases to 20 at 12th level. At 20th level, you gain immunity to fire.
+Domain Spells: 1st—Burning Hands, 2nd—Produce Flame, 3rd—Fireball, 4th—Wall of Fire, 5th—Fire Shield, 6th—Fire Seeds, 7th—Elemental Body IV, 8th—Incendiary Cloud, 9th—Elemental Swarm
+*Domain Glory
+Deities: Gorum, Iomedae, Sarenrae.
+Granted Powers: You are infused with the glory of the divine, and are a true foe of the undead. In addition, when you channel positive energy to harm undead creatures, the save DC to halve the damage is increased by 2.
+Touch of Glory:(Sp):1: You can cause your hand to shimmer with divine radiance, allowing you to touch a creature as a standard action and give it a bonus equal to your cleric level on a single Charisma-based skill check or Charisma ability check. This ability lasts for 1 hour or until the creature touched elects to apply the bonus to a roll. You can use this ability to grant the bonus a number of times per day equal to 3 + your Wisdom modifier.
+Divine Presence:(Su):8: At 8th level, you can emit a 30-foot aura of divine presence for a number of rounds per day equal to your cleric level. All allies within this aura are treated as if under the effects of a sanctuary spell with a DC equal to 10 + 1/2 your cleric level + your Wisdom modifier. These rounds do not need to be consecutive. Activating this ability is a standard action. If an ally leaves the area or makes an attack, the effect ends for that ally. If you make an attack, the effect ends for you and your allies. 
+Domain Spells: 1st—Shield of Faith, 2nd—Bless Weapon, 3rd—Searing Light, 4th—Holy Smite, 5th—Righteous Might, 6th—Undeath to DeathM, 7th—Holy Sword, 8th—Holy AuraF, 9th—GateM
+*Domain Good
+Deities: Cayden Cailean, Desna, Erastil, Iomedae, Sarenrae, Shelyn, Torag.
+Granted Powers: You have pledged your life and soul to goodness and purity.
+Touch of Good:(Sp):1: You can touch a creature as a standard action, granting a sacred bonus on attack rolls, skill checks, ability checks, and saving throws equal to half your cleric level (minimum 1) for 1 round. You can use this ability a number of times per day equal to 3 + your Wisdom modifier.
+Holy Lance:(Su):8: At 8th level, you can give a weapon you touch the holy special weapon quality for a number of rounds equal to 1/2 your cleric level. You can use this ability once per day at 8th level, and an additional time per day for every four levels beyond 8th. 
+Domain Spells: 1st—Protection from Evil, 2nd—Align Weapon, 3rd—Magic Circle against Evil, 4th—Holy Smite, 5th—Dispel Evil, 6th—Blade Barrier, 7th—Holy Word, 8th—Holy AuraF, 9th—Summon Monster IX
+*Domain Healing
+Deities: Irori, Pharasma, Sarenrae.
+Granted Powers: Your touch staves off pain and death, and your healing magic is particularly vital and potent. 
+Rebuke Death:(Sp):1: You can touch a living creature as a standard action, healing it for 1d4 points of damage plus 1 for every two cleric levels you possess. You can only use this ability on a creature that is below 0 hit points. You can use this ability a number of times per day equal to 3 + your Wisdom modifier. 
+Healer’s Blessing:(Su):6: At 6th level, all of your cure spells are treated as if they were empowered, increasing the amount of damage healed by half (+50%). This does not apply to damage dealt to undead with a cure spell. This does not stack with the Empower Spell metamagic feat.
+Domain Spells: 1st—Cure Light Wounds, 2nd—Cure Moderate Wounds, 3rd—Cure Serious Wounds, 4th—Cure Critical Wounds, 5th—Breath of Life, 6th—Heal, 7th—Regenerate, 8th—Mass Cure Critical Wounds, 9th—Mass Heal
+*Domain Knowledge
+Deities: Calistria, Irori, Nethys, Norgorber, Pharasma.
+Granted Powers: You are a scholar and a sage of legends. In addition, you treat all Knowledge skills as class skills. 
+Lore Keeper:(Sp):1: You can touch a creature to learn about its abilities and weaknesses. With a successful touch attack, you gain information as if you made the appropriate Knowledge skill check with a result equal to 15 + your cleric level + your Wisdom modifier. 
+Remote Viewing:(Sp):6: Starting at 6th level, you can use clairvoyance/clairaudience as a spell-like ability using your cleric level as the caster level. You can use this ability for a number of rounds per day equal to your cleric level. These rounds do not need to be consecutive. 
+Domain Spells: 1st—Comprehend Languages, 2nd—Detect Thoughts, 3rd—Speak with Dead, 4th—DivinationM, 5th—True SeeingM, 6th—Find the Path, 7th—Legend LoreMF, 8th—Discern Location, 9th—Foresight
+*Domain Law
+Deities: Abadar, Asmodeus, Erastil, Iomedae, Irori, Torag, Zon-Kuthon.
+Granted Powers: You follow a strict and ordered code of laws, and in so doing, achieve enlightenment. 
+Touch of Law:(Sp):1: You can touch a willing creature as a standard action, infusing it with the power of divine order and allowing it to treat all attack rolls, skill checks, ability checks, and saving throws for 1 round as if the natural d20 roll resulted in an 11. You can use this ability a number of times per day equal to 3 + your Wisdom modifier. 
+Staff of Order:(Su):8: At 8th level, you can give a weapon touched the axiomatic special weapon quality for a number of rounds equal to 1/2 your cleric level. You can use this ability once per day at 8th level, and an additional time per day for every four levels beyond 8th. 
+Domain Spells: 1st—Protection from Chaos, 2nd—Align Weapon, 3rd—Magic Circle against Chaos, 4th—Order's Wrath, 5th—Dispel Chaos, 6th—Hold Monster, 7th—Dictum, 8th—Shield of LawF, 9th—Summon Monster IX
+*Domain Liberation
+Deities: Desna.
+Granted Powers: You are a spirit of freedom and a staunch foe against all who would enslave and oppress. 
+Liberation:(Su):1: You have the ability to ignore impediments to your mobility. For a number of rounds per day equal to your cleric level, you can move normally regardless of magical effects that impede movement, as if you were affected by freedom of movement. This effect occurs automatically as soon as it applies. These rounds do not need to be consecutive.
+Freedom’s Call:(Su):8: At 8th level, you can emit a 30-foot aura of freedom for a number of rounds per day equal to your cleric level. Allies within this aura are not affected by the confused, grappled, frightened, panicked, paralyzed, pinned, or shaken conditions. This aura only suppresses these effects, and they return once a creature leaves the aura or when the aura ends, if applicable. These rounds do not need to be consecutive.
+Domain Spells: 1st—Remove Fear, 2nd—Remove Paralysis, 3rd—Remove Curse, 4th—Freedom of Movement, 5th—Break Enchantment, 6th—Greater Dispel Magic, 7th—RefugeM, 8th—Mind Blank, 9th—Freedom
+*Domain Luck
+Deities: Calistria, Desna, Shelyn.
+Granted Powers: You are infused with luck, and your mere presence can spread good fortune.
+Bit of Luck:(Sp):1: You can touch a willing creature as a standard action, giving it a bit of luck. For the next round, any time the target rolls a d20, he may roll twice and take the more favorable result. You can use this ability a number of times per day equal to 3 + your Wisdom modifier.
+Good Fortune:(Ex):6: At 6th level, as an immediate action, you can reroll any one d20 roll you have just made before the results of the roll are revealed. You must take the result of the reroll, even if it’s worse than the original roll. You can use this ability once per day at 6th level, and one additional time per day for every six cleric levels beyond 6th. 
+Domain Spells: 1st—True Strike, 2nd—Aid, 3rd—Protection from Energy, 4th—Freedom of Movement, 5th—Break Enchantment, 6th—Mislead, 7th—Spell TurningM, 8th—Moment of Prescience, 9th—MiracleM
+*Domain Madness
+Deities: Lamashtu.
+Granted Powers: You embrace the madness that lurks deep in your heart, and can unleash it to drive your foes insane or to sacrifice certain abilities to hone others. 
+Vision of Madness:(Sp):1: You can give a creature a vision of madness as a melee touch attack. Choose one of the following: attack rolls, saving throws, or skill checks. The target receives a bonus to the chosen rolls equal to 1/2 your cleric level (minimum +1) and a penalty to the other two types of rolls equal to 1/2 your cleric level (minimum –1). This effect fades after 3 rounds. You can use this ability a number of times per day equal to 3 + your Wisdom modifier.
+Aura of Madness:(Su):8: At 8th level, you can emit a 30-foot aura of madness for a number of rounds per day equal to your cleric level. Enemies within this aura are affected by confusion unless they make a Will save with a DC equal to 10 + 1/2 your cleric level + your Wisdom modifier. The confusion effect ends immediately when the creature leaves the area or the aura expires. Creatures that succeed on their saving throw are immune to this aura for 24 hours. These rounds do not need to be consecutive.
+Domain Spells: 1st—Lesser Confusion, 2nd—Touch of Idiocy, 3rd—Rage, 4th—Confusion, 5th—Nightmare, 6th—Phantasmal Killer, 7th—Insanity, 8th—Scintillating Pattern, 9th—Weird
+*Domain Magic
+Deities: Asmodeus, Nethys, Urgathoa.
+Granted Powers: You are a true student of all things mystical, and see divinity in the purity of magic. 
+Hand of the Acolyte:(Su):1: You can cause your melee weapon to f ly from your grasp and strike a foe before instantly returning. As a standard action, you can make a single attack using a melee weapon at a range of 30 feet. This attack is treated as a ranged attack with a thrown weapon, except that you add your Wisdom modifier to the attack roll instead of your Dexterity modifier (damage still relies on Strength). This ability cannot be used to perform a combat maneuver. You can use this ability a number of times per day equal to 3 + your Wisdom modifier. 
+Dispelling Touch:(Sp):8: At 8th level, you can use a targeted dispel magic effect as a melee touch attack. You can use this ability once per day at 8th level and one additional time per day for every four cleric levels beyond 8th.
+Domain Spells: 1st—Identify, 2nd—Magic MouthM, 3rd—Dispel Magic, 4th—Imbue with Spell Ability, 5th—Spell Resistance, 6th—Antimagic Field, 7th—Spell TurningM, 8th—Protection from SpellsMF, 9th—Mage's Disjunction
+*Domain Nobility
+Deities: Abadar.
+Granted Powers: You are a great leader, an inspiration to all who follow the teachings of your faith. 
+Inspiring Word:(Sp):1: As a standard action, you can speak an inspiring word to a creature within 30 feet. That creature receives a +2 morale bonus on attack rolls, skill checks, ability checks, and saving throws for a number of rounds equal to 1/2 your cleric level (minimum 1). You can use this power a number of times per day equal to 3 + your Wisdom modifier. 
+Leadership:(Ex):8: At 8th level, you receive Leadership as a bonus feat. In addition, you gain a +2 bonus on your leadership score as long as you uphold the tenets of your deity (or divine concept if you do not venerate a deity).
+Domain Spells: 1st—Divine Favor, 2nd—Enthrall, 3rd—Magic Vestment, 4th—Discern Lies, 5th—Greater Command, 6th—Geas/Quest, 7th—Repulsion, 8th—Demand, 9th—Storm of Vengeance
+*Domain Plant
+Deities: Erastil, Gozreh.
+Granted Powers: You find solace in the green, can grow defensive thorns, and can communicate with plants. 
+Wooden Fist:(Su):1: As a free action, your hands can become as hard as wood, covered in tiny thorns. While you have wooden fists, your unarmed strikes do not provoke attacks of opportunity, deal lethal damage, and gain a bonus on damage rolls equal to 1/2 your cleric level (minimum +1). You can use this ability for a number of rounds per day equal to 3 + your Wisdom modifier. These rounds do not need to be consecutive. 
+Bramble Armor:(Su):6: At 6th level, you can cause a host of wooden thorns to burst from your skin as a free action. While bramble armor is in effect, any foe striking you with an unarmed strike or a melee weapon without reach takes 1d6 points of piercing damage + 1 point per two cleric levels you possess. You can use this ability for a number of rounds per day equal to your cleric level. These rounds do not need to be consecutive. 
+Domain Spells: 1st—Entangle, 2nd—Barkskin, 3rd—Plant Growth, 4th—Command Plants, 5th—Wall of Thorns, 6th—Repel Wood, 7th—Animate Plants, 8th—Control Plants, 9th—Shambler
+*Domain Protection
+Deities: Abadar, Nethys, Shelyn, Torag.
+Granted Powers: Your faith is your greatest source of protection, and you can use that faith to defend others. In addition, you receive a +1 resistance bonus on saving throws. This bonus increases by 1 for every 5 levels you possess. 
+Resistant Touch:(Sp):1: As a standard action, you can touch an ally to grant him your resistance bonus for 1 minute. When you use this ability, you lose your resistance bonus granted by the Protection domain for 1 minute. You can use this ability a number of times per day equal to 3 + your Wisdom modifier. 
+Aura of Protection:(Su):8: At 8th level, you can emit a 30-foot aura of protection for a number of rounds per day equal to your cleric level. You and your allies within this aura gain a +1 def lection bonus to AC and resistance 5 against all elements (acid, cold, electricity, fire, and sonic). The def lection bonus increases by +1 for every four cleric levels you possess beyond 8th. At 14th level, the resistance against all elements increases to 10. These rounds do not need to be consecutive. 
+Domain Spells: 1st—Sanctuary, 2nd—Shield OtherF, 3rd—Protection from Energy, 4th—Spell Immunity, 5th—Spell Resistance, 6th—Antimagic Field, 7th—Repulsion, 8th—Mind Blank, 9th—Prismatic Sphere
+*Domain Repose
+Deities: Pharasma.
+Granted Powers: You see death not as something to be feared, but as a final rest and reward for a life well spent. The taint of undeath is a mockery of what you hold dear. 
+Gentle Rest:(Sp):1: Your touch can fill a creature with lethargy, causing a living creature to become staggered for 1 round as a melee touch attack. If you touch a staggered living creature, that creature falls asleep for 1 round instead. Undead creatures touched are staggered for a number of rounds equal to your Wisdom modifier. You can use this ability a number of times per day equal to 3 + your Wisdom modifier. 
+Ward Against Death:(Su):8: At 8th level, you can emit a 30- foot aura that wards against death for a number of rounds per day equal to your cleric level. Living creatures in this area are immune to all death effects, energy drain, and effects that cause negative levels. This ward does not remove negative levels that a creature has already gained, but the negative levels have no effect while the creature is inside the warded area. These rounds do not need to be consecutive. 
+Domain Spells: 1st—Deathwatch, 2nd—Gentle Repose, 3rd—Speak with Dead, 4th—Death Ward, 5th—Slay Living, 6th—Undeath to DeathM, 7th—DestructionF, 8th—Waves of Exhaustion, 9th—Wail of the Banshee
+*Domain Rune
+Deities: Irori, Nethys.
+Granted Powers: In strange and eldritch runes you find potent magic. You gain Scribe Scroll as a bonus feat. 
+Blast Rune:(Sp):1: As a standard action, you can create a blast rune in any adjacent square. Any creature entering this square takes 1d6 points of damage + 1 point for every two cleric levels you possess. This rune deals either acid, cold, electricity, or fire damage, decided when you create the rune. The rune is invisible and lasts a number of rounds equal to your cleric level or until discharged. You cannot create a blast rune in a square occupied by another creature. This rune counts as a 1st-level spell for the purposes of dispelling. It can be discovered with a DC 26 Perception skill check and disarmed with a DC 26 Disable Device skill check. You can use this ability a number of times per day equal to 3 + your Wisdom modifier. 
+Spell Rune:(Sp):8: At 8th level, you can attach another spell that you cast to one of your blast runes, causing that spell to affect the creature that triggers the rune, in addition to the damage. This spell must be of at least one level lower than the highest-level cleric spell you can cast and it must target one or more creatures. Regardless of the number of targets the spell can normally affect, it only affects the creature that triggers the rune.
+Domain Spells: 1st—Erase, 2nd—Secret Page, 3rd—Glyph of WardingM, 4th—Explosive Runes, 5th—Lesser Planar Binding, 6th—Greater Glyph of WardingM, 7th—Instant SummonsM, 8th—Symbol of DeathM, 9th—Teleportation CircleM
+*Domain Strength
+Deities: Cayden Cailean, Gorum, Irori, Lamashtu, Urgathoa.
+Granted Powers: In strength and brawn there is truth—your faith gives you incredible might and power. 
+Strength Surge:(Sp):1: As a standard action, you can touch a creature to give it great strength. For 1 round, the target gains an enhancement bonus equal to 1/2 your cleric level (minimum +1) to melee attacks, combat maneuver checks that rely on Strength, Strength-based skills, and Strength checks. You can use this ability a number of times per day equal to 3 + your Wisdom modifier.
+Might of the Gods:(Su):8: At 8th level, you can add your cleric level as an enhancement bonus to your Strength score for a number of rounds per day equal to your cleric level. This bonus only applies on Strength checks and Strength-based skill checks. These rounds do not need to be consecutive. 
+Domain Spells: 1st—Enlarge Person, 2nd—Bull's Strength, 3rd—Magic Vestment, 4th—Spell Immunity, 5th—Righteous Might, 6th—StoneskinM, 7th—Grasping Hand, 8th—Clenched Fist, 9th—Crushing Hand
+*Domain Sun
+Deities: Iomedae, Sarenrae.
+Granted Powers: You see truth in the pure and burning light of the sun, and can call upon its blessing or wrath to work great deeds. 
+Sun’s Blessing:(Su):1: Whenever you channel positive energy to harm undead creatures, add your cleric level to the damage dealt. Undead do not add their channel resistance to their saves when you channel positive energy. 
+Nimbus of Light:(Su):8: At 8th level, you can emit a 30-footnimbus of light for a number of rounds per day equal to your cleric level. This acts as a daylight spell. In addition, undead within this radius take an amount of damage equal to your cleric level each round that they remain inside the nimbus. Spells and spell-like abilities with the darkness descriptor are automatically dispelled if brought inside this nimbus. These rounds do not need to be consecutive.
+Domain Spells: 1st—Endure Elements, 2nd—Heat Metal, 3rd—Searing Light, 4th—Fire Shield, 5th—Flame Strike, 6th—Fire Seeds, 7th—Sunbeam, 8th—Sunburst, 9th—Prismatic Sphere
+*Domain Travel
+Deities: Abadar, Cayden Cailean, Desna.
+Granted Powers: You are an explorer and find enlightenment in the simple joy of travel, be it by foot or conveyance or magic. Increase your base speed by 10 feet. 
+Agile Feet:(Su):1: As a free action, you can gain increased mobility for 1 round. For the next round, you ignore all difficult terrain and do not take any penalties for moving through it. You can use this ability a number of times per day equal to 3 + your Wisdom modifier.
+Dimensional Hop:(Sp):8: At 8th level, you can teleport up to 10 feet per cleric level per day as a move action. This teleportation must be used in 5-foot increments and such movement does not provoke attacks of opportunity. You must have line of sight to your destination to use this ability. You can bring other willing creatures with you, but you must expend an equal amount of distance for each creature brought. 
+Domain Spells: 1st—Longstrider, 2nd—Locate Object, 3rd—Fly, 4th—Dimension Door, 5th—Teleport, 6th—Find the Path, 7th—Greater Teleport, 8th—Phase Door, 9th—Astral ProjectionM
+*Domain Trickery
+Deities: Asmodeus, Calistria, Lamashtu, Norgorber.
+Granted Powers: You are a master of illusions and deceptions. Bluff, Disguise, and Stealth are class skills. 
+Copycat:(Sp):1: You can create an illusory double of yourself as a move action. This double functions as a single mirror image and lasts for a number of rounds equal to your cleric level, or until the illusory duplicate is dispelled or destroyed. You can have no more than one copycat at a time. This ability does not stack with the mirror image spell. You can use this ability a number of times per day equal to 3 + your Wisdom modifier.
+Master’s Illusion:(Sp):8: At 8th level, you can create an illusion that hides the appearance of yourself and any number of allies within 30 feet for 1 round per cleric level. The save DC to disbelieve this effect is equal to 10 + 1/2 your cleric level + your Wisdom modifier. This ability otherwise functions like the spell veil. The rounds do not need to be consecutive.
+Domain Spells: 1st—Disguise Self, 2nd—Invisibility, 3rd—NondetectionM, 4th—Confusion, 5th—False VisionM, 6th—Mislead, 7th—Screen, 8th—Mass Invisibility, 9th—Time Stop
+*Domain War
+Deities: Gorum, Iomedae, Rovagug, Urgathoa.
+Granted Powers: You are a crusader for your god, always ready and willing to f ight to defend your faith. 
+Battle Rage:(Sp):1: You can touch a creature as a standard action to give it a bonus on melee damage rolls equal to 1/2 your cleric level (minimum +1) for 1 round. You can do so a number of times per day equal to 3 + your Wisdom modifier. 
+Weapon Master:(Su):8: At 8th level, as a swift action, you gain the use of one combat feat for a number of rounds per day equal to your cleric level. These rounds do not need to be consecutive and you can change the feat chosen each time you use this ability. You must meet the prerequisites to use this feat. 
+Domain Spells: 1st—Magic Weapon, 2nd—Spiritual Weapon, 3rd—Magic Vestment, 4th—Divine Power, 5th—Flame Strike, 6th—Blade Barrier, 7th—Power Word Blind, 8th—Power Word Stun, 9th—Power Word Kill
+*Domain Water
+Deities: Gozreh, Pharasma.
+Granted Powers: You can manipulate water and mist and ice, conjure creatures of water, and resist cold. 
+Icicle:(Sp):1: As a standard action, you can fire an icicle from your finger, targeting any foe within 30 feet as a ranged touch attack. The icicle deals 1d6 points of cold damage + 1 point for every two cleric levels you possess. You can use this ability a number of times per day equal to 3 + your Wisdom modifier.
+Cold Resistance:(Ex):6: At 6th level, you gain resist cold 10. This resistance increases to 20 at 12th level. At 20th level, you gain immunity to cold.
+Domain Spells: 1st—Obscuring Mist, 2nd—Fog Cloud, 3rd—Water Breathing, 4th—Control Water, 5th—Ice Storm, 6th—Cone of Cold, 7th—Elemental Body IV, 8th—Horrid Wilting, 9th—Elemental Swarm
+*Domain Weather
+Deities: Gozreh, Rovagug.
+Granted Powers: With power over storm and sky, you can call down the wrath of the gods upon the world below. 
+Storm Burst:(Sp):1: As a standard action, you can create a storm burst targeting any foe within 30 feet as a ranged touch attack. The storm burst deals 1d6 points of nonlethal damage + 1 point for every two cleric levels you possess. In addition, the target is buffeted by winds and rain, causing it to take a –2 penalty on attack rolls for 1 round. You can use this ability a number of times per day equal to 3 + your Wisdom modifier.
+Lightning Lord:(Sp):8: At 8th level, you can call down a number of bolts of lightning per day equal to your cleric level. You can call down as many bolts as you want with a single standard action, but no creature can be the target of more than one bolt and no two targets can be more than 30 feet apart. This ability otherwise functions as call lightning.
+Domain Spells: 1st—Obscuring Mist, 2nd—Fog Cloud, 3rd—Call Lightning, 4th—Sleet Storm, 5th—Ice Storm, 6th—Control Winds, 7th—Control Weather, 8th—Whirlwind, 9th—Storm of Vengeance

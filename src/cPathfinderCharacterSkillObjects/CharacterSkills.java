@@ -86,16 +86,28 @@ public class CharacterSkills {
 	}
 	public Map<Skill, Integer> getSkillRanks() {return this.skillRanksMap;}
 	public Map<Skill, Boolean> getClassSkillsMap() {return this.classSkillsMap;}
+	public boolean isClassSkill(Skill skill) {return classSkillsMap.get(skill);}
 	
 	public void incrementSkillRank(Skill skill, int value) {skillRanksMap.put(skill, skillRanksMap.get(skill) + value);}
 	
 	public void setClassSkills(Set<Skill> classSkills) {
 		for (Skill characterSkill : this.characterSkills) {
-			for (Skill classSkill : classSkills) {
-				if (classSkill.equals(characterSkill)) {
-					this.classSkillsMap.put(characterSkill, true);
-				}
+			if (classSkills.contains(characterSkill)) {
+				this.classSkillsMap.put(characterSkill, true);
 			}
+		}
+	}
+	
+	public int getCharacterSkillBonus(Skill skill) {
+		if (skillRanksMap.get(skill) == 0) {
+			return 0;
+		}
+		else {
+			int outputBonus = skillRanksMap.get(skill);
+			if (this.isClassSkill(skill)) {
+				outputBonus += 3;
+			}
+			return outputBonus;
 		}
 	}
 	

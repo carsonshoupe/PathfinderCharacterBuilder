@@ -18,7 +18,7 @@ public abstract class Race implements CharacterModifier{
 	
 	protected int[] abilityModifiers = {0, 0, 0, 0, 0, 0}; 
 	protected Sizes size; 
-	protected int speed;
+	protected int baseSpeed;
 	protected String vision;
 	protected RacialTrait[] racialTraits;
 	protected String[] familiarWeapons;
@@ -30,10 +30,8 @@ public abstract class Race implements CharacterModifier{
 	protected int bonusSkillRanks = 0;
 	protected ArrayList<Feat> featsToAdd = new ArrayList<Feat>();
 	protected int bonusFeats = 0;
-	protected int fortitudeSaveBonus = 0;
-	protected int reflexSaveBonus = 0;
-	protected int willSaveBonus = 0;
-	protected ArrayList<String> specialAbilityDescriptionsToAdd = new ArrayList<String>();
+	protected int[] savingThrowModifiers = {0, 0, 0};
+	protected ArrayList<String> specialAbilityDescriptions = new ArrayList<String>();
 	
 	
 	
@@ -56,8 +54,12 @@ public abstract class Race implements CharacterModifier{
 	public void setCharismaModifier(int value) {this.abilityModifiers[5] = value;}
 	
 	public Sizes getSize() {return this.size;}
-	public int getSpeed() {return this.speed;}
+	public int getBaseSpeed() {return this.baseSpeed;}
 	public String getVision() {return this.vision;}
+	
+	public int getFortSaveModifier() {return this.savingThrowModifiers[0];}
+	public int getReflexSaveModifier() {return this.savingThrowModifiers[1];}
+	public int getWillSaveModifier() {return this.savingThrowModifiers[2];}
 	
 	public RacialTrait[] getRacialTraits() {return this.racialTraits;}
 	
@@ -67,6 +69,8 @@ public abstract class Race implements CharacterModifier{
 	public void setFamiliarWeapons(String[] familiarWeapons) {this.familiarWeapons = familiarWeapons;}
 	public void setKnownLanguages(String[] knownLanguages) {this.knownLanguages = knownLanguages;}
 	public void setPotentialLanguages(String[] potentialLanguages) {this.potentialLanguages = potentialLanguages;}
+	
+	public ArrayList<String> getSpecialAbilityDescriptions() {return this.specialAbilityDescriptions;}
 	
 	public void incrementAbilityModifier(int abilityChoice) {
 		setStrengthModifier(0);
@@ -106,10 +110,10 @@ public abstract class Race implements CharacterModifier{
 				+ "Potential Languages: " + Arrays.toString(this.potentialLanguages) + "\n"
 				+ "Skill to Add: " + this.skillRanksToAdd.toString() + "\n"
 				+ "Feat to Add: " + this.featsToAdd.toString() + " NumBonusFeats: " + this.bonusFeats + "\n"
-				+ "Saving Throws Bonus: " + this.fortitudeSaveBonus + ":" + this.reflexSaveBonus + ":" + this.willSaveBonus + "\n"
+				+ "Saving Throws Bonus: " + Arrays.toString(this.savingThrowModifiers) + "\n"
 				+ "Bonus Skill Ranks: " + this.bonusSkillRanks + "\n";
 		String specialAbilitiesDescriptions = "Special Ability Descriptons: \n";
-		for (String specialAbilityDescription : this.specialAbilityDescriptionsToAdd) {
+		for (String specialAbilityDescription : this.specialAbilityDescriptions) {
 			specialAbilitiesDescriptions += (specialAbilityDescription + "\n");
 		}
 		outputString += specialAbilitiesDescriptions;
@@ -141,10 +145,10 @@ public abstract class Race implements CharacterModifier{
 		outputRace.bonusSkillRanks = 0;
 		outputRace.featsToAdd = new ArrayList<Feat>();
 		outputRace.bonusFeats = 0;
-		outputRace.fortitudeSaveBonus = 0;
-		outputRace.reflexSaveBonus = 0;
-		outputRace.willSaveBonus = 0;
-		outputRace.specialAbilityDescriptionsToAdd = new ArrayList<String>();
+		outputRace.savingThrowModifiers[0] = 0;
+		outputRace.savingThrowModifiers[1] = 0;
+		outputRace.savingThrowModifiers[2] = 0;
+		outputRace.specialAbilityDescriptions = new ArrayList<String>();
 		
 		outputRace.applyRacialTraitModifications();
 		
@@ -157,9 +161,9 @@ public abstract class Race implements CharacterModifier{
 				if (trait.getName().equals("ADAPTABILITY")) {this.featsToAdd.add(new Feat("SKILL_FOCUS"));}
 				if (trait.getName().equals("BONUS_FEAT")) {this.bonusFeats++;}
 				if (trait.getName().equals("HALFLING_LUCK")) {
-					this.fortitudeSaveBonus++;
-					this.reflexSaveBonus++;
-					this.willSaveBonus++;
+					this.savingThrowModifiers[0]++;
+					this.savingThrowModifiers[1]++;
+					this.savingThrowModifiers[2]++;
 				}
 				if (trait.getName().equals("INTIMIDATING")) {this.skillRanksToAdd.put(new Skill("INTIMIDATE"), 2);}
 				if (trait.getName().equals("KEEN_SENSES")) {this.skillRanksToAdd.put(new Skill("PERCEPTION"), 2);}
@@ -177,7 +181,7 @@ public abstract class Race implements CharacterModifier{
 				}
 			}
 			else {
-				this.specialAbilityDescriptionsToAdd.add(trait.toString());
+				this.specialAbilityDescriptions.add(trait.toString());
 			}
 		}
 	}	

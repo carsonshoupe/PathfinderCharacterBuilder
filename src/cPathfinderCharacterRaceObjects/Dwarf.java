@@ -22,7 +22,7 @@ public class Dwarf extends Race {
 		setCharismaModifier(-2);
 		
 		this.size = Sizes.MEDIUM;
-		this.speed = 20;
+		this.baseSpeed = 20;
 		this.vision = "Dark";
 		
 		this.racialTraits = dwarfRacialTraits;
