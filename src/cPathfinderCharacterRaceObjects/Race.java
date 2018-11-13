@@ -1,8 +1,12 @@
 package cPathfinderCharacterRaceObjects;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import cPathfinderCharacterFeatObjects.Feat;
@@ -13,10 +17,93 @@ import cPathfinderCharacterObjects.Sizes;
 import cPathfinderCharacterSkillObjects.Skill;
 
 public abstract class Race implements CharacterModifier{
+	//Static Variables:
+	public static Map<String, String[]> raceDescriptionsMap = new HashMap<String, String[]>();
+	
+	static {
+		setRaceDescriptions();
+	}
+
+	//Static Methods:
+	private static void setRaceDescriptions() {
+		String filePath = "C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterRaceObjects/RaceDescriptions.txt"; 
+		String line;
+		try {
+			BufferedReader reader = new BufferedReader(new FileReader(filePath));
+			int lineCounter = -1;
+			String key = "";
+			String[] value = new String[6];
+			while ((line = reader.readLine()) != null ) {
+				//System.out.println(line);
+				if (lineCounter == 6) {
+					raceDescriptionsMap.put(key, value);
+					value = new String[6];
+				}
+				if (line.contains("*Race")) {
+					key = line.split(":")[1];
+					lineCounter = 0;
+					continue;
+				}
+				if (lineCounter < 6) {
+					value[lineCounter] = line;
+					lineCounter++;
+				}
+			}
+			reader.close();
+		}
+		catch (IOException e) {
+			System.out.println("Failed to load raceDescriptionsMap");
+		} 
+	}
+	
+	public static String getRaceInformation(String race, String descriptionType) {
+		if (descriptionType.equals("Overview")) {
+			return raceDescriptionsMap.get(race)[0];
+		}
+		else if ((descriptionType.equals("Physical Description"))) {
+			return raceDescriptionsMap.get(race)[1];
+		}
+		else if (descriptionType.equals("Society")) {
+			return raceDescriptionsMap.get(race)[2];
+		}
+		else if (descriptionType.equals("Relations")) {
+			return raceDescriptionsMap.get(race)[3];
+		}
+		else if (descriptionType.equals("Alignment and Religion")) {
+			return raceDescriptionsMap.get(race)[4];
+		}
+		else if (descriptionType.equals("Adventurers")) {
+			return raceDescriptionsMap.get(race)[5];
+		}
+		else {
+			return null;
+		}
+	}
+	
+	public static String getOverview(String race) {return raceDescriptionsMap.get(race)[0];}
+	public static String getPhysicalDescription(String race) {return raceDescriptionsMap.get(race)[1];}
+	public static String getSociety(String race) {return raceDescriptionsMap.get(race)[2];}
+	public static String getRelations(String race) {return raceDescriptionsMap.get(race)[3];}
+	public static String getAlignmentAndReligion(String race) {return raceDescriptionsMap.get(race)[4];}
+	public static String getAdventurers(String race) {return raceDescriptionsMap.get(race)[5];}
+
+	public static List<String> getAllRaces() {
+		List<String> races = new ArrayList<String>();
+		races.add("Dwarf");
+		races.add("Elf");
+		races.add("Gnome");
+		races.add("Half-Elf");
+		races.add("Half-Orc");
+		races.add("Human");
+		races.add("Halfling");
+		return races;
+	}
+	
 	//Instance Variables: 
 	protected String raceType;
 	
 	protected int[] abilityModifiers = {0, 0, 0, 0, 0, 0}; 
+	protected String abilityModifierText = "";
 	protected Sizes size; 
 	protected int baseSpeed;
 	protected String vision;
@@ -36,7 +123,6 @@ public abstract class Race implements CharacterModifier{
 	
 	
 	//Methods: 
-	
 	public int getStrengthModifier() {return this.abilityModifiers[0];}
 	public int getDexterityModifier() {return this.abilityModifiers[1];}
 	public int getConstitutionModifier() {return this.abilityModifiers[2];}
@@ -52,6 +138,8 @@ public abstract class Race implements CharacterModifier{
 	public void setIntelligenceModifier(int value) {this.abilityModifiers[3] = value;}
 	public void setWisdomModifier(int value) {this.abilityModifiers[4] = value;}
 	public void setCharismaModifier(int value) {this.abilityModifiers[5] = value;}
+	
+	public String getAbilityModifierText() {return this.abilityModifierText;}
 	
 	public Sizes getSize() {return this.size;}
 	public int getBaseSpeed() {return this.baseSpeed;}
@@ -88,16 +176,90 @@ public abstract class Race implements CharacterModifier{
 		if (abilityChoice == 5) {setCharismaModifier(2);}
 	}
 	
+	public static Race instantiateRace(String race) {
+		if (race == "Dwarf") {
+			return new Dwarf();
+		}
+		else if (race == "Elf") {
+			return  new Elf();
+		}
+		else if (race == "Gnome") {
+			return  new Gnome();
+		}
+		else if (race == "Half-Elf") {
+			return  new HalfElf();
+		}
+		else if (race == "Half-Orc") {
+			return  new HalfOrc();
+		}
+		else if (race == "Halfling") {
+			return  new Halfling();
+		}
+		else if (race == "Human") {
+			return  new Human();
+		}
+		else {
+			return null;
+		}
+	}
+	
 	@Override
 	public String toString() {
-		String outputString = this.raceType + ": " + Arrays.deepToString(this.racialTraits) + "\n"
-				+ "Ability Modifiers: " + Arrays.toString(this.abilityModifiers) + "\n"
-				+ "Size: " + this.size.toString() + "\n"
+		StringBuilder outputString = new StringBuilder("Size: " + this.size.toString() + "\n"
 				+ "Vision: " + this.vision + "\n"
-				+ "Familiar Weapons: " + Arrays.toString(this.familiarWeapons) + "\n"
-				+ "Known Languages: " + Arrays.toString(this.knownLanguages) + "\n"
-				+ "Potential Languages: " + Arrays.toString(this.potentialLanguages) + "\n";
-		return outputString;
+				+ "Familiar Weapons: "); 
+		
+		for (String weapon : this.familiarWeapons) {
+			outputString.append(weapon + " "); 
+		}
+		outputString.append("\nKnown Languages: ");
+		for (String language : this.knownLanguages) {
+			outputString.append(language + " "); 
+		}
+		outputString.append("\nPotential Languages: ");
+		for (String langauge : this.potentialLanguages) {
+			outputString.append(langauge + " ");
+		}
+		outputString.append("\nBenefits:\n");
+		for (RacialTrait rt : this.racialTraits) {
+			outputString.append(rt.toString() + "\n");
+		}
+		return outputString.toString();
+	}
+	
+	public String abilityModifiersToString() {
+		StringBuilder outputString = new StringBuilder();
+		for (int counter = 0; counter < 6; counter++) {
+			if (this.getAbilityModifiers()[counter] != 0) {
+				String abilityModifier = "";
+				if (this.getAbilityModifiers()[counter] > 0) {
+					abilityModifier = "+" + Integer.toString(this.getAbilityModifiers()[counter]);
+				}
+				else {
+					abilityModifier = Integer.toString(this.getAbilityModifiers()[counter]);
+				}
+					
+				if (counter == 0) {
+					outputString.append("STR: " + abilityModifier + " ");
+				}
+				else if (counter == 1) {
+					outputString.append("DEX: " + abilityModifier + " ");
+				}
+				else if (counter == 2) {
+					outputString.append("CON: " + abilityModifier + " ");
+				}
+				else if (counter == 3) {
+					outputString.append("INT: " + abilityModifier + " ");
+				}
+				else if (counter == 4) {
+					outputString.append("WIS: " + abilityModifier + " ");
+				}
+				else {
+					outputString.append("CHA: " + abilityModifier + " ");
+				}
+			}
+		}
+		return outputString.toString();
 	}
 	
 	public String modificationsToString() {

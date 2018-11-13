@@ -11,12 +11,14 @@ import java.util.Set;
 
 import cPathfinderCharacterSkillObjects.Skill;
 
+//TODO: Add level dictated stats
+
 public class Monk extends CharacterClass {
 	//Static Variables: 	
 	protected static final Set<Skill> monkClassSkills = new HashSet<Skill>(Arrays.asList(new Skill("ACROBATICS"), new Skill("CLIMB"), new Skill("CRAFT1"), 
-			new Skill("CRAFT2"), new Skill("CRAFT3"), new Skill("ESCAPE_ARTIST"), new Skill("INTIMIDATE"), new Skill("KNOWLEDGE_RELIGION"), 
-			new Skill("PERCEPTION"), new Skill("PERFORM1"), new Skill("PERFORM2"), new Skill("PROFESSION1"), new Skill("PROFESSION2"), 
-			new Skill("RIDE"), new Skill("SENSE_MOTIVE"), new Skill("STEALTH"), new Skill("SWIM")));
+			new Skill("CRAFT2"), new Skill("CRAFT3"), new Skill("ESCAPE_ARTIST"), new Skill("INTIMIDATE"), new Skill("KNOWLEDGE_HISTORY"), 
+			new Skill("KNOWLEDGE_RELIGION"), new Skill("PERCEPTION"), new Skill("PERFORM1"), new Skill("PERFORM2"), new Skill("PROFESSION1"), 
+			new Skill("PROFESSION2"), new Skill("RIDE"), new Skill("SENSE_MOTIVE"), new Skill("STEALTH"), new Skill("SWIM")));
 	
 	protected static final Map<String, ClassFeature> monkClassFeatures = new HashMap<String, ClassFeature>();
 	static {
@@ -45,14 +47,15 @@ public class Monk extends CharacterClass {
 
 	
 	//Instance Variables:
+	private int kaiPool = 0;
 	
 	//Constructors:
 	public Monk(int level) {
 		this.level = level;
-		this.alignmentRestriction = "None";
-		this.hitDie = 10;
+		this.alignmentRestriction = "Any Lawful";
+		this.hitDie = 8;
 		this.classSkills = monkClassSkills;
-		this.skillRanksPerLevel = 2;
+		this.skillRanksPerLevel = 4;
 		this.weaponAndArmorProficiencies = "Monks are proficient with the club, crossbow (light or heavy), dagger, "
 				+ "handaxe,	javelin, kama, nunchaku, quarterstaff, sai, shortspear,	short sword, shuriken, "
 				+ "siangham, sling, and spear. Monks are not proficient with any armor or shields. When wearing "
@@ -69,5 +72,7 @@ public class Monk extends CharacterClass {
 	}
 	
 	//Methods:
+	public int getKaiPool() {return this.kaiPool;}
+	public void setKaiPool(int value) {this.kaiPool = value;}
 
 }

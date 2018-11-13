@@ -1,39 +1,39 @@
-ACROBATICS:Ability to traverse narrow or treacherous surfaces:false:1:87
-APPRAISE:Evaluate the monetary value of an object:false:3:90
-BLUFF:Skill to lie:false:5:90
-CLIMB:Ability to scale vertical surfaces from smooth city walls to rocky cliffs:false:0:90
-CRAFT1:Skill to craft a specific group of items:false:5:90
-CRAFT2:Skill to craft a specific group of items:false:5:90
-CRAFT3:Skill to craft a specific group of items:false:5:90
-DIPLOMACY:Skill to persuade others:false:5:93
-DISABLE_DEVICE:Skill to disarm traps and open locks:true:1:94
-DISGUISE:Skill to change one's appearance:false:5:95
-ESCAPE_ARTIST:Skill to slip out of bonds and escape from grapples:false:1:95
-FLY:Skill to perform daring or complex airborne maneuvers -- Note - This skill does not give you the ability to fly:false:1:96
-HANDLE_ANIMAL:Skill with animals, including tricks and simple commands:true:5:97
-HEAL:Skill tending to wounds and ailments:false:4:98
-INTIMIDATE:Skill to frighten others to act in a way that benefits you:false:5:99
-KNOWLEDGE_ARCANA:Knolwedge of ancient mysteries, magic traditions, arcane symbols, constructs, dragons, and magical beasts:true:3:99
-KNOWLEDGE_DUNGEONEERING:Knowldge of aberrations, caverns, oozes, and spelunking:true:3:99
-KNOWLEDGE_ENGINEERING:Knowldge of buildings, aqueducts, bridges, and fortifications:true:3:99
-KNOWLEDGE_GEOGRAPHY:Knowldge of lands, terrain, climate, and people:true:3:99
-KNOWLEDGE_HISTORY:Knowldge of wars, colonies, migrations, and founding of cities:true:3:99
-KNOWLEDGE_LOCAL:Knowldge of legends, personalities, inhabitants, laws, customs, traditions, and humanoids:true:3:99
-KNOWLEDGE_NATURE:Knowldge of animals, fey, monstrous humanoids, plants, seasons and cycles, weather, and vermin:true:3:99
-KNOWLEDGE_NOBILITY:Knowldge of lineages, heraldry, personalities, and royalty:true:3:99
-KNOWLEDGE_PLANES:Knowldge of the Inner Planes, the Outer Planes, the Astral Plane, the Ethereal Plane, outsiders, and planar magic:true:3:99
-KNOWLEDGE_RELIGION:Knowldge of gods and goddesses, mythic history, ecclesiastic tradition, holy symbols, and undead:true:3:99
-LINGUISTICS:Skill working with languages:true:3:100
-PERCEPTION:Sense to notice finer details and alert you to danger:true:3:100
-PERFORM1:Skill in a form of entertainment:false:5:102
-PERFORM2:Skill in a form of entertainment:false:5:102
-PROFESSION1:Skill in a specific job:true:4:103
-PROFESSION2:Skill in a specific job:true:4:103
-RIDE:Skill to ride animals:false:1:103
-SENSE_MOTIVE:Skill to detect falsehood and true intentions:false:4:104
-SLIGHT_OF_HAND:Skill to pick pockets, draw hidden weapons, and take a variety of actions without being noticed:true:1:104
-SPELLCRAFT:Skill at the art of casting spells, identifying magic items, crafting magic items, and identifying spells as they are being cast:true:3:106
-STEALTH:Skill at avoiding detection, allowing you to slip past foes or strike from an unseen position:false:1:106
-SURVIVAL:Skill to navigate the wilderness:false:4:107
-SWIM:Skill to swim:false:0:108
-USE_MAGICAL_DEVICE:Skill to activate magical items:true:5:108
+ACROBATICS:Ability to traverse narrow or treacherous surfaces:false:DEX:87
+APPRAISE:Evaluate the monetary value of an object:false:INT:90
+BLUFF:Skill to lie:false:CHA:90
+CLIMB:Ability to scale vertical surfaces from smooth city walls to rocky cliffs:false:STR:90
+CRAFT1:Skill to craft a specific group of items:false:CHA:90
+CRAFT2:Skill to craft a specific group of items:false:CHA:90
+CRAFT3:Skill to craft a specific group of items:false:CHA:90
+DIPLOMACY:Skill to persuade others:false:CHA:93
+DISABLE_DEVICE:Skill to disarm traps and open locks:true:DEX:94
+DISGUISE:Skill to change one's appearance:false:CHA:95
+ESCAPE_ARTIST:Skill to slip out of bonds and escape from grapples:false:DEX:95
+FLY:Skill to perform daring or complex airborne maneuvers -- Note - This skill does not give you the ability to fly:false:DEX:96
+HANDLE_ANIMAL:Skill with animals, including tricks and simple commands:true:CHA:97
+HEAL:Skill tending to wounds and ailments:false:WIS:98
+INTIMIDATE:Skill to frighten others to act in a way that benefits you:false:CHA:99
+KNOWLEDGE_ARCANA:Knolwedge of ancient mysteries, magic traditions, arcane symbols, constructs, dragons, and magical beasts:true:INT:99
+KNOWLEDGE_DUNGEONEERING:Knowldge of aberrations, caverns, oozes, and spelunking:true:INT:99
+KNOWLEDGE_ENGINEERING:Knowldge of buildings, aqueducts, bridges, and fortifications:true:INT:99
+KNOWLEDGE_GEOGRAPHY:Knowldge of lands, terrain, climate, and people:true:INT:99
+KNOWLEDGE_HISTORY:Knowldge of wars, colonies, migrations, and founding of cities:true:INT:99
+KNOWLEDGE_LOCAL:Knowldge of legends, personalities, inhabitants, laws, customs, traditions, and humanoids:true:INT:99
+KNOWLEDGE_NATURE:Knowldge of animals, fey, monstrous humanoids, plants, seasons and cycles, weather, and vermin:true:INT:99
+KNOWLEDGE_NOBILITY:Knowldge of lineages, heraldry, personalities, and royalty:true:INT:99
+KNOWLEDGE_PLANES:Knowldge of the Inner Planes, the Outer Planes, the Astral Plane, the Ethereal Plane, outsiders, and planar magic:true:INT:99
+KNOWLEDGE_RELIGION:Knowldge of gods and goddesses, mythic history, ecclesiastic tradition, holy symbols, and undead:true:INT:99
+LINGUISTICS:Skill working with languages:true:INT:100
+PERCEPTION:Sense to notice finer details and alert you to danger:true:INT:100
+PERFORM1:Skill in a form of entertainment:false:CHA:102
+PERFORM2:Skill in a form of entertainment:false:CHA:102
+PROFESSION1:Skill in a specific job:true:WIS:103
+PROFESSION2:Skill in a specific job:true:WIS:103
+RIDE:Skill to ride animals:false:DEX:103
+SENSE_MOTIVE:Skill to detect falsehood and true intentions:false:WIS:104
+SLIGHT_OF_HAND:Skill to pick pockets, draw hidden weapons, and take a variety of actions without being noticed:true:DEX:104
+SPELLCRAFT:Skill at the art of casting spells, identifying magic items, crafting magic items, and identifying spells as they are being cast:true:INT:106
+STEALTH:Skill at avoiding detection, allowing you to slip past foes or strike from an unseen position:false:DEX:106
+SURVIVAL:Skill to navigate the wilderness:false:WIS:107
+SWIM:Skill to swim:false:STR:108
+USE_MAGICAL_DEVICE:Skill to activate magical items:true:CHA:108

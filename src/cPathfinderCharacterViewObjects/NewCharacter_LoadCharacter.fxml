@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="207.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cPathfinderCharacterControlObjects.NewCharacter_LoadCharacterControl">
+   <children>
+      <Button fx:id="loadCharacterButon" layoutX="170.0" layoutY="127.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="133.0" text="Load Character" />
+      <Button fx:id="newCharacterButton" layoutX="14.0" layoutY="127.0" mnemonicParsing="false" onAction="#newCharacterButtonClick" prefHeight="66.0" prefWidth="133.0" text="New Character" />
+      <Label layoutX="56.0" layoutY="14.0" prefHeight="97.0" prefWidth="209.0" text="Welcome to the Pathfinder Character Builder" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</AnchorPane>

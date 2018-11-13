@@ -6,6 +6,9 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import javafx.collections.FXCollections;
+import javafx.collections.transformation.SortedList;
+
 
 public class CharacterSkills {
 	//Instance Variables: 	
@@ -18,6 +21,8 @@ public class CharacterSkills {
 			new Skill("PERCEPTION"), new Skill("PERFORM1"), new Skill("PERFORM2"), new Skill("PROFESSION1"), new Skill("PROFESSION2"),
 			new Skill("RIDE"), new Skill("SENSE_MOTIVE"), new Skill("SLIGHT_OF_HAND"), new Skill("SPELLCRAFT"), new Skill("STEALTH"),
 			new Skill("SURVIVAL"), new Skill("SWIM"), new Skill("USE_MAGICAL_DEVICE")};
+	
+	private SortedList<Skill> characterSkillsList = new SortedList<Skill>(FXCollections.observableArrayList(Arrays.asList(this.characterSkills))); //TODO: Add Comparator
 	
 	private Map<Skill, Integer> skillRanksMap = new HashMap<Skill, Integer>();
 	private Map<Skill, Boolean> classSkillsMap = new HashMap<Skill, Boolean>();
@@ -73,6 +78,7 @@ public class CharacterSkills {
 	public Skill getUseMagicalDevice() {return this.characterSkills[38];}
 	
 	public Skill[] getCharacterSkills() {return this.characterSkills;}
+	public SortedList<Skill> getCharacterSkillsList() {return this.characterSkillsList;}
 	
 	public Set<Skill> getClassSkills() {
 		Set<Skill> classSkills = new HashSet<Skill>();

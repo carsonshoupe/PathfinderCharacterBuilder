@@ -21,13 +21,15 @@ public class Dwarf extends Race {
 		setWisdomModifier(2);
 		setCharismaModifier(-2);
 		
+		this.abilityModifierText = "Dwarves are both tough and wise, but also a bit gruff.";
+		
 		this.size = Sizes.MEDIUM;
 		this.baseSpeed = 20;
 		this.vision = "Dark";
 		
 		this.racialTraits = dwarfRacialTraits;
 		
-		this.familiarWeapons = new String[] {"battleaxes", "heavy picks", "warhammers"};
+		this.familiarWeapons = new String[] {"Battleaxes", "Heavy Picks", "Warhammers"};
 		this.knownLanguages = new String[] {"Common", "Dwarven"};
 		this.potentialLanguages = new String[] {"Giant", "Gnome", "Goblin", "Orc", "Terran", "Undercommon"};	
 		

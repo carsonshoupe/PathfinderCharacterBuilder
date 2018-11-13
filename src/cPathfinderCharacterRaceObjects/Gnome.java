@@ -21,6 +21,8 @@ public class Gnome extends Race {
 		setWisdomModifier(0);
 		setCharismaModifier(2);
 		
+		this.abilityModifierText = "Gnomes are physically weak but surprisingly hardy, and their attitude makes them naturally agreeable.";
+		
 		this.size = Sizes.SMALL;
 		this.baseSpeed = 20;
 		this.vision = "Low-Light";

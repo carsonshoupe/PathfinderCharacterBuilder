@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="0.0" prefHeight="764.0" prefWidth="1234.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cPathfinderCharacterControlObjects.MainPageControl">
+   <children>
+      <MenuBar layoutY="7.0" prefHeight="25.0" prefWidth="857.0" AnchorPane.bottomAnchor="834.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <SplitPane dividerPositions="0.6868686868686869" layoutY="28.0" prefHeight="736.0" prefWidth="1234.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TabPane prefHeight="734.0" prefWidth="843.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab fx:id="characterTab" text="Character">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TextField fx:id="playerNameField" layoutX="126.0" layoutY="59.0" prefWidth="160.0" />
+                                    <Label layoutX="24.0" layoutY="58.0" prefHeight="27.0" prefWidth="74.0" text="Your Name:" />
+                                    <Label layoutX="24.0" layoutY="14.0" prefHeight="33.0" prefWidth="275.0" text="Character">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="24.0" layoutY="127.0" prefHeight="27.0" prefWidth="101.0" text="Character Name: " />
+                                    <TextField fx:id="characterNameField" layoutX="126.0" layoutY="128.0" prefWidth="160.0" />
+                                    <Label layoutX="24.0" layoutY="154.0" prefHeight="27.0" prefWidth="74.0" text="Gender:" />
+                                    <Label layoutX="24.0" layoutY="181.0" prefHeight="27.0" prefWidth="74.0" text="Age:" />
+                                    <Label layoutX="24.0" layoutY="208.0" prefHeight="27.0" prefWidth="74.0" text="Height:" />
+                                    <Label layoutX="24.0" layoutY="235.0" prefHeight="27.0" prefWidth="74.0" text="Weight:" />
+                                    <Label layoutX="24.0" layoutY="262.0" prefHeight="27.0" prefWidth="74.0" text="Hair Color:" />
+                                    <TextField fx:id="hairColorField" layoutX="126.0" layoutY="263.0" prefWidth="160.0" />
+                                    <Label layoutX="24.0" layoutY="289.0" prefHeight="27.0" prefWidth="74.0" text="Eye Color:" />
+                                    <TextField fx:id="eyeColorField" layoutX="126.0" layoutY="290.0" prefWidth="160.0" />
+                                    <RadioButton fx:id="maleRadioButton" layoutX="138.0" layoutY="159.0" mnemonicParsing="false" selected="true" text="Male">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="genderToggleGroup" />
+                                       </toggleGroup></RadioButton>
+                                    <RadioButton fx:id="femaleRadioButton" layoutX="209.0" layoutY="159.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="66.0" text="Female" toggleGroup="$genderToggleGroup" />
+                                    <ComboBox fx:id="heightComboBox" layoutX="126.0" layoutY="209.0" prefWidth="160.0" promptText="-- Select Height --" />
+                                    <ComboBox fx:id="weightComboBox" layoutX="126.0" layoutY="236.0" prefWidth="160.0" promptText="-- Select Weight --" />
+                                    <TextField fx:id="deityField" layoutX="126.0" layoutY="317.0" prefWidth="160.0" />
+                                    <Label layoutX="24.0" layoutY="316.0" prefHeight="27.0" prefWidth="74.0" text="Deity:" />
+                                    <TextField fx:id="homelandField" layoutX="126.0" layoutY="344.0" prefWidth="160.0" />
+                                    <Label layoutX="24.0" layoutY="343.0" prefHeight="27.0" prefWidth="74.0" text="Homeland:" />
+                                    <ComboBox fx:id="ageComboBox" layoutX="126.0" layoutY="182.0" prefWidth="160.0" promptText="-- Select Age --" />
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Race">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" prefHeight="33.0" prefWidth="241.0" text="Race">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="raceSelectorComboBox" layoutX="14.0" layoutY="51.0" onAction="#raceSelected" prefHeight="25.0" prefWidth="190.0" promptText="-- Select Race --" />
+                                    <ComboBox fx:id="raceInformationComboBox" layoutX="416.0" layoutY="51.0" onAction="#raceInformationSelected" prefHeight="25.0" prefWidth="190.0" promptText="-- Race Information --" />
+                                    <TextArea fx:id="raceInformationTextArea" editable="false" layoutX="416.0" layoutY="95.0" prefHeight="208.0" prefWidth="408.0" wrapText="true" />
+                                    <ImageView fx:id="raceImage" fitHeight="355.0" fitWidth="237.0" layoutX="502.0" layoutY="316.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Pane fx:id="racialTraitsPane" layoutX="14.0" layoutY="94.0" prefHeight="538.0" prefWidth="402.0">
+                                       <children>
+                                          <Label fx:id="racialTraitsLabel" prefHeight="38.0" prefWidth="165.0" text="Racial Traits:">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutY="155.0" prefHeight="20.0" prefWidth="100.0" text="Size:" />
+                                          <TextField fx:id="sizeTextField" editable="false" layoutX="159.0" layoutY="155.0" prefHeight="25.0" prefWidth="215.0" />
+                                          <TextField fx:id="visionTextField" editable="false" layoutX="159.0" layoutY="182.0" prefHeight="25.0" prefWidth="215.0" />
+                                          <Label layoutY="182.0" prefHeight="20.0" prefWidth="100.0" text="Vision:" />
+                                          <TextField fx:id="familiarWeaponsTextField" editable="false" layoutX="159.0" layoutY="210.0" prefWidth="215.0" />
+                                          <Label layoutY="210.0" prefHeight="20.0" prefWidth="111.0" text="Familiar Weapons:" />
+                                          <TextField fx:id="languagesTextField" editable="false" layoutX="159.0" layoutY="238.0" prefWidth="215.0" />
+                                          <Label layoutY="238.0" prefHeight="20.0" prefWidth="100.0" text="Languages:" />
+                                          <Label layoutY="38.0" prefHeight="28.0" prefWidth="100.0" text="Ability Modifiers:" />
+                                          <TextArea fx:id="abilityModifiersTextArea" editable="false" layoutX="159.0" layoutY="42.0" prefHeight="108.0" prefWidth="215.0" wrapText="true" />
+                                          <Pane fx:id="abilityModifierPane" layoutY="68.0" prefHeight="76.0" prefWidth="156.0">
+                                             <children>
+                                                <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="72.0" text="Strength">
+                                                   <font>
+                                                      <Font size="10.0" />
+                                                   </font>
+                                                   <toggleGroup>
+                                                      <ToggleGroup fx:id="abilityModifierToggleGroup" />
+                                                   </toggleGroup>
+                                                </RadioButton>
+                                                <RadioButton layoutX="82.0" layoutY="1.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="63.0" text="Dexterity" toggleGroup="$abilityModifierToggleGroup">
+                                                   <font>
+                                                      <Font size="10.0" />
+                                                   </font>
+                                                </RadioButton>
+                                                <RadioButton layoutY="28.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="79.0" text="Constitution" toggleGroup="$abilityModifierToggleGroup">
+                                                   <font>
+                                                      <Font size="10.0" />
+                                                   </font>
+                                                </RadioButton>
+                                                <RadioButton layoutY="54.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="72.0" text="Wisdom" toggleGroup="$abilityModifierToggleGroup">
+                                                   <font>
+                                                      <Font size="10.0" />
+                                                   </font>
+                                                </RadioButton>
+                                                <RadioButton layoutX="82.0" layoutY="28.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="72.0" text="Intelligence" toggleGroup="$abilityModifierToggleGroup">
+                                                   <font>
+                                                      <Font size="10.0" />
+                                                   </font>
+                                                </RadioButton>
+                                                <RadioButton layoutX="82.0" layoutY="54.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="62.0" text="Charisma" toggleGroup="$abilityModifierToggleGroup">
+                                                   <font>
+                                                      <Font size="10.0" />
+                                                   </font>
+                                                </RadioButton>
+                                             </children>
+                                          </Pane>
+                                          <ComboBox fx:id="racialTraitsComboBox" layoutY="288.0" onAction="#updateRacialTraitsTextArea" prefWidth="150.0" promptText="-- Racial Traits --" />
+                                          <TextArea fx:id="racialTraitsTextArea" layoutY="323.0" prefHeight="201.0" prefWidth="374.0" wrapText="true" />
+                                       </children>
+                                    </Pane>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab text="Class">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                          </content>
+                        </Tab>
+                        <Tab text="Ability Score">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                          </content>
+                        </Tab>
+                        <Tab text="Skills">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="skillsTable" layoutX="14.0" layoutY="56.0" prefHeight="635.0" prefWidth="529.0">
+                                      <columns>
+                                          <TableColumn prefWidth="63.0" text="Class Skill" />
+                                          <TableColumn fx:id="trainedOnlyCol" prefWidth="77.0" text="Trained Only" />
+                                        <TableColumn fx:id="skillNameCol" editable="false" prefWidth="192.0" text="Skill" />
+                                          <TableColumn editable="false" minWidth="0.0" prefWidth="39.0" text="Total" />
+                                        <TableColumn fx:id="abilityModifierCol" editable="false" minWidth="0.0" prefWidth="56.0" text="Modifier" />
+                                          <TableColumn minWidth="0.0" prefWidth="38.0" text="Ranks" />
+                                          <TableColumn editable="false" prefWidth="49.0" text="Misc." />
+                                      </columns>
+                                    </TableView>
+                                    <Label layoutX="14.0" layoutY="14.0" prefHeight="33.0" prefWidth="241.0" text="Skills">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextArea layoutX="558.0" layoutY="85.0" prefHeight="540.0" prefWidth="269.0" />
+                                    <Label layoutX="618.0" layoutY="56.0" prefHeight="33.0" prefWidth="149.0" text="Skill Description">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children></AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Feats">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                        </Tab>
+                        <Tab text="Spells">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                        </Tab>
+                        <Tab text="Items">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                        </Tab>
+                        <Tab text="Character Overview">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TextArea fx:id="pbcAssistantText" layoutX="8.0" layoutY="94.0" prefHeight="635.0" prefWidth="367.0" />
+                  <Label fx:id="pcbAssistantTitle" alignment="CENTER" layoutX="8.0" layoutY="14.0" prefHeight="56.0" prefWidth="367.0" text="PCB Assistant" textAlignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -2,6 +2,7 @@ package cPathfinderCharacterClassObjects;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Set;
 
 import cPathfinderCharacterObjects.CharacterModifier;
@@ -19,9 +20,9 @@ public abstract class CharacterClass implements CharacterModifier {
 	protected int skillRanksPerLevel;
 	protected String weaponAndArmorProficiencies; 
 	protected int[] baseSavingThrows = {0, 0, 0};
-	protected ArrayList<ClassFeature> classFeatures = new ArrayList<ClassFeature>();
+	protected Set<ClassFeature> classFeatures = new HashSet<ClassFeature>();
 	protected CharacterSpells characterSpellsObject = new CharacterSpells();
-	protected ArrayList<Spell> spells = new ArrayList<Spell>();
+	protected Set<Spell> spells = new HashSet<Spell>();
 	
 		//Modifications:
 	protected ArrayList<String> specialAbilityDescriptions = new ArrayList<String>();
@@ -36,8 +37,8 @@ public abstract class CharacterClass implements CharacterModifier {
 	public int getBaseFortSave() {return this.baseSavingThrows[0];}
 	public int getBaseReflexSave() {return this.baseSavingThrows[1];}
 	public int getBaseWillSave() {return this.baseSavingThrows[2];}
-	public ArrayList<ClassFeature> getClassFeatures() {return this.classFeatures;}
-	public ArrayList<Spell> getSpells() {return this.spells;}
+	public Set<ClassFeature> getClassFeatures() {return this.classFeatures;}
+	public Set<Spell> getSpells() {return this.spells;}
 	public ArrayList<String> getSpecialAbilityDescriptions() {return this.specialAbilityDescriptions;}
 	
 	public PathfinderCharacter updateCharacter(PathfinderCharacter pathfinderCharacter) {
@@ -69,8 +70,8 @@ public abstract class CharacterClass implements CharacterModifier {
 				+ "Spells: " + this.getSpells().toString() + "\n";
 		
 		String specialAbilityDescriptions = ""; 
-		for (String specialAbilityDescription : this.getSpecialAbilityDescriptions()) {
-			specialAbilityDescriptions += specialAbilityDescription + "\n";
+		for (ClassFeature classFeature : this.getClassFeatures()) {
+			specialAbilityDescriptions += classFeature.getName() + ": " + classFeature.getFullDescription() + "\n";
 		}
 		outputString += specialAbilityDescriptions;
 		return outputString;

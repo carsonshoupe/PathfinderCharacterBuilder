@@ -20,13 +20,15 @@ public class Elf extends Race{
 		setWisdomModifier(0);
 		setCharismaModifier(0);
 		
+		this.abilityModifierText = "Elves are nimble, both in body and mind, but their form is frail.";
+		
 		this.size = Sizes.MEDIUM;
 		this.baseSpeed = 30;
 		this.vision = "Low-Light";
 		
 		this.racialTraits = elfRacialTraits;
 		
-		this.familiarWeapons = new String[] {"longbows", "composite longbows", "longswords", "rapiers", "shortbows", "composite shortbows"};
+		this.familiarWeapons = new String[] {"Bows", "Longswords", "Rapiers"};
 		this.knownLanguages = new String[] {"Common", "Elven"};
 		this.potentialLanguages = new String[] {"Celestial", "Draconic", "Gnoll", "Gnome", "Goblin", "Orc", "Sylvan"};	
 		

@@ -160,7 +160,7 @@ public class PathfinderCharacter {
 	
 	public String getWeaponAndArmorProficiencies() {return this.characterClass.getWeaponAndArmorProficiencies();}
 	
-	public ArrayList<ClassFeature> getClassFeatures() {return this.characterClass.getClassFeatures();}
+	public Set<ClassFeature> getClassFeatures() {return this.characterClass.getClassFeatures();}
 	
 	 //Skill Methods:
 	public CharacterSkills getCharacterSkills() {return this.characterSkills;}
@@ -197,7 +197,8 @@ public class PathfinderCharacter {
 	}
 	
 	 //Spell Methods:
-	public ArrayList<Spell> getSpells() {return this.characterClass.getSpells();}
+	//TODO: Fix spells getter
+	public Set<Spell> getSpells() {return this.characterClass.getSpells();}
 
 	
 	@SuppressWarnings("unchecked")

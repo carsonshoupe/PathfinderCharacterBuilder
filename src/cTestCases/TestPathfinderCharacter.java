@@ -12,13 +12,20 @@ import java.util.Set;
 import org.junit.Test;
 
 import cPathfinderCharacterClassObjects.AnimalCompanion;
+import cPathfinderCharacterClassObjects.ArcaneSchool;
 import cPathfinderCharacterClassObjects.Barbarian;
 import cPathfinderCharacterClassObjects.Bard;
+import cPathfinderCharacterClassObjects.Bloodline;
 import cPathfinderCharacterClassObjects.Cleric;
 import cPathfinderCharacterClassObjects.ClericDomain;
 import cPathfinderCharacterClassObjects.Druid;
 import cPathfinderCharacterClassObjects.Fighter;
 import cPathfinderCharacterClassObjects.Monk;
+import cPathfinderCharacterClassObjects.Paladin;
+import cPathfinderCharacterClassObjects.Ranger;
+import cPathfinderCharacterClassObjects.Rogue;
+import cPathfinderCharacterClassObjects.Sorcerer;
+import cPathfinderCharacterClassObjects.Wizard;
 import cPathfinderCharacterFeatObjects.CharacterFeats;
 import cPathfinderCharacterFeatObjects.Feat;
 import cPathfinderCharacterObjects.PathfinderCharacter;
@@ -29,6 +36,7 @@ import cPathfinderCharacterRaceObjects.HalfElf;
 import cPathfinderCharacterRaceObjects.HalfOrc;
 import cPathfinderCharacterRaceObjects.Halfling;
 import cPathfinderCharacterRaceObjects.Human;
+import cPathfinderCharacterRaceObjects.Race;
 import cPathfinderCharacterSkillObjects.CharacterSkills;
 import cPathfinderCharacterSkillObjects.Skill;
 import cPathfinderCharacterSpellObjects.Spell;
@@ -62,6 +70,17 @@ public class TestPathfinderCharacter {
 		halflingCharacter.setRace(new Halfling());
 		System.out.println(halflingCharacter.getRace().modificationsToString());
 		
+		System.out.println("Race Descriptions: " + Race.getAllRaces().toString());
+		
+		for(String race : Race.getAllRaces()) {
+			System.out.println("Overview: " + Race.getOverview(race));
+			System.out.println("Physical Description: " + Race.getPhysicalDescription(race));
+			System.out.println("Society: " + Race.getSociety(race));
+			System.out.println("Relations: " + Race.getRelations(race));
+			System.out.println("Alignment and Religion: " + Race.getAlignmentAndReligion(race));
+			System.out.println("Adventurers: " + Race.getAdventurers(race));
+		}
+		
 		
 	}
 
@@ -80,6 +99,11 @@ public class TestPathfinderCharacter {
 			charSkills.incrementSkillRank(skill, -5);
 		}
 		System.out.println(chad.getCharacterSkills().toString()); 
+		
+		CharacterSkills cs = new CharacterSkills();
+		for (Skill skill : cs.getCharacterSkills()) {
+			System.out.println(skill.toString() + ": " + skill.isTrainedOnly());
+		}
 		
 		Set<Skill> classSkills = new HashSet<Skill>(Arrays.asList(new Skill("ACROBATICS"), new Skill("CLIMB"), new Skill("CRAFT1"), 
 				new Skill("CRAFT2"), new Skill("CRAFT3"), new Skill("HANDLE_ANIMAL"), new Skill("INTIMIDATE"), new Skill("KNOWLEDGE_NATURE"), 
@@ -130,14 +154,14 @@ public class TestPathfinderCharacter {
 	
 	@Test
 	public void testCharacterClassBarbarian() {
-		PathfinderCharacter james = new PathfinderCharacter();
+		PathfinderCharacter pc = new PathfinderCharacter();
 		Barbarian testBarbarianClass = new Barbarian(1); 
 		System.out.println(testBarbarianClass.modificationsToString());
 	}
 	
 	@Test
 	public void testCharacterClassBard() {
-		PathfinderCharacter jimmy = new PathfinderCharacter();
+		PathfinderCharacter pc = new PathfinderCharacter();
 		Bard testBardClass = new Bard(1); 
 		System.out.println(testBardClass.modificationsToString());
 		//System.out.println(Bard.bardSpells);
@@ -145,7 +169,7 @@ public class TestPathfinderCharacter {
 	
 	@Test
 	public void testCharacterClassCleric() {
-		PathfinderCharacter jimbo = new PathfinderCharacter();
+		PathfinderCharacter pc = new PathfinderCharacter();
 		Cleric testClericClass = new Cleric(1); 
 		
 		testClericClass.setDomain1(new ClericDomain("Air")); 
@@ -165,14 +189,14 @@ public class TestPathfinderCharacter {
 	
 	@Test
 	public void testCharacterClassDruid() {
-		PathfinderCharacter jim = new PathfinderCharacter();
+		PathfinderCharacter pc = new PathfinderCharacter();
 		Druid testdruidClass = new Druid(1); 
 		System.out.println(testdruidClass.modificationsToString());
 	}
 	
 	@Test
 	public void testAnimalCompanion() {
-		AnimalCompanion jerry = new AnimalCompanion(1);
+		AnimalCompanion ac = new AnimalCompanion(1);
 		Set<Integer> keys = AnimalCompanion.levelDecidedStatsMap.keySet();
 		for (Integer key : keys) {
 			System.out.println(key + ": " + Arrays.toString(AnimalCompanion.levelDecidedStatsMap.get(key)));
@@ -185,7 +209,7 @@ public class TestPathfinderCharacter {
 	
 	@Test
 	public void testCharacterClassFighter() {
-		PathfinderCharacter jobi = new PathfinderCharacter();
+		PathfinderCharacter pc = new PathfinderCharacter();
 		Fighter testFighterClass = new Fighter(1); 
 		System.out.println(testFighterClass.modificationsToString());
 	}
@@ -195,5 +219,65 @@ public class TestPathfinderCharacter {
 		PathfinderCharacter pc = new PathfinderCharacter();
 		Monk testMonkClass = new Monk(1); 
 		System.out.println(testMonkClass.modificationsToString());
+	}
+	
+	@Test
+	public void testCharacterClassPaladin() {
+		PathfinderCharacter pc = new PathfinderCharacter();
+		Paladin testPaladinClass = new Paladin(1); 
+		System.out.println(testPaladinClass.modificationsToString());
+	}
+	
+	@Test
+	public void testCharacterClassRanger() {
+		PathfinderCharacter pc = new PathfinderCharacter();
+		Ranger testRangerClass = new Ranger(1); 
+		System.out.println(testRangerClass.modificationsToString());
+	}
+	
+	@Test
+	public void testCharacterClassRogue() {
+		PathfinderCharacter pc = new PathfinderCharacter();
+		Rogue testRogueClass = new Rogue(1); 
+		System.out.println(testRogueClass.modificationsToString());
+	}
+	
+	@Test
+	public void testCharacterClassSorcerer() {
+		PathfinderCharacter pc = new PathfinderCharacter();
+		Sorcerer testSorcererClass = new Sorcerer(1); 
+		System.out.println(testSorcererClass.modificationsToString());
+		
+		testSorcererClass.setBloodline(new Bloodline("Aberrant"), 20); 
+		System.out.println(testSorcererClass.modificationsToString());
+	}
+	
+	@Test
+	public void testBloodlines() {
+		String[] bloodlineNames = {"Aberrant", "Abyssal", "Arcane", "Celestial", "Destined", "Draconic", "Elemental", "Fey", "Infernal", "Undead"};
+		System.out.println(Bloodline.bloodlineMap.keySet());
+		
+		
+		for (String name : bloodlineNames) {
+			Bloodline testBloodline = new Bloodline(name);
+			System.out.println(testBloodline.toString());
+		}
+	}
+	
+	@Test
+	public void testCharacterClassWizard() {
+		PathfinderCharacter pc = new PathfinderCharacter();
+		Wizard testWizardClass = new Wizard(1); 
+		System.out.println(testWizardClass.modificationsToString());
+	}
+	
+	@Test
+	public void testArcaneSchools() {
+		String[] arcaneSchoolNames = {"Abjuration", "Conjuration", "Divination", "Enchantment", "Evocation", "Illusion", "Necromancy", "Transmutation", "Universalist"};
+		
+		for (String name : arcaneSchoolNames) {
+			ArcaneSchool testArcaneSchool = new ArcaneSchool(name);
+			System.out.println(testArcaneSchool.toString());
+		}
 	}
 }

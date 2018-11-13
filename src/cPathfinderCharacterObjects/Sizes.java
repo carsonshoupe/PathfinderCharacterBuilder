@@ -50,4 +50,11 @@ public enum Sizes {
 	public double getSpace() {return this.space;}
 	public int getNaturalReach_Tall() {return this.naturalReach_Tall;}
 	public int getNatrualReach_Long() {return this.natrualReach_Long;}
+	
+	@Override
+	public String toString() {
+		StringBuilder outputString = new StringBuilder(this.name().toLowerCase());
+		outputString.setCharAt(0, Character.toUpperCase(outputString.charAt(0)));
+		return outputString.toString();
+	}
 }

@@ -34,25 +34,38 @@ public class RacialTrait {
 	
 	//Instance Variables: 
 	private String name;
-	private String racialTraitDescription;
+	private String description;
 	private boolean updateCharacterSheet;
 	
 	//Constructors:
-	RacialTrait(String name) {
+	public RacialTrait(String name) {
 		this.name = name;
-		this.racialTraitDescription = racialTraitsMap.get(this.name)[0];
+		this.description = racialTraitsMap.get(this.name)[0];
 		this.updateCharacterSheet = Boolean.parseBoolean(racialTraitsMap.get(this.name)[1]);
 	}
 	
 	//Methods:
 	
-	public String getName() {return this.name;}
-	public String getracialTraitDescription() {return this.racialTraitDescription;}
+	public String getName() {
+		StringBuilder outputString = new StringBuilder();
+		String[] outputStringArr = this.name.toLowerCase().split("_");
+		for (String word : outputStringArr) {
+			outputString.append(Character.toUpperCase(word.charAt(0)) + word.substring(1) + " ");
+		}
+		return outputString.toString().trim();
+	}
+	public String getDescription() {return this.description;}
 	public boolean shouldUpdateCharacterSheet() {return this.updateCharacterSheet;}
 	
 	@Override
 	public String toString() {
-		return (this.name + ": " + this.racialTraitDescription);
+		StringBuilder outputString = new StringBuilder();
+		String[] outputStringArr = this.name.toLowerCase().split("_");
+		for (String word : outputStringArr) {
+			outputString.append(Character.toUpperCase(word.charAt(0)) + word.substring(1) + " ");
+		}
+		outputString.trimToSize();
+		return outputString.toString();
 	}
 	
 	@Override 

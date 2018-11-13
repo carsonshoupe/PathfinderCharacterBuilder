@@ -20,13 +20,15 @@ public class Halfling extends Race{
 		setWisdomModifier(0);
 		setCharismaModifier(2);
 		
+		this.abilityModifierText = "Halflings are nimble and strong-willed, but their small stature makes them weaker than other races.";
+		
 		this.size = Sizes.SMALL;
 		this.baseSpeed = 20;
 		this.vision = "Normal";
 		
 		this.racialTraits = halflingRacialTraits;
 		
-		this.familiarWeapons = new String[] {"slings"};
+		this.familiarWeapons = new String[] {"Slings"};
 		this.knownLanguages = new String[] {"Common", "Halfling"};
 		this.potentialLanguages = new String[] {"Dwarven", "Elven", "Gnome", "Goblin"};	
 		

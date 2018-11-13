@@ -20,6 +20,8 @@ public class Human extends Race {
 		setWisdomModifier(0);
 		setCharismaModifier(0);
 		
+		this.abilityModifierText = "Human characters get a +2 bonus to one ability score of their choice at creation to represent their varied nature.";
+		
 		this.size = Sizes.MEDIUM;
 		this.baseSpeed = 30;
 		this.vision = "Normal";
