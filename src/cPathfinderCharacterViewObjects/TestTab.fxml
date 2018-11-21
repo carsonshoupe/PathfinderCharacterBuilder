@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="testTabContol" prefHeight="696.0" prefWidth="833.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cPathfinderCharacterControlObjects.TestTabControl">
+   <children>
+      <Button fx:id="testButton" layoutX="108.0" layoutY="146.0" mnemonicParsing="false" onAction="#testButtonClick" text="Test Button" />
+      <Label fx:id="testLabel" layoutX="79.0" layoutY="201.0" prefHeight="140.0" prefWidth="356.0" text="NOTHING TO SEE HERE" />
+      <Button layoutY="2.0" mnemonicParsing="false" text="Top Left" />
+      <Button layoutX="774.0" layoutY="2.0" mnemonicParsing="false" text="Top Right" />
+      <Button layoutY="679.0" mnemonicParsing="false" text="Bottom Left" />
+      <Button layoutX="755.0" layoutY="679.0" mnemonicParsing="false" text="Bottom Right" />
+      <Button layoutX="409.0" layoutY="329.0" mnemonicParsing="false" text="Center" />
+      <Label fx:id="nameTestLabel" layoutX="368.0" layoutY="419.0" prefHeight="60.0" prefWidth="134.0" />
+   </children>
+</AnchorPane>

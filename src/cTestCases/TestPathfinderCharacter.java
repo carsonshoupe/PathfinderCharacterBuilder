@@ -6,11 +6,15 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import org.junit.Test;
 
+import cPathfinderCharacterAbilityScoreObjects.AbilityScore;
 import cPathfinderCharacterClassObjects.AnimalCompanion;
 import cPathfinderCharacterClassObjects.ArcaneSchool;
 import cPathfinderCharacterClassObjects.Barbarian;
@@ -135,9 +139,14 @@ public class TestPathfinderCharacter {
 			System.out.println("Something went wrong");
 		}
 		for (String featName : featNames) {
-			charFeats.addFeat(new Feat(featName));
+			String formattedFeatName = Feat.formatFeatName(featName);
+			Feat feat = new Feat(formattedFeatName);
+			System.out.println(feat.getFeatName() + feat.getTags().toString());
+			charFeats.addFeat(feat);
 		}
 		System.out.println(charFeats.modificationsToString());
+		
+		System.out.println(Feat.getFeatNames());
 	}
 	
 	@Test
@@ -279,5 +288,19 @@ public class TestPathfinderCharacter {
 			ArcaneSchool testArcaneSchool = new ArcaneSchool(name);
 			System.out.println(testArcaneSchool.toString());
 		}
+	}
+	
+	@Test
+	public void testAbilityScoreGenerator() {
+		List<Integer> randomNums = new ArrayList<Integer>(); 
+		for (int counter = 0; counter < 20; counter++) {
+			randomNums.add((int) Math.floor((Math.random()*6)+1));
+		}
+		Collections.sort(randomNums);
+		System.out.println(randomNums.toString());
+		System.out.println(Arrays.toString(AbilityScore.abilityScoresGenerator("Standard")));
+		System.out.println(Arrays.toString(AbilityScore.abilityScoresGenerator("Classic")));
+		System.out.println(Arrays.toString(AbilityScore.abilityScoresGenerator("Heroic")));
+		
 	}
 }

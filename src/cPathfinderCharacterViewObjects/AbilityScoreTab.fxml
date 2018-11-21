@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="abilityScoreTab" prefHeight="696.0" prefWidth="833.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cPathfinderCharacterControlObjects.AbilityScoreTabControl">
+   <children>
+      <Label layoutX="24.0" layoutY="14.0" prefHeight="33.0" prefWidth="275.0" text="Ability Score">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="rollButton" layoutX="653.0" layoutY="47.0" mnemonicParsing="false" onAction="#rollButtonPress" prefWidth="100.0" text="Roll" />
+      <Button fx:id="purchaseButton" layoutX="516.0" layoutY="47.0" mnemonicParsing="false" onAction="#purchaseButtonPress" prefWidth="100.0" text="Purchase" />
+      <Pane layoutX="6.0" layoutY="285.0" prefHeight="406.0" prefWidth="790.0">
+         <children>
+            <VBox layoutX="459.0" layoutY="55.0" prefHeight="320.0" prefWidth="320.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="32.0" prefWidth="269.0" text="Uses" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="usesTA" editable="false" prefHeight="290.0" prefWidth="230.0" wrapText="true" />
+               </children>
+            </VBox>
+            <VBox layoutX="131.0" layoutY="55.0" prefHeight="320.0" prefWidth="320.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="32.0" prefWidth="422.0" text="Description" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="descriptionTA" editable="false" prefHeight="290.0" prefWidth="320.0" wrapText="true" />
+               </children>
+            </VBox>
+            <ComboBox fx:id="abilitiesCB" layoutX="11.0" layoutY="86.0" onAction="#abilitiesCBSelection" prefHeight="25.0" prefWidth="109.0" />
+         </children>
+      </Pane>
+      <VBox layoutX="24.0" layoutY="79.0" prefHeight="177.0" prefWidth="370.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="70.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="115.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" maxWidth="40.0" prefHeight="27.0" prefWidth="40.0" text="Mod">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" maxWidth="40.0" prefHeight="27.0" prefWidth="20.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" maxWidth="40.0" prefHeight="27.0" prefWidth="40.0" text="Total">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" maxWidth="40.0" prefHeight="27.0" prefWidth="20.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" maxWidth="55.0" prefHeight="27.0" prefWidth="55.0" text="Score">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" maxWidth="40.0" prefHeight="27.0" prefWidth="20.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" maxWidth="40.0" prefHeight="27.0" prefWidth="40.0" text="Race">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="70.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="115.0" text="Strength">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="strengthModifierTF" alignment="CENTER" editable="false" maxWidth="40.0" prefWidth="40.0" />
+                  <Label alignment="CENTER" maxWidth="40.0" prefHeight="27.0" prefWidth="20.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="strengthTotalTF" alignment="CENTER" editable="false" maxWidth="40.0" prefWidth="40.0" />
+                  <Label alignment="CENTER" maxWidth="40.0" prefHeight="27.0" prefWidth="20.0" text="=">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="strengthScoreCB" maxWidth="55.0" onAction="#strengthScoreSelect" prefHeight="25.0" prefWidth="55.0" />
+                  <Label alignment="CENTER" maxWidth="40.0" prefHeight="27.0" prefWidth="20.0" text="+">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="strengthRaceTF" alignment="CENTER" editable="false" maxWidth="40.0" prefWidth="40.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="70.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="115.0" text="Dexterity">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="dexterityModifierTF" alignment="CENTER" editable="false" maxWidth="40.0" prefWidth="40.0" />
+                  <Label alignment="CENTER" maxWidth="40.0" prefHeight="27.0" prefWidth="20.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="dexterityTotalTF" alignment="CENTER" editable="false" maxWidth="40.0" prefWidth="40.0" />
+                  <Label alignment="CENTER" maxWidth="40.0" prefHeight="27.0" prefWidth="20.0" text="=">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="dexterityScoreCB" maxWidth="55.0" onAction="#dexterityScoreSelect" prefHeight="25.0" prefWidth="55.0" />
+                  <Label alignment="CENTER" maxWidth="40.0" prefHeight="27.0" prefWidth="20.0" text="+">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="dexterityRaceTF" alignment="CENTER" editable="false" maxWidth="40.0" prefWidth="40.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="70.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="115.0" text="Constitution">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="constitutionModifierTF" alignment="CENTER" editable="false" maxWidth="40.0" prefWidth="40.0" />
+                  <Label alignment="CENTER" maxWidth="40.0" prefHeight="27.0" prefWidth="20.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="constitutionTotalTF" alignment="CENTER" editable="false" maxWidth="40.0" prefWidth="40.0" />
+                  <Label alignment="CENTER" maxWidth="40.0" prefHeight="27.0" prefWidth="20.0" text="=">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="constitutionScoreCB" maxWidth="55.0" onAction="#constitutionScoreSelect" prefHeight="25.0" prefWidth="55.0" />
+                  <Label alignment="CENTER" maxWidth="40.0" prefHeight="27.0" prefWidth="20.0" text="+">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="constitutionRaceTF" alignment="CENTER" editable="false" maxWidth="40.0" prefWidth="40.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="70.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="115.0" text="Intelligence">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="intelligenceModifierTF" alignment="CENTER" editable="false" maxWidth="40.0" prefWidth="40.0" />
+                  <Label alignment="CENTER" maxWidth="40.0" prefHeight="27.0" prefWidth="20.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="intelligenceTotalTF" alignment="CENTER" editable="false" maxWidth="40.0" prefWidth="40.0" />
+                  <Label alignment="CENTER" maxWidth="40.0" prefHeight="27.0" prefWidth="20.0" text="=">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="intelligenceScoreCB" maxWidth="55.0" onAction="#intelligenceScoreSelect" prefHeight="25.0" prefWidth="55.0" />
+                  <Label alignment="CENTER" maxWidth="40.0" prefHeight="27.0" prefWidth="20.0" text="+">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="intelligenceRaceTF" alignment="CENTER" editable="false" maxWidth="40.0" prefWidth="40.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="70.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="115.0" text="Wisdom">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="wisdomModifierTF" alignment="CENTER" editable="false" maxWidth="40.0" prefWidth="40.0" />
+                  <Label alignment="CENTER" maxWidth="40.0" prefHeight="27.0" prefWidth="20.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="wisdomTotalTF" alignment="CENTER" editable="false" maxWidth="40.0" prefWidth="40.0" />
+                  <Label alignment="CENTER" maxWidth="40.0" prefHeight="27.0" prefWidth="20.0" text="=">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="wisdomScoreCB" maxWidth="55.0" onAction="#wisdomScoreSelect" prefHeight="25.0" prefWidth="55.0" />
+                  <Label alignment="CENTER" maxWidth="40.0" prefHeight="27.0" prefWidth="20.0" text="+">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="wisdomRaceTF" alignment="CENTER" editable="false" maxWidth="40.0" prefWidth="40.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="70.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="115.0" text="Charisma">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="charismaModifierTF" alignment="CENTER" editable="false" maxWidth="40.0" prefWidth="40.0" />
+                  <Label alignment="CENTER" maxWidth="40.0" prefHeight="27.0" prefWidth="20.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="charismaTotalTF" alignment="CENTER" editable="false" maxWidth="40.0" prefWidth="40.0" />
+                  <Label alignment="CENTER" maxWidth="40.0" prefHeight="27.0" prefWidth="20.0" text="=">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="charismaScoreCB" maxWidth="55.0" onAction="#charismaScoreSelect" prefHeight="25.0" prefWidth="55.0" />
+                  <Label alignment="CENTER" maxWidth="40.0" prefHeight="27.0" prefWidth="20.0" text="+">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="charismaRaceTF" alignment="CENTER" editable="false" maxWidth="40.0" prefWidth="40.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Pane fx:id="rollPane" layoutX="417.0" layoutY="79.0" prefHeight="203.0" prefWidth="397.0">
+         <children>
+            <Label layoutX="12.0" layoutY="16.0" prefHeight="25.0" prefWidth="123.0" text="Choose Difficulty:" />
+            <RadioButton layoutX="12.0" layoutY="51.0" mnemonicParsing="false" selected="true" text="Standard">
+               <toggleGroup>
+                  <ToggleGroup fx:id="rollDifficultyToggleGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="12.0" layoutY="76.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="69.0" text="Classic" toggleGroup="$rollDifficultyToggleGroup" />
+            <RadioButton layoutX="12.0" layoutY="102.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="69.0" text="Heroic" toggleGroup="$rollDifficultyToggleGroup" />
+            <TextField editable="false" layoutX="93.0" layoutY="47.0" text="Roll 4d6.  Keep highest 3." />
+            <TextField editable="false" layoutX="93.0" layoutY="72.0" text="Roll 3d6." />
+            <TextField editable="false" layoutX="93.0" layoutY="97.0" text="Roll 2d6, add 6." />
+            <Button fx:id="rollForScoresButton" layoutX="12.0" layoutY="147.0" mnemonicParsing="false" onAction="#rollForScoresButtonPress" text="ROLL!" />
+            <TextField fx:id="rolledScore0" alignment="CENTER" editable="false" layoutX="263.0" layoutY="47.0" prefWidth="50.0" />
+            <TextField fx:id="rolledScore1" alignment="CENTER" editable="false" layoutX="263.0" layoutY="72.0" prefWidth="50.0" />
+            <TextField fx:id="rolledScore2" alignment="CENTER" editable="false" layoutX="263.0" layoutY="97.0" prefWidth="50.0" />
+            <TextField fx:id="rolledScore3" alignment="CENTER" editable="false" layoutX="318.0" layoutY="47.0" prefWidth="50.0" />
+            <TextField fx:id="rolledScore4" alignment="CENTER" editable="false" layoutX="318.0" layoutY="72.0" prefWidth="50.0" />
+            <TextField fx:id="rolledScore5" alignment="CENTER" editable="false" layoutX="318.0" layoutY="97.0" prefWidth="50.0" />
+            <Label layoutX="263.0" layoutY="20.0" text="Scores" />
+         </children>
+      </Pane>
+      <Pane fx:id="purchasePane" layoutX="404.0" layoutY="85.0" prefHeight="203.0" prefWidth="422.0" visible="false">
+         <children>
+            <VBox layoutY="-6.0" maxHeight="-Infinity" prefHeight="203.0" prefWidth="40.0">
+               <children>
+                  <Label alignment="CENTER" minHeight="27.0" minWidth="40.0" prefHeight="27.0" prefWidth="40.0" text="Cost">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="strengthCostTF" editable="false" maxHeight="25.0" maxWidth="40.0" minHeight="25.0" prefHeight="25.0" prefWidth="40.0" scaleShape="false" VBox.vgrow="NEVER" />
+                  <TextField fx:id="dexterityCostTF" editable="false" maxHeight="25.0" maxWidth="40.0" minHeight="25.0" prefHeight="25.0" prefWidth="40.0" scaleShape="false" VBox.vgrow="NEVER" />
+                  <TextField fx:id="constitutionCostTF" editable="false" maxHeight="25.0" maxWidth="40.0" minHeight="25.0" prefHeight="25.0" prefWidth="40.0" scaleShape="false" VBox.vgrow="NEVER" />
+                  <TextField fx:id="intelligenceCostTF" editable="false" maxHeight="25.0" maxWidth="40.0" minHeight="25.0" prefHeight="25.0" prefWidth="40.0" scaleShape="false" VBox.vgrow="NEVER" />
+                  <TextField fx:id="wisdomCostTF" editable="false" maxHeight="25.0" maxWidth="40.0" minHeight="25.0" prefHeight="25.0" prefWidth="40.0" scaleShape="false" VBox.vgrow="NEVER" />
+                  <TextField fx:id="charismaCostTF" editable="false" maxHeight="25.0" maxWidth="40.0" minHeight="25.0" prefHeight="25.0" prefWidth="40.0" scaleShape="false" VBox.vgrow="NEVER" />
+                  <TextField fx:id="totalCostTF" editable="false" maxHeight="25.0" maxWidth="40.0" minHeight="25.0" prefHeight="25.0" prefWidth="40.0" scaleShape="false" VBox.vgrow="NEVER" />
+               </children>
+            </VBox>
+            <Label layoutX="47.0" layoutY="181.0" text="Total Cost">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <VBox layoutX="47.0" layoutY="14.0" prefHeight="101.0" prefWidth="166.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="257.0" text="Campaign Type">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <RadioButton mnemonicParsing="false" selected="true" text="Low Fantasy (10 pts)">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="campaignTypeToggleGroup" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton mnemonicParsing="false" text="Standard Fantasy (15 pts)" toggleGroup="$campaignTypeToggleGroup" />
+                  <RadioButton mnemonicParsing="false" text="High Fantasy (20 pts)" toggleGroup="$campaignTypeToggleGroup" />
+                  <RadioButton mnemonicParsing="false" text="Epic Fantasy (25 pts)" toggleGroup="$campaignTypeToggleGroup" />
+               </children>
+            </VBox>
+            <GridPane gridLinesVisible="true" layoutX="219.0" layoutY="33.0" prefHeight="168.0" prefWidth="188.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="127.0" minWidth="10.0" prefWidth="43.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="10.0" prefWidth="43.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="10.0" prefWidth="27.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="10.0" prefWidth="43.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="10.0" prefWidth="43.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="68.0" text="Score" underline="true" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="54.0" text="Cost" underline="true" GridPane.columnIndex="1" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="68.0" text="Score" underline="true" GridPane.columnIndex="3" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="54.0" text="Cost" underline="true" GridPane.columnIndex="4" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="71.0" text="7" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="71.0" text="8" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="71.0" text="9" GridPane.rowIndex="3" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="71.0" text="10" GridPane.rowIndex="4" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="71.0" text="11" GridPane.rowIndex="5" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="71.0" text="12" GridPane.rowIndex="6" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="71.0" text="-4" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="71.0" text="-2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="71.0" text="-1" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="71.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="71.0" text="1" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="71.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="71.0" text="13" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="71.0" text="14" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="71.0" text="15" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="71.0" text="16" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="71.0" text="17" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="71.0" text="18" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="71.0" text="3" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="71.0" text="5" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="71.0" text="7" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="71.0" text="10" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="71.0" text="13" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="71.0" text="17" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+               </children>
+            </GridPane>
+            <Label alignment="CENTER" layoutX="219.0" layoutY="14.0" prefHeight="17.0" prefWidth="188.0" text="Ability Score Costs">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="spentTooManyPointsTF" layoutX="47.0" layoutY="106.0" prefHeight="74.0" prefWidth="155.0" textFill="RED" wrapText="true" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="696.0" maxWidth="833.0" minHeight="696.0" minWidth="833.0" prefHeight="696.0" prefWidth="833.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cPathfinderCharacterControlObjects.FeatsTabControl">
+   <children>
+      <Label layoutX="24.0" layoutY="14.0" prefHeight="33.0" prefWidth="275.0" text="Feats">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Pane layoutX="22.0" layoutY="60.0" prefHeight="531.0" prefWidth="790.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="454.0" prefWidth="810.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label alignment="CENTER" minWidth="250.0" prefHeight="33.0" prefWidth="200.0" text="Feats" underline="true">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <ListView fx:id="featListView" minWidth="250.0" prefHeight="329.0" prefWidth="200.0" />
+                        <Label alignment="CENTER" minWidth="250.0" prefHeight="18.0" prefWidth="200.0">
+                           <font>
+                              <Font name="System Bold" size="8.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" minWidth="250.0" prefHeight="17.0" prefWidth="200.0" text="Filters">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" minWidth="250.0" prefHeight="18.0" prefWidth="200.0">
+                           <font>
+                              <Font name="System Bold" size="8.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="filtersCB" minWidth="250.0" onAction="#filterFeats" prefHeight="25.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+                  <Label text="     " />
+                  <VBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" maxWidth="250.0" minWidth="200.0" prefHeight="33.0" prefWidth="275.0" text="Feat Description" underline="true">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="17.0" prefWidth="234.0" text="     " />
+                        <Label fx:id="featNameLabel" alignment="CENTER" prefHeight="39.0" prefWidth="200.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" maxWidth="250.0" minWidth="200.0" prefHeight="17.0" prefWidth="275.0" text="Benefit" />
+                        <TextArea fx:id="featDescriptionTA" maxWidth="250.0" minWidth="200.0" prefHeight="81.0" prefWidth="275.0" wrapText="true" />
+                        <Label alignment="CENTER" maxWidth="250.0" minWidth="200.0" prefHeight="17.0" prefWidth="275.0" text="Prerequisite" />
+                        <TextArea fx:id="featPrerequisiteTA" maxWidth="250.0" minWidth="200.0" prefHeight="81.0" prefWidth="275.0" wrapText="true" />
+                        <HBox alignment="CENTER" maxWidth="250.0" minWidth="200.0" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="selectFeatButton" mnemonicParsing="false" onAction="#selectFeatButtonPress" text="Select Feat" />
+                              <Label text="       " />
+                              <Button fx:id="removeFeatButton" mnemonicParsing="false" onAction="#removeFeatButtonPress" text="Remove Feat" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Label text="     " />
+                  <VBox prefHeight="454.0" prefWidth="193.0">
+                     <children>
+                        <Label alignment="CENTER" minWidth="250.0" prefHeight="43.0" prefWidth="203.0" text="Your Feats" underline="true">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <ListView fx:id="yourFeatsListView" minWidth="250.0" prefHeight="331.0" prefWidth="191.0" />
+                        <Label fx:id="errorLabel" alignment="CENTER" prefHeight="81.0" prefWidth="256.0" textFill="#ff0404" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

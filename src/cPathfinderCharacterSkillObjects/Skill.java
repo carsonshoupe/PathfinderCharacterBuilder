@@ -61,6 +61,8 @@ public class Skill implements Comparable<Skill> {
 		}
 	}
 	
+	//Static Methods:
+	
 	//Instance Variables: 
 	private String name;
 	private String description;

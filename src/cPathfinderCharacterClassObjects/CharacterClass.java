@@ -12,6 +12,12 @@ import cPathfinderCharacterSpellObjects.CharacterSpells;
 import cPathfinderCharacterSpellObjects.Spell;
 
 public abstract class CharacterClass implements CharacterModifier {
+	//Static Methods:
+	public static CharacterClass stringToClass(String classAsString) {
+		//TODO: Implement Method
+		return null;
+	}
+	
 	//Instance Variables:
 	protected int level;
 	protected String alignmentRestriction;

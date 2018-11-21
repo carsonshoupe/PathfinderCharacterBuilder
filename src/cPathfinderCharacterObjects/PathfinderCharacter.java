@@ -3,6 +3,8 @@ package cPathfinderCharacterObjects;
 import java.util.ArrayList;
 import java.util.Set;
 
+import cPathfinderCharacterRaceObjects.Dwarf;
+import cPathfinderCharacterRaceObjects.Human;
 import cPathfinderCharacterClassObjects.CharacterClass;
 import cPathfinderCharacterClassObjects.ClassFeature;
 
@@ -15,6 +17,7 @@ import cPathfinderCharacterRaceObjects.Race;
 import cPathfinderCharacterSkillObjects.CharacterSkills;
 import cPathfinderCharacterSkillObjects.Skill;
 import cPathfinderCharacterSpellObjects.Spell;
+import javafx.beans.property.SimpleIntegerProperty;
 
 public class PathfinderCharacter {
 	//Instance Variables: 
@@ -43,7 +46,7 @@ public class PathfinderCharacter {
 	protected int miscArmorClassModifier = 0;
 
 	 //Race
-	protected Race race;
+	protected Race race = new Dwarf();
 	protected int miscSpeedBonus = 0;
 	
 	 //Character Class
@@ -67,7 +70,7 @@ public class PathfinderCharacter {
 	
 	 //Player Methods
 	public String getPlayerName() {return this.playerName;}
-	public int getPlayerId() {return this.characterId;}
+	public int getCharacterId() {return this.characterId;}
 	public void setPlayerName(String playerName) {this.playerName = playerName;}
 	public void setCharacterId(int characterId) {this.characterId = characterId;}
 	
@@ -117,13 +120,13 @@ public class PathfinderCharacter {
 	public int getStrength() {return this.abilityScores[0];}
 	public int getDexterity() {return this.abilityScores[1];}
 	public int getConstitution() {return this.abilityScores[2];}
-	public int getIntelligence() {return this.abilityScores[3] ;}
+	public int getIntelligence() {return this.abilityScores[3];}
 	public int getWisdom() {return this.abilityScores[4];}
 	public int getCharisma() {return this.abilityScores[5];}
 	
 	public int getAbilityScoreModifier(int enumeratedAbilityScore) {return (int) Math.floor((this.abilityScores[enumeratedAbilityScore]-10)/2.0);}
 	
-	public int getStrenghModifier() {return (int) Math.floor((getStrength()-10)/2.0);}
+	public int getStrengthModifier() {return (int) Math.floor((getStrength()-10)/2.0);}
 	public int getDexterityModifier() {return (int) Math.floor((getDexterity()-10)/2.0);}
 	public int getConstitutionModifier() {return (int) Math.floor((getConstitution()-10)/2.0);}
 	public int getIntelligenceModifier() {return (int) Math.floor((getIntelligence()-10)/2.0);}
@@ -157,6 +160,7 @@ public class PathfinderCharacter {
 	 //Class Methods: 
 	public CharacterClass getCharacterClass() {return this.characterClass;}
 	public void setCharacterClass(CharacterClass classChoice) {this.characterClass = classChoice;}
+	public void setClassSkills(Set<Skill> classSkills) {this.getCharacterSkills().setClassSkills(classSkills);}
 	
 	public String getWeaponAndArmorProficiencies() {return this.characterClass.getWeaponAndArmorProficiencies();}
 	
@@ -169,12 +173,17 @@ public class PathfinderCharacter {
 	public Set<Skill> getClassSkills() {return this.characterClass.getClassSkills();}
 	public int getSkillRanksPerLevel() {return this.characterClass.getSkillRanksPerLevel() + this.getIntelligenceModifier();}
 	
+	public SimpleIntegerProperty getSkillRanks(Skill skill) {return getCharacterSkills().getSkillRanks(skill);}
+	public void setSkillRanks(Skill skill, int value) {this.getCharacterSkills().setSkillRanks(skill, value);}
+	
+	public SimpleIntegerProperty getMiscSkillMod(Skill skill) {return getCharacterSkills().getMiscSkillMod(skill);}
+
 	public int getSkillBonus(Skill skill) {
-		if (skill.isTrainedOnly()) {
+		if (skill.isTrainedOnly() && getCharacterSkills().getSkillRanks(skill).intValue() == 0) {
 			return 0;
 		}
 		else {
-			return this.characterSkills.getCharacterSkillBonus(skill) + this.getAbilityScoreModifier(skill.getAbilityModifier());
+			return this.characterSkills.getClassSkillBonus(skill).getValue() + this.getAbilityScoreModifier(this.abilityModifierToInt(skill.getAbilityModifier()));
 		}
 	}
 	
@@ -240,5 +249,26 @@ public class PathfinderCharacter {
 		outputCharacter.setCharacterFeats((CharacterFeats) this.getCharacterFeats().clone());
 				
 		return outputCharacter;
+	}
+	
+	public int abilityModifierToInt(String abilityModifier) {
+		if (abilityModifier.equals("STR")) {
+			return 0;
+		}
+		else if (abilityModifier.equals("DEX")) {
+			return 1;
+		}
+		else if (abilityModifier.equals("CON")) {
+			return 2;
+		}
+		else if (abilityModifier.equals("INT")) {
+			return 3;
+		}
+		else if (abilityModifier.equals("WIS")) {
+			return 4;
+		}
+		else {
+			return 5;
+		}
 	}
 }

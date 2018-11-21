@@ -3,29 +3,43 @@ package cPathfinderCharacterFeatObjects;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class Feat {
 	//Static Variables:
-	protected static final Map<String, String[]> featMap;
+	protected static Map<String, String[]> featMap;
+	private static ArrayList<String> featNames;
 	static {
+		setFeatMap();
+		setFeatNames();
+	}
+	
+	public static ArrayList<String> getFeatNames() {return Feat.featNames;}
+	
+	private static void setFeatMap() {
 		HashMap<String, String[]> outputMap = new HashMap<String, String[]>();
 		String filePath = "C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterFeatObjects/FeatsChartAsText.txt"; 
 		String line;
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader(filePath));
 			while ((line = reader.readLine()) != null ) {
-				String[] parts = line.split(":", 6);
+				//System.out.println(line);
+				String[] parts = line.split(":", 7);
 				String key = parts[0];
-				String[] value = new String[5];
+				String[] value = new String[6];
 				value[0] = parts[1];
 				value[1] = parts[2];
 				value[2] = parts[3];
 				value[3] = parts[4];
 				value[4] = parts[5];
+				value[5] = parts[6];
 				outputMap.put(key, value);
 				//System.out.println(key + ": " + value[1]);
 			}
@@ -34,7 +48,29 @@ public class Feat {
 		catch (IOException e) {
 			System.out.println("Failed to load featMap");
 		}
-		featMap = Collections.unmodifiableMap(outputMap);
+		featMap = outputMap;
+	}
+	
+	private static void setFeatNames() {
+		String filePath = "C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterFeatObjects/FeatNames.txt"; 
+		String line; 
+		Feat.featNames = new ArrayList<String>();
+		try {
+			BufferedReader reader = new BufferedReader(new FileReader(filePath)); 
+			//System.out.println("Feat Names: \n");
+			while ((line = reader.readLine()) != null) {
+				//System.out.println(line);
+				Feat.featNames.add(line);
+			}
+			reader.close();
+		}
+		catch (Exception ex) {
+			System.out.println("Something went wrong");
+		}
+	}
+	
+	public static String formatFeatName(String featName) {
+		return featName.replace(" ", "_").replace("-", "_").toUpperCase();
 	}
 	
 	
@@ -49,6 +85,7 @@ public class Feat {
 	private boolean isCombatFeat;
 	private boolean isItemCreationFeat;
 	private boolean isMetamagicFeat;
+	private Set<String> tags;
 	
 	
 	//Constructors:
@@ -87,6 +124,13 @@ public class Feat {
 				this.infoToUpdateCharacterSheet.put(infoParts[0], infoParts[1]);
 			}
 		}
+		
+		this.tags = new HashSet<String>();
+		String[] featTags = featMap.get(this.name)[5].split(",");
+		for (String tag : featTags) {
+			this.tags.add(tag);
+		}
+		
 	}
 	
 	//Methods:
@@ -100,6 +144,7 @@ public class Feat {
 	public boolean getIsCombatFeat() {return this.isCombatFeat;}
 	public boolean getIsItemCreationFeat() {return this.isItemCreationFeat;}
 	public boolean getIsMetaMagicFeat() {return this.isMetamagicFeat;}
+	public Set<String> getTags() {return this.tags;}
 	
 	
 

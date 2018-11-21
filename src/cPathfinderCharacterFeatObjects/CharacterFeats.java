@@ -81,9 +81,11 @@ public class CharacterFeats implements CharacterModifier {
 		PathfinderCharacter outputCharacter = pathfinderCharacter.clone();
 		
 		Set<Skill> skillRanksToAddKeys = skillRanksToAdd.keySet();
+		/*TODO: Fix
 		for (Skill key : skillRanksToAddKeys) {
 			outputCharacter.getCharacterSkills().incrementSkillRank(key, skillRanksToAdd.get(key));
 		}
+		*/
 		
 		for (String featDescription : this.featDescriptionsToAdd) {
 			outputCharacter.getFeatDescriptions().add(featDescription);
@@ -104,7 +106,6 @@ public class CharacterFeats implements CharacterModifier {
 		}
 		outputString += featDescriptions;
 		
-		// TODO Auto-generated method stub
 		return outputString;
 	}
 	

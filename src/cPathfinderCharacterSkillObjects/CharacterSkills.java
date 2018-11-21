@@ -6,11 +6,14 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.transformation.SortedList;
 
 
-public class CharacterSkills {
+public class CharacterSkills {	
 	//Instance Variables: 	
 	private Skill[] characterSkills = {new Skill("ACROBATICS"), new Skill("APPRAISE"), new Skill("BLUFF"), new Skill("CLIMB"),
 			new Skill("CRAFT1"), new Skill("CRAFT2"), new Skill("CRAFT3"), new Skill("DIPLOMACY"), new Skill("DISABLE_DEVICE"), 
@@ -24,14 +27,12 @@ public class CharacterSkills {
 	
 	private SortedList<Skill> characterSkillsList = new SortedList<Skill>(FXCollections.observableArrayList(Arrays.asList(this.characterSkills))); //TODO: Add Comparator
 	
-	private Map<Skill, Integer> skillRanksMap = new HashMap<Skill, Integer>();
-	private Map<Skill, Boolean> classSkillsMap = new HashMap<Skill, Boolean>();
+	private Map<Skill, CharacterSkillProperties> characterSkillPropertiesMap = new HashMap<Skill, CharacterSkillProperties>();
 	
 	//Constructors: 
 	public CharacterSkills() {
 		for (Skill skill : characterSkills) {
-			skillRanksMap.put(skill, 0);
-			classSkillsMap.put(skill, false);
+			characterSkillPropertiesMap.put(skill, new CharacterSkillProperties());
 		}
 	}
 	
@@ -53,15 +54,15 @@ public class CharacterSkills {
 	public Skill getHeal() {return this.characterSkills[13];}
 	public Skill getIntimidate() {return this.characterSkills[14];}
 	public Skill getKnowledgeArcana() {return this.characterSkills[15];}
-	public Skill getKnolwedgeDungeoneering() {return this.characterSkills[16];}
-	public Skill getKnolwedgeEngineering() {return this.characterSkills[17];}
-	public Skill getKnolwedgeGeography() {return this.characterSkills[18];}
-	public Skill getKnolwedgeHistory() {return this.characterSkills[19];}
-	public Skill getKnolwedgeLocal() {return this.characterSkills[20];}
-	public Skill getKnolwedgeNature() {return this.characterSkills[21];}
-	public Skill getKnolwedgeNobility() {return this.characterSkills[22];}
-	public Skill getKnolwedgePlanes() {return this.characterSkills[23];}
-	public Skill getknolwedgeReligion() {return this.characterSkills[24];}
+	public Skill getKnowledgeDungeoneering() {return this.characterSkills[16];}
+	public Skill getKnowledgeEngineering() {return this.characterSkills[17];}
+	public Skill getKnowledgeGeography() {return this.characterSkills[18];}
+	public Skill getKnowledgeHistory() {return this.characterSkills[19];}
+	public Skill getKnowledgeLocal() {return this.characterSkills[20];}
+	public Skill getKnowledgeNature() {return this.characterSkills[21];}
+	public Skill getKnowledgeNobility() {return this.characterSkills[22];}
+	public Skill getKnowledgePlanes() {return this.characterSkills[23];}
+	public Skill getknowledgeReligion() {return this.characterSkills[24];}
 	public Skill getLinguistics() {return this.characterSkills[25];}
 	public Skill getPerception() {return this.characterSkills[26];}
 	public Skill getPerform1() {return this.characterSkills[27];}
@@ -80,40 +81,59 @@ public class CharacterSkills {
 	public Skill[] getCharacterSkills() {return this.characterSkills;}
 	public SortedList<Skill> getCharacterSkillsList() {return this.characterSkillsList;}
 	
+	public SimpleBooleanProperty isClassSkill(Skill skill) {
+		return this.characterSkillPropertiesMap.get(skill).getClassSkill();
+	}
+	public void setClassSkill(Skill skill, Boolean bool) {
+		this.characterSkillPropertiesMap.get(skill).setClassSkill(bool);
+	}
+	
+	public SimpleIntegerProperty getSkillRanks(Skill skill) {
+		return this.characterSkillPropertiesMap.get(skill).getSkillRanks();
+	}
+	public void incrementSkillRanks(Skill skill, int value) {
+		this.characterSkillPropertiesMap.get(skill).incrementSkillRanks(value);
+	}
+	public void setSkillRanks(Skill skill, int value) {
+		this.characterSkillPropertiesMap.get(skill).setSkillRanks(value);
+	}
+	
+	public SimpleIntegerProperty getMiscSkillMod(Skill skill) {
+		return this.characterSkillPropertiesMap.get(skill).getMiscSkillMod();
+	}
+	public void incrementMiscSkillMod(Skill skill, int value) {
+		this.characterSkillPropertiesMap.get(skill).incrementMiscSkillMod(value);
+	}
+	
 	public Set<Skill> getClassSkills() {
 		Set<Skill> classSkills = new HashSet<Skill>();
-		Set<Skill> classSkillKeys = getClassSkillsMap().keySet();
+		Set<Skill> classSkillKeys = this.characterSkillPropertiesMap.keySet();
 		for (Skill key : classSkillKeys) {
-			if (this.classSkillsMap.get(key) == true) {
+			if (isClassSkill(key).getValue()) {
 				classSkills.add(key);
 			}
 		}
 		return classSkills;
 	}
-	public Map<Skill, Integer> getSkillRanks() {return this.skillRanksMap;}
-	public Map<Skill, Boolean> getClassSkillsMap() {return this.classSkillsMap;}
-	public boolean isClassSkill(Skill skill) {return classSkillsMap.get(skill);}
-	
-	public void incrementSkillRank(Skill skill, int value) {skillRanksMap.put(skill, skillRanksMap.get(skill) + value);}
 	
 	public void setClassSkills(Set<Skill> classSkills) {
 		for (Skill characterSkill : this.characterSkills) {
 			if (classSkills.contains(characterSkill)) {
-				this.classSkillsMap.put(characterSkill, true);
+				setClassSkill(characterSkill, true);
 			}
 		}
 	}
 	
-	public int getCharacterSkillBonus(Skill skill) {
-		if (skillRanksMap.get(skill) == 0) {
-			return 0;
+	public IntegerProperty getClassSkillBonus(Skill skill) {
+		if (getSkillRanks(skill).intValue() == 0) {
+			return new SimpleIntegerProperty(0);
 		}
 		else {
-			int outputBonus = skillRanksMap.get(skill);
-			if (this.isClassSkill(skill)) {
+			int outputBonus = getSkillRanks(skill).intValue();
+			if (isClassSkill(skill).getValue()) {
 				outputBonus += 3;
 			}
-			return outputBonus;
+			return new SimpleIntegerProperty(outputBonus);
 		}
 	}
 	
@@ -121,7 +141,7 @@ public class CharacterSkills {
 	public String toString() {
 		String outputString = "";
 		for (Skill skill : characterSkills) {
-			outputString = outputString + skill.toString() + ": " + this.getSkillRanks().get(skill) + "\n";
+			outputString = outputString + skill.toString() + ": " + getSkillRanks(skill) + "\n";
 		}
 		return outputString;
 	}
@@ -130,8 +150,8 @@ public class CharacterSkills {
 	public Object clone() {
 		CharacterSkills outputCharacterSkills = new CharacterSkills(); 
 		for (Skill skill : outputCharacterSkills.getCharacterSkills()) {
-			outputCharacterSkills.getSkillRanks().put(skill, this.getSkillRanks().get(skill));
-			outputCharacterSkills.getClassSkillsMap().put(skill, this.getClassSkillsMap().get(skill));
+			outputCharacterSkills.incrementSkillRanks(skill, getSkillRanks(skill).intValue());
+			outputCharacterSkills.setClassSkill(skill, isClassSkill(skill).getValue());
 		}
 		return outputCharacterSkills;
 	}

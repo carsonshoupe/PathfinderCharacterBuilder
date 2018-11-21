@@ -56,6 +56,16 @@ public class FeatPrerequisite {
 	}
 	
 	//Methods:
+	public String getFeatPrerequisiteAsText() { //Should never be null.  TODO: Decide whether to give all feats a featPrereq object or not.
+		if (this.featPrerequisiteAsText == null) {
+			System.out.println("feat prereq equals null");
+			return "None";
+		}
+		else {
+			return this.featPrerequisiteAsText;
+		}
+	}
+	
 	public void setFeatPrerequisiteText(String prerequisiteText) {this.featPrerequisiteAsText = prerequisiteText;}
 	
 	private void setRequiredFeats() {
