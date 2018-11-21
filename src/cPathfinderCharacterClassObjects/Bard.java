@@ -153,6 +153,19 @@ public class Bard extends CharacterClass {
 		
 		this.characterSpellsObject.setSpellsToChoose(spellsKnownByLevel.get(this.level));
 		this.characterSpellsObject.incrementSpellsPerDay(1, 2);
+		
+		this.description = "Untold wonders and secrets exist for those skillful enough to discover them. Through cleverness, talent, "
+				+ "and magic, these cunning few unravel the wiles of the world,	becoming adept in the arts of persuasion, manipulation,	"
+				+ "and inspiration. Typically masters of one or many forms	of artistry, bards possess an uncanny ability to know more "
+				+ "than they should and use what they learn to keep themselves and their allies ever one step ahead of danger. Bards "
+				+ "are quick-witted and captivating, and their skills might lead them down many paths, be they gamblers or "
+				+ "jacks-of-all-trades, scholars or performers, leaders or	scoundrels, or even all of the above. For bards, every day brings "
+				+ "its own opportunities, adventures, and challenges, and only by bucking the odds, knowing the most, and	"
+				+ "being the best might they claim the treasures of each.";
+		
+		this.role = "Bards capably confuse and confound their foes while inspiring their allies to ever-greater daring. While accomplished "
+				+ "with both weapons and magic, the true strength of bards lies outside melee, where they can support their companions and undermine "
+				+ "their foes without fear of interruptions to their performances.";
 	}
 	
 	//Methods:

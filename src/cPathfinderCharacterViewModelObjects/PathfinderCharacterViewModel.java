@@ -127,8 +127,9 @@ public class PathfinderCharacterViewModel {
 	
 	 //Class Methods:
 	public CharacterClass getCharacterClass() {return pcModel.getCharacterClass();}
-	public void setCharacterClass(String classChoice) {pcModel.setCharacterClass(CharacterClass.stringToClass(classChoice));}
+	public void setCharacterClass(String classChoice, int level) {pcModel.setCharacterClass(CharacterClass.stringToClass(classChoice, level));}
 	public void setClassSkills(Set<Skill> classSkills) {pcModel.setClassSkills(classSkills);}
+	public String getWeaponAndArmorProficiencies() {return pcModel.getWeaponAndArmorProficiencies();}
 		//there will be more here
 	
 	 //Skill Methods:

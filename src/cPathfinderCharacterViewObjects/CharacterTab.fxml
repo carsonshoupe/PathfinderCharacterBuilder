@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane maxHeight="696.0" maxWidth="833.0" minHeight="696.0" minWidth="833.0" prefHeight="696.0" prefWidth="833.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="cPathfinderCharacterControlObjects.CharacterTabControl">
+	<children>
+        <TextField fx:id="playerNameField" layoutX="126.0" layoutY="59.0" prefWidth="160.0" />
+        <Label layoutX="24.0" layoutY="58.0" prefHeight="27.0" prefWidth="74.0" text="Your Name:" />
+        <Label layoutX="24.0" layoutY="14.0" prefHeight="33.0" prefWidth="275.0" text="Character">
+           <font>
+              <Font size="18.0" />
+           </font>
+        </Label>
+        <Label layoutX="24.0" layoutY="127.0" prefHeight="27.0" prefWidth="101.0" text="Character Name: " />
+        <TextField fx:id="characterNameField" layoutX="126.0" layoutY="128.0" prefWidth="160.0" />
+        <Label layoutX="24.0" layoutY="154.0" prefHeight="27.0" prefWidth="74.0" text="Gender:" />
+        <Label layoutX="24.0" layoutY="181.0" prefHeight="27.0" prefWidth="74.0" text="Age:" />
+        <Label layoutX="24.0" layoutY="208.0" prefHeight="27.0" prefWidth="74.0" text="Height:" />
+        <Label layoutX="24.0" layoutY="235.0" prefHeight="27.0" prefWidth="74.0" text="Weight:" />
+        <Label layoutX="24.0" layoutY="262.0" prefHeight="27.0" prefWidth="74.0" text="Hair Color:" />
+        <TextField fx:id="hairColorField" layoutX="126.0" layoutY="263.0" prefWidth="160.0" />
+        <Label layoutX="24.0" layoutY="289.0" prefHeight="27.0" prefWidth="74.0" text="Eye Color:" />
+        <TextField fx:id="eyeColorField" layoutX="126.0" layoutY="290.0" prefWidth="160.0" />
+        <RadioButton fx:id="maleRadioButton" layoutX="138.0" layoutY="159.0" mnemonicParsing="false" selected="true" text="Male">
+           <toggleGroup>
+              <ToggleGroup fx:id="genderToggleGroup" />
+           </toggleGroup></RadioButton>
+        <RadioButton fx:id="femaleRadioButton" layoutX="209.0" layoutY="159.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="66.0" text="Female" toggleGroup="$genderToggleGroup" />
+        <ComboBox fx:id="heightComboBox" layoutX="126.0" layoutY="209.0" prefWidth="160.0" promptText="-- Select Height --" />
+        <ComboBox fx:id="weightComboBox" layoutX="126.0" layoutY="236.0" prefWidth="160.0" promptText="-- Select Weight --" />
+        <TextField fx:id="deityField" layoutX="126.0" layoutY="317.0" prefWidth="160.0" />
+        <Label layoutX="24.0" layoutY="316.0" prefHeight="27.0" prefWidth="74.0" text="Deity:" />
+        <TextField fx:id="homelandField" layoutX="126.0" layoutY="344.0" prefWidth="160.0" />
+        <Label layoutX="24.0" layoutY="343.0" prefHeight="27.0" prefWidth="74.0" text="Homeland:" />
+        <ComboBox fx:id="ageComboBox" layoutX="126.0" layoutY="182.0" prefWidth="160.0" promptText="-- Select Age --" />
+      <Button fx:id="saveButton" layoutX="19.0" layoutY="402.0" mnemonicParsing="false" onAction="#saveButtonpress" prefHeight="25.0" prefWidth="85.0" text="Save" />
+     </children>
+</AnchorPane>

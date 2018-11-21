@@ -63,6 +63,18 @@ public class Ranger extends CharacterClass {
 				this.specialAbilityDescriptions.add(rangerClassFeatures.get(key).getName().replaceAll("_", " ") + ": " + rangerClassFeatures.get(key).getFullDescription());
 			}
 		}
+		
+		this.description = "For those who relish the thrill of the hunt, there are only predators and prey. Be they scouts, "
+				+ "trackers, or bounty hunters, rangers share much in common: unique mastery of specialized weapons, skill "
+				+ "at stalking even the most elusive game, and the expertise to defeat a wide range of quarries. "
+				+ "Knowledgeable, patient, and skilled hunters, these rangers hound man, beast, and monster alike, "
+				+ "gaining insight into the way of the predator, skill in varied environments, and ever more lethal "
+				+ "martial prowess. While some track man-eating creatures to protect the frontier, others pursue more cunning "
+				+ "game— even fugitives among their own people.";
+		
+		this.role = "Rangers are deft skirmishers, either in melee or at range, capable of skillfully dancing in and out of "
+				+ "battle. Their abilities allow them to deal significant harm to specific types of foes, but their skills "
+				+ "are valuable against all manner of enemies.";
 	}
 	
 	//Methods:

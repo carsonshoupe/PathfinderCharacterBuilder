@@ -137,9 +137,13 @@ public class Skill implements Comparable<Skill> {
 	
 	@Override
 	public String toString() {
-		String outputString = this.name;
-		return outputString;
-				
+		StringBuilder outputString = new StringBuilder();
+		String[] skillNameWords = this.name.split("_");
+		for (String word : skillNameWords) {
+			String wordToAppend = word.substring(0, 1) + word.substring(1).toLowerCase();
+			outputString.append(wordToAppend + " ");
+		}
+		return outputString.toString().trim();
 	}
 	
 	@Override

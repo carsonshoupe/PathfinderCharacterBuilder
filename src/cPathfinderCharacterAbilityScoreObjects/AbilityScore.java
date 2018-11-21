@@ -137,5 +137,15 @@ public class AbilityScore {
 		}
 		return outputArr;
 	}
+	
+	public static Integer abilityToAbilityInteger (String ability) {
+		if (ability.equals("Strength")) {return 0;}
+		else if (ability.equals("Dexterity")) {return 1;}
+		else if (ability.equals("Constitution")) {return 2;}
+		else if (ability.equals("Intelligence")) {return 3;}
+		else if (ability.equals("Wisdom")) {return 4;}
+		else if (ability.equals("Charisma")) {return 5;}
+		else {return null;}
+	}
 
 }

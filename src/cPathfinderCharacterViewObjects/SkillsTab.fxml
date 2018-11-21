@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="696.0" maxWidth="833.0" minHeight="696.0" minWidth="833.0" prefHeight="696.0" prefWidth="833.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cPathfinderCharacterControlObjects.SkillsTabControl">
+   <children>
+      <TableView fx:id="skillsTable" editable="true" layoutX="14.0" layoutY="56.0" onMouseClicked="#getSkillDescription" prefHeight="635.0" prefWidth="529.0">
+        <columns>
+            <TableColumn fx:id="classSkillCol" editable="false" prefWidth="42.0" text="Class&#10;Skill" />
+            <TableColumn fx:id="trainedOnlyCol" editable="false" prefWidth="49.0" text="Trained&#10;Only" />
+          <TableColumn fx:id="skillNameCol" editable="false" prefWidth="187.0" text="Skill" />
+            <TableColumn fx:id="totalSkillBonusCol" editable="false" minWidth="0.0" prefWidth="39.0" text="Total" />
+          <TableColumn editable="false" minWidth="0.0" prefWidth="133.0" text="Modifier">
+               <columns>
+                  <TableColumn fx:id="abilityModifierTypeCol" editable="false" prefWidth="39.0" text="Type" />
+                  <TableColumn fx:id="abilityModifierValueCol" editable="false" prefWidth="40.0" text="Value" />
+               </columns></TableColumn>
+            <TableColumn fx:id="skillRanksCol" minWidth="0.0" prefWidth="70.0" text="Ranks" />
+            <TableColumn fx:id="miscSkillModCol" editable="false" prefWidth="49.0" text="Misc." />
+        </columns>
+      </TableView>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="33.0" prefWidth="241.0" text="Skills">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="skillDescriptionTextArea" editable="false" layoutX="558.0" layoutY="85.0" prefHeight="540.0" prefWidth="269.0" wrapText="true" />
+      <Label layoutX="642.0" layoutY="47.0" prefHeight="33.0" prefWidth="101.0" text="Skill Description">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="selectSkillsButton" layoutX="558.0" layoutY="647.0" mnemonicParsing="false" onAction="#selectSkillsButtonOnClick" text="Select Skills" />
+   </children>
+</AnchorPane>

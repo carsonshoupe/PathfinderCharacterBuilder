@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="696.0" maxWidth="833.0" minHeight="696.0" minWidth="833.0" prefHeight="696.0" prefWidth="833.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cPathfinderCharacterControlObjects.ClassTabControl">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="33.0" prefWidth="100.0" text="Class">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="classSelectorComboBox" layoutX="14.0" layoutY="56.0" onAction="#classSelected" prefHeight="25.0" prefWidth="147.0" promptText="-- Select Class --" visibleRowCount="12" />
+      <ComboBox fx:id="bondSelectorComboBox" layoutX="173.0" layoutY="56.0" onAction="#bondSelected" prefHeight="25.0" prefWidth="139.0" promptText="-- Select Bond --" />
+      <TextField fx:id="levelTF" alignment="CENTER" layoutX="330.0" layoutY="56.0" prefHeight="25.0" prefWidth="49.0" text="1" />
+      <Label alignment="CENTER" layoutX="331.0" layoutY="39.0" prefHeight="17.0" prefWidth="49.0" text="Level" />
+      <VBox layoutX="28.0" layoutY="114.0" prefHeight="312.0" prefWidth="340.0">
+         <children>
+            <HBox prefHeight="40.0" prefWidth="340.0">
+               <children>
+                  <Label minWidth="75.0" prefWidth="50.0" text="Alignment Restriction: " wrapText="true" />
+                  <TextField fx:id="alignmentRestrictionTF" minWidth="130.0" prefWidth="130.0" />
+                  <HBox prefHeight="36.0" prefWidth="215.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="TOP" minWidth="45.0" prefHeight="17.0" prefWidth="83.0" text="Hit Die:" />
+                        <TextField fx:id="hitDieTF" minWidth="38.0" prefHeight="25.0" prefWidth="38.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="39.0" prefWidth="340.0">
+               <children>
+                  <Label alignment="TOP_LEFT" minWidth="75.0" prefHeight="44.0" prefWidth="50.0" text="Skill Ranks/Level:" wrapText="true" />
+                  <TextField fx:id="skillRanksPerLevelTF" minWidth="130.0" prefHeight="25.0" prefWidth="130.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="109.0" prefWidth="340.0">
+               <children>
+                  <Label minWidth="75.0" prefHeight="51.0" prefWidth="50.0" text="Weapon and Armor Proficiencies:" wrapText="true" />
+                  <TextArea fx:id="weaponArmorProficienciesTA" maxHeight="100.0" minHeight="20.0" minWidth="130.0" prefHeight="100.0" prefWidth="265.0" wrapText="true" />
+               </children>
+            </HBox>
+            <HBox prefHeight="110.0" prefWidth="340.0">
+               <children>
+                  <Label minWidth="75.0" prefHeight="17.0" prefWidth="50.0" text="Class Skills:" />
+                  <TextArea fx:id="classSkillsTA" maxHeight="100.0" minHeight="20.0" prefHeight="100.0" prefWidth="304.0" wrapText="true" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <TextArea fx:id="classInformationTA" editable="false" layoutX="402.0" layoutY="100.0" prefHeight="264.0" prefWidth="349.0" wrapText="true" />
+      <ComboBox fx:id="classInformationComboBox" layoutX="402.0" layoutY="56.0" onAction="#classInformationSelected" prefHeight="25.0" prefWidth="190.0" promptText="-- Class Information --" />
+      <ListView layoutX="28.0" layoutY="498.0" prefHeight="162.0" prefWidth="198.0" />
+      <Label layoutX="28.0" layoutY="481.0" prefHeight="17.0" prefWidth="88.0" text="Class Features" />
+      <TextArea layoutX="255.0" layoutY="496.0" prefHeight="162.0" prefWidth="544.0" />
+      <Label layoutX="255.0" layoutY="481.0" prefHeight="17.0" prefWidth="88.0" text="Description" />
+   </children>
+</AnchorPane>

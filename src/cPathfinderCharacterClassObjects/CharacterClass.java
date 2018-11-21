@@ -13,9 +13,19 @@ import cPathfinderCharacterSpellObjects.Spell;
 
 public abstract class CharacterClass implements CharacterModifier {
 	//Static Methods:
-	public static CharacterClass stringToClass(String classAsString) {
-		//TODO: Implement Method
-		return null;
+	public static CharacterClass stringToClass(String classAsString, int level) {
+		if (classAsString.equals("Barbarian")) {return new Barbarian(level);}
+		else if (classAsString.equals("Bard")) {return new Bard(level);}
+		else if (classAsString.equals("Cleric")) {return new Cleric(level);}
+		else if (classAsString.equals("Druid")) {return new Druid(level);}
+		else if (classAsString.equals("Fighter")) {return new Fighter(level);}
+		else if (classAsString.equals("Monk")) {return new Monk(level);}
+		else if (classAsString.equals("Paladin")) {return new Paladin(level);}
+		else if (classAsString.equals("Ranger")) {return new Ranger(level);}
+		else if (classAsString.equals("Rogue")) {return new Rogue(level);}
+		else if (classAsString.equals("Sorcerer")) {return new Sorcerer(level);}
+		else if (classAsString.equals("Wizard")) {return new Wizard(level);}
+		else {return null;}
 	}
 	
 	//Instance Variables:
@@ -29,6 +39,9 @@ public abstract class CharacterClass implements CharacterModifier {
 	protected Set<ClassFeature> classFeatures = new HashSet<ClassFeature>();
 	protected CharacterSpells characterSpellsObject = new CharacterSpells();
 	protected Set<Spell> spells = new HashSet<Spell>();
+	
+	protected String description;
+	protected String role;
 	
 		//Modifications:
 	protected ArrayList<String> specialAbilityDescriptions = new ArrayList<String>();
@@ -46,6 +59,9 @@ public abstract class CharacterClass implements CharacterModifier {
 	public Set<ClassFeature> getClassFeatures() {return this.classFeatures;}
 	public Set<Spell> getSpells() {return this.spells;}
 	public ArrayList<String> getSpecialAbilityDescriptions() {return this.specialAbilityDescriptions;}
+	
+	public String getDescription() {return this.description;}
+	public String getRole() {return this.role;}
 	
 	public PathfinderCharacter updateCharacter(PathfinderCharacter pathfinderCharacter) {
 		PathfinderCharacter outputCharacter = pathfinderCharacter.clone();

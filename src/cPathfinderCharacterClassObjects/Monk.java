@@ -69,6 +69,18 @@ public class Monk extends CharacterClass {
 				this.specialAbilityDescriptions.add(monkClassFeatures.get(key).getName().replaceAll("_", " ") + ": " + monkClassFeatures.get(key).getFullDescription());
 			}
 		}
+		
+		this.description = "For the truly exemplary, martial skill transcends the battlefield— it is a lifestyle, "
+				+ "a doctrine, a state of mind. These warrior-artists search out methods of battle beyond swords "
+				+ "and shields, finding weapons within themselves just as capable of crippling or killing as any "
+				+ "blade. These monks (so called since they adhere to ancient philosophies and strict martial "
+				+ "disciplines) elevate their bodies to become weapons of war, from battle-minded ascetics to "
+				+ "self-taught brawlers. Monks tread the path of discipline, and those with the will to endure "
+				+ "that path discover within themselves not what they are, but what they are meant to be.";
+		
+		this.role = "Monks excel at overcoming even the most daunting perils, striking where it’s least expected, "
+				+ "and taking advantage of enemy vulnerabilities. Fleet of foot and skilled in combat, monks can "
+				+ "navigate any battlefield with ease, aiding allies wherever they are needed most.";
 	}
 	
 	//Methods:

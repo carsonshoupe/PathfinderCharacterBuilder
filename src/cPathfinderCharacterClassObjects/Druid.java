@@ -70,6 +70,22 @@ public class Druid extends CharacterClass {
 				this.specialAbilityDescriptions.add(druidClassFeatures.get(key).getName().replaceAll("_", " ") + ": " + druidClassFeatures.get(key).getFullDescription());
 			}
 		}
+		
+		this.description = "Within the purity of the elements and the order of the wilds lingers a power beyond the marvels "
+				+ "of civilization. Furtive yet undeniable, these primal magics are guarded over by servants of philosophical "
+				+ "balance known as druids. Allies to beasts and manipulators of nature, these often misunderstood protectors "
+				+ "of the wild strive to shield their lands from all who would threaten them and prove the might of the wilds "
+				+ "to those who lock themselves behind city walls. Rewarded for their devotion with incredible powers, druids "
+				+ "gain unparalleled shape-shifting abilities, the companionship of mighty beasts, and the power to call upon "
+				+ "nature’s wrath. The mightiest temper powers akin to storms, earthquakes, and volcanoes with primeval wisdom "
+				+ "long abandoned and forgotten by civilization.";
+		
+		this.role = "While some druids might keep to the fringe of battle, "
+				+ "allowing companions and summoned creatures to fight while they confound foes with the powers of nature, "
+				+ "others transform into deadly beasts and savagely wade into combat. Druids worship personifications of "
+				+ "elemental forces, natural powers, or nature itself. Typically this means devotion to a nature deity, "
+				+ "though druids are just as likely to revere vague spirits, animalistic demigods, or even specific "
+				+ "awe-inspiring natural wonders.";
 	}
 	
 	//Methods:
