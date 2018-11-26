@@ -44,6 +44,7 @@ import cPathfinderCharacterRaceObjects.Race;
 import cPathfinderCharacterSkillObjects.CharacterSkills;
 import cPathfinderCharacterSkillObjects.Skill;
 import cPathfinderCharacterSpellObjects.Spell;
+import javafx.collections.transformation.SortedList;
 
 public class TestPathfinderCharacter {
 	
@@ -94,18 +95,18 @@ public class TestPathfinderCharacter {
 		CharacterSkills charSkills = chad.getCharacterSkills(); 
 		System.out.println(chad.getCharacterSkills().toString()); 
 		
-		Skill[] charSkillsArr = charSkills.getCharacterSkills();
+		SortedList<Skill> charSkillsArr = charSkills.getCharacterSkillsList();
 		for (Skill skill : charSkillsArr) {
-			charSkills.incrementSkillRank(skill, 4);
+			charSkills.incrementSkillRanks(skill, 4);
 		}
 		System.out.println(chad.getCharacterSkills().toString()); 
 		for (Skill skill : charSkillsArr) {
-			charSkills.incrementSkillRank(skill, -5);
+			charSkills.incrementSkillRanks(skill, -5);
 		}
 		System.out.println(chad.getCharacterSkills().toString()); 
 		
 		CharacterSkills cs = new CharacterSkills();
-		for (Skill skill : cs.getCharacterSkills()) {
+		for (Skill skill : cs.getCharacterSkillsList()) {
 			System.out.println(skill.toString() + ": " + skill.isTrainedOnly());
 		}
 		
@@ -115,7 +116,7 @@ public class TestPathfinderCharacter {
 		
 		chad.getCharacterSkills().setClassSkills(classSkills);
 		for (Skill skill : charSkillsArr) {
-			System.out.println(skill.getName() + ": " + charSkills.getClassSkillsMap().get(skill));
+			System.out.println(skill.getName() + ": " + skill.getAbilityModifier() + skill.getPageInCoreRuleBook() + skill.getDescription() + skill.isTrainedOnly());
 		}
 	}
 	
@@ -124,7 +125,7 @@ public class TestPathfinderCharacter {
 		PathfinderCharacter pete = new PathfinderCharacter();
 		CharacterFeats charFeats = new CharacterFeats();
 		
-		String filePath = "C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterFeatObjects/FeatNames.txt"; 
+		String filePath = "src/cPathfinderCharacterFeatObjects/FeatNames.txt"; 
 		String line; 
 		ArrayList<String> featNames = new ArrayList<String>();
 		try {

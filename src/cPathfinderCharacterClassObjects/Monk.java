@@ -22,7 +22,7 @@ public class Monk extends CharacterClass {
 	
 	protected static final Map<String, ClassFeature> monkClassFeatures = new HashMap<String, ClassFeature>();
 	static {
-		setMonkClassFeatures("C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterClassObjects/MonkClassFeatures.txt");
+		setMonkClassFeatures("src/cPathfinderCharacterClassObjects/MonkClassFeatures.txt");
 	}
 	
 	//Static Methods:

@@ -105,31 +105,31 @@ public class RaceTabControl implements Initializable {
 		//Update Image
 		this.raceImage.preserveRatioProperty();
 		if (raceSelectorComboBox.getValue().equals("Dwarf")) {
-			Image image = new Image("file:C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterViewObjects/DwarfImage.png");
+			Image image = new Image("file:src/cPathfinderCharacterViewObjects/DwarfImage.png");
 			this.raceImage.setImage(image);
 		}
 		else if (raceSelectorComboBox.getValue().equals("Elf")) {
-			Image image = new Image("file:C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterViewObjects/ElfImage.png");
+			Image image = new Image("file:src/cPathfinderCharacterViewObjects/ElfImage.png");
 			this.raceImage.setImage(image);
 		}
 		else if (raceSelectorComboBox.getValue().equals("Gnome")) {
-			Image image = new Image("file:C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterViewObjects/GnomeImage.png");
+			Image image = new Image("file:src/cPathfinderCharacterViewObjects/GnomeImage.png");
 			this.raceImage.setImage(image);
 		}
 		else if (raceSelectorComboBox.getValue().equals("Half-Elf")) {
-			Image image = new Image("file:C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterViewObjects/HalfElfImage.png");
+			Image image = new Image("file:src/cPathfinderCharacterViewObjects/HalfElfImage.png");
 			this.raceImage.setImage(image);
 		}
 		else if (raceSelectorComboBox.getValue().equals("Half-Orc")) {
-			Image image = new Image("file:C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterViewObjects/HalfOrcImage.png");
+			Image image = new Image("file:src/cPathfinderCharacterViewObjects/HalfOrcImage.png");
 			this.raceImage.setImage(image);
 		}
 		else if (raceSelectorComboBox.getValue().equals("Halfling")) {
-			Image image = new Image("file:C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterViewObjects/HalflingImage.png");
+			Image image = new Image("file:src/cPathfinderCharacterViewObjects/HalflingImage.png");
 			this.raceImage.setImage(image);
 		}
 		else {
-			Image image = new Image("file:C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterViewObjects/HumanImage.png");
+			Image image = new Image("file:src/cPathfinderCharacterViewObjects/HumanImage.png");
 			this.raceImage.setImage(image);
 		}
 		this.raceImage.fitHeightProperty();

@@ -16,7 +16,7 @@ public class ArcaneSchool {
 	public static Map<String, String[]> arcaneSchoolsMap = new HashMap<String, String[]>();
 	
 	static {
-		setArcaneSchoolsMap("C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterClassObjects/WizardArcaneSchools.txt");
+		setArcaneSchoolsMap("src/cPathfinderCharacterClassObjects/WizardArcaneSchools.txt");
 	}
 	
 	//Static Methods:

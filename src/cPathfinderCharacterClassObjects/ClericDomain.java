@@ -15,7 +15,7 @@ public class ClericDomain { //TODO: change this to just domain so its more intui
 	public static Map<String, String[]> clericDomainsMap = new HashMap<String, String[]>();
 	
 	static {
-		setClericDomainsMap("C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterClassObjects/ClericDomains.txt");
+		setClericDomainsMap("src/cPathfinderCharacterClassObjects/ClericDomains.txt");
 	}
 	
 	//Static Methods:

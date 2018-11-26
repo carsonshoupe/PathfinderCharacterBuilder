@@ -21,7 +21,7 @@ public class Wizard extends CharacterClass {
 	
 	protected static final Map<String, ClassFeature> wizardClassFeatures = new HashMap<String, ClassFeature>();
 	static {
-		setWizardClassFeatures("C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterClassObjects/WizardClassFeatures.txt");
+		setWizardClassFeatures("src/cPathfinderCharacterClassObjects/WizardClassFeatures.txt");
 	}
 	
 	//Static Methods:

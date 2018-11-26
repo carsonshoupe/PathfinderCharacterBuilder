@@ -5,7 +5,7 @@ ELF_BLOOD:Elves count as both elves and humans for any effect related to race:fa
 ELVEN_IMMUNITIES:Elves are immune to magic sleep effects and get a +2 racial saving throw bonus against enchantment spells and effects:false
 ELVEN_MAGIC:Elves receive a +2 racial bonus on caster level checks made to overcome spell resistance. In addition, elves receive a +2 racial bonus on Spellcraft skill checks made to identify the properties of magic items:false
 FEARLESS:Receive a +2 racial bonus on all saving throws against fear. This bonus stacks with the bonus granted by halfling luck:false
-GNOME_MAGIC:Gnomes add +1 to the DC of any saving throws against illusion spells that they cast. Gnomes with a Charisma of 11 or higher also gain the following spell-like abilities: 1/day—dancing lights, ghost sound, prestidigitation, and speak with animals. The caster level for these effects is equal to the gnome’s level. The DC for these spells is equal to 10 + the spell’s level + the gnome’s Charisma modifier:false
+GNOME_MAGIC:Gnomes add +1 to the DC of any saving throws against illusion spells that they cast. Gnomes with a Charisma of 11 or higher also gain the following spell-like abilities -- 1/day—dancing lights, ghost sound, prestidigitation, and speak with animals. The caster level for these effects is equal to the gnome’s level. The DC for these spells is equal to 10 + the spell’s level + the gnome’s Charisma modifier:false
 GREED:Receive a +2 racial bonus on Appraise skill checks made to determine the price of nonmagical goods that contain precious metals or gemstones:false
 HALFLING_LUCK:Halflings receive a +1 racial bonus on all saving throws:true
 HARDY:Receive a +2 racial bonus on saving throws against poison, spells, and spell-like abilities:false

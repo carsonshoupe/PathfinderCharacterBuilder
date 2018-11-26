@@ -53,7 +53,7 @@ public class SkillsTabControl implements Initializable {
 	public void getSkillDescription(Event e) {
 		Skill skill = skillsTable.getSelectionModel().selectedItemProperty().get();
 		if (skill != null) {
-			skillDescriptionTextArea.setText(skill.getSkillDescription());
+			skillDescriptionTextArea.setText(skill.getDescription());
 		}
 	};
 	
@@ -69,7 +69,7 @@ public class SkillsTabControl implements Initializable {
 		
 		//Trained Only Col
 		this.trainedOnlyCol.setCellValueFactory(ov -> {
-			return ov.getValue().skillTrainedOnlyProperty();  
+			return ov.getValue().trainedOnlyProperty();  
 		});
 		trainedOnlyCol.setCellFactory(CheckBoxTableCell.forTableColumn(trainedOnlyCol));
 		
@@ -77,7 +77,7 @@ public class SkillsTabControl implements Initializable {
 		this.abilityModifierTypeCol.setCellValueFactory(new PropertyValueFactory<Skill, Integer>("skillAbilityModifier"));
 		
 		this.abilityModifierValueCol.setCellValueFactory(ov -> {
-			return new SimpleStringProperty(Integer.toString(pcViewModel.getAbilityScoreModifier(pcViewModel.abilityModifierToInt(ov.getValue().skillAbilityModifierProperty().getValue()))));
+			return new SimpleStringProperty(Integer.toString(pcViewModel.getAbilityScoreModifier(pcViewModel.abilityModifierToInt(ov.getValue().abilityModifierProperty().getValue()))));
 		});
 		classSkillCol.setCellFactory(CheckBoxTableCell.forTableColumn(classSkillCol));
 		

@@ -17,11 +17,18 @@ import javafx.beans.property.StringProperty;
 
 public class Skill implements Comparable<Skill> {
 	//Static Variables:
-	protected static final Map<String, String[]> skillDescriptionsMap;
-	public static final String[] skillNames;
+	protected static final Map<String, String[]> skillDescriptionsMap = new HashMap<String, String[]>();
+	public static final String[] skillNames = new String[35];
+	
+	//Static Call
 	static {
-		Map<String, String[]> outputMap = new HashMap<String, String[]>();
-		String filePath = "C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterSkillObjects/SkillDescriptions.txt"; 
+		setSkillDescriptionsMap();
+		setSkillNames();
+	}
+	
+	//Static Methods:
+	private static void setSkillDescriptionsMap() {
+		String filePath = "src/cPathfinderCharacterSkillObjects/SkillDescriptions.txt"; 
 		String line;
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader(filePath));
@@ -34,19 +41,18 @@ public class Skill implements Comparable<Skill> {
 				value[2] = parts[3];
 				value[3] = parts[4];
 				
-				outputMap.put(key, value);
+				Skill.skillDescriptionsMap.put(key, value);
 			}
 			reader.close();
 		}
 		catch (IOException e) {
 			System.out.println("Failed to load skillDescriptionsMap in Skill");
 		} 
-		skillDescriptionsMap = outputMap;
-		
-		/***************************************************************/
-		
-		filePath = "C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterSkillObjects/SkillNames.txt";
-		skillNames = new String[35];
+	}
+	
+	private static void setSkillNames() {
+		String filePath = "src/cPathfinderCharacterSkillObjects/SkillNames.txt";
+		String line;
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader(filePath));
 			int skillNameCounter = 0;
@@ -61,63 +67,63 @@ public class Skill implements Comparable<Skill> {
 		}
 	}
 	
-	//Static Methods:
-	
 	//Instance Variables: 
-	private String name;
-	private String description;
-	private int pageInCoreRuleBook;
-	private boolean trainedOnly;
-	private String abilityModifier;
+	private SimpleStringProperty name;
+	private SimpleStringProperty description;
+	private SimpleBooleanProperty trainedOnly;
+	private SimpleStringProperty abilityModifier;
+	private SimpleIntegerProperty pageInCoreRuleBook;
 	
-	private SimpleStringProperty skillName = new SimpleStringProperty();
-	private SimpleStringProperty skillDescription = new SimpleStringProperty();
-	private SimpleBooleanProperty skillTrainedOnly = new SimpleBooleanProperty();
-	private SimpleStringProperty skillAbilityModifier = new SimpleStringProperty();
-	
-	public StringProperty skillNameProperty() { 
-        if (this.name == null) this.skillName = new SimpleStringProperty(this, "skillName");
-        return this.skillName; 
+	public StringProperty nameProperty() { 
+        if (this.name == null) this.name = new SimpleStringProperty(this, "name");
+        return this.name; 
     }
-	public StringProperty skillDescriptionProperty() {
-		if (this.skillDescription == null) this.skillDescription = new SimpleStringProperty(this, "skillDescription");
-		return this.skillDescription;
+	public StringProperty descriptionProperty() {
+		if (this.description == null) this.description = new SimpleStringProperty(this, "description");
+		return this.description;
 	}
-	public BooleanProperty skillTrainedOnlyProperty() {
-		if (this.skillTrainedOnly == null) this.skillTrainedOnly = new SimpleBooleanProperty(this, "skillTrainedOnly");
-		return this.skillTrainedOnly;
+	public BooleanProperty trainedOnlyProperty() {
+		if (this.trainedOnly == null) this.trainedOnly = new SimpleBooleanProperty(this, "trainedOnly");
+		return this.trainedOnly;
 	}
-	public StringProperty skillAbilityModifierProperty() {
-		if (this.skillAbilityModifier == null) this.skillAbilityModifier = new SimpleStringProperty(this, "skillAbilityModifier");
-		return this.skillAbilityModifier;
+	public StringProperty abilityModifierProperty() {
+		if (this.abilityModifier == null) this.abilityModifier = new SimpleStringProperty(this, "abilityModifier");
+		return this.abilityModifier;
+	}
+	public IntegerProperty pageInCoreRuleBookProperty() {
+		if (this.pageInCoreRuleBook == null) this.pageInCoreRuleBook = new SimpleIntegerProperty(this, "pageInCoreRuleBook");
+		return this.pageInCoreRuleBook;
 	}
 		
 	//Constructors:
 	public Skill() {
-		this.name = "Null Skill";
+		this.name = new SimpleStringProperty("Null Skill");
 	}
 	
-	public Skill(String name) {
-		this.name = name;
-		//System.out.println(this.skillNameProperty.get());
-		//System.out.println("Creating skill: " + this.name);
-		this.description = skillDescriptionsMap.get(this.name)[0];
-		this.trainedOnly = Boolean.parseBoolean(skillDescriptionsMap.get(this.name)[1]);
-		this.abilityModifier = skillDescriptionsMap.get(this.name)[2];
-		this.pageInCoreRuleBook = Integer.parseInt(skillDescriptionsMap.get(this.name)[3]);
-		
-		this.skillName.set(this.name);
-		this.skillDescription.set(skillDescriptionsMap.get(this.name)[0]);
-		this.skillTrainedOnly.set(Boolean.parseBoolean(skillDescriptionsMap.get(this.name)[1]));
-		this.skillAbilityModifier.set(skillDescriptionsMap.get(this.name)[2]);
+	public Skill(String name) { //TODO: Eventually, I should remove this and replace all calls like this with references to the CharacterSkills object
+		this.name = new SimpleStringProperty(name);
+		this.description = new SimpleStringProperty(skillDescriptionsMap.get(this.getName())[0]);
+		this.trainedOnly = new SimpleBooleanProperty(Boolean.parseBoolean(skillDescriptionsMap.get(this.getName())[1]));
+		this.abilityModifier = new SimpleStringProperty(skillDescriptionsMap.get(this.getName())[2]);
+		this.pageInCoreRuleBook = new SimpleIntegerProperty(Integer.parseInt(skillDescriptionsMap.get(this.getName())[3]));
+	}
+	
+	public Skill(String name, String description, Boolean trainedOnly, String abilityModifier, Integer pageInCoreRuleBook) {
+		this.name = new SimpleStringProperty(name);
+		this.description = new SimpleStringProperty(description);
+		this.trainedOnly = new SimpleBooleanProperty(trainedOnly);
+		this.abilityModifier = new SimpleStringProperty(abilityModifier);
+		this.pageInCoreRuleBook = new SimpleIntegerProperty(pageInCoreRuleBook);
 	}
 	
 	//Methods: 
-	public String getName() {return this.name;}
-	public String getSkillDescription() {return this.description;}
-	public int getPageInCoreRuleBOok() {return this.pageInCoreRuleBook;}
-	public boolean isTrainedOnly() {return this.trainedOnly;}
-	public String getAbilityModifier() {return this.abilityModifier;}
+	public String getName() {return this.name.get();}
+	public String getDescription() {return this.description.get();}
+	public int getPageInCoreRuleBook() {return this.pageInCoreRuleBook.get();}
+	public boolean isTrainedOnly() {return this.trainedOnly.get();}
+	public String getAbilityModifier() {return this.abilityModifier.get();}
+	
+	private void setTrainedOnly(Boolean bool) {this.trainedOnly = new SimpleBooleanProperty(bool);} //No idea why I need this but don't need it for simpleStringProperties or IntegerProperties
 	
 	@Override
 	public int hashCode() {
@@ -125,20 +131,19 @@ public class Skill implements Comparable<Skill> {
 	}
 	
 	@Override
-	public boolean equals(Object skill) { //Add 'instanceOf' if statement
-		Skill typeCastedSkill = (Skill) skill;
-		if (this.getName().equals(typeCastedSkill.getName())) {
-			return true;
-		}
+	public boolean equals(Object skill) {
+		if (!(skill instanceof Skill)) {return false;}
 		else {
-			return false;
+			Skill typeCastedSkill = (Skill) skill;
+			if (this.getName().equals(typeCastedSkill.getName())) {return true;}
+			else {return false;}
 		}
 	}
 	
 	@Override
 	public String toString() {
 		StringBuilder outputString = new StringBuilder();
-		String[] skillNameWords = this.name.split("_");
+		String[] skillNameWords = this.getName().split("_");
 		for (String word : skillNameWords) {
 			String wordToAppend = word.substring(0, 1) + word.substring(1).toLowerCase();
 			outputString.append(wordToAppend + " ");

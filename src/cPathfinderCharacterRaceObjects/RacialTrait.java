@@ -3,33 +3,29 @@ package cPathfinderCharacterRaceObjects;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 public class RacialTrait {
 	//Static Variables:
-	protected static final Map<String, String[]> racialTraitsMap;
+	protected static Map<String, String[]> racialTraitsMap;
 	static {
-		HashMap<String, String[]> outputMap = new HashMap<String, String[]>();
-		String filePath = "C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterRaceObjects/RacialSkillTraits.txt"; 
-		String line;
 		try {
-			BufferedReader reader = new BufferedReader(new FileReader(filePath));
-			while ((line = reader.readLine()) != null ) {
-				String[] parts = line.split(":", 3);
-				String key = parts[0];
-				String[] value = new String[2];
-				value[0] = parts[1];
-				value[1] = parts[2];
-				outputMap.put(key, value);
-			}
-			reader.close();
-		}
-		catch (IOException e) {
+			String fileName = "src/cPathfinderCharacterRaceObjects/RacialTraits.json";
+			byte[] jsonData = Files.readAllBytes(Paths.get(fileName));
+			ObjectMapper mapper = new ObjectMapper();
+			
+			RacialTrait.racialTraitsMap = mapper.readValue(jsonData, new TypeReference<HashMap<String, String[]>>(){});
+		} catch (Exception e) {
 			System.out.println("Failed to load racialTraitsMap");
+			e.printStackTrace();
 		}
-		racialTraitsMap = Collections.unmodifiableMap(outputMap);
 	}
 	
 	//Instance Variables: 

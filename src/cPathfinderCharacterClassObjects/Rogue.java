@@ -21,7 +21,7 @@ public class Rogue extends CharacterClass {
 	
 	protected static final Map<String, ClassFeature> rogueClassFeatures = new HashMap<String, ClassFeature>();
 	static {
-		setRogueClassFeatures("C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterClassObjects/RogueClassFeatures.txt");
+		setRogueClassFeatures("src/cPathfinderCharacterClassObjects/RogueClassFeatures.txt");
 	}
 	
 	//Static Methods:

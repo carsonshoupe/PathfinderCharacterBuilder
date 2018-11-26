@@ -20,7 +20,7 @@ public class Ranger extends CharacterClass {
 	
 	protected static final Map<String, ClassFeature> rangerClassFeatures = new HashMap<String, ClassFeature>();
 	static {
-		setRangerClassFeatures("C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterClassObjects/RangerClassFeatures.txt");
+		setRangerClassFeatures("src/cPathfinderCharacterClassObjects/RangerClassFeatures.txt");
 	}
 	
 	//Static Methods:

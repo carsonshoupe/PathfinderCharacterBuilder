@@ -14,7 +14,7 @@ public class FeatPrerequisite {
 	protected static final String[] featNames;
 	static {
 		String[] outputStringArr = new String[176];
-		String filePath = "C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterFeatObjects/FeatNames.txt"; 
+		String filePath = "src/cPathfinderCharacterFeatObjects/FeatNames.txt"; 
 		String line;
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader(filePath));

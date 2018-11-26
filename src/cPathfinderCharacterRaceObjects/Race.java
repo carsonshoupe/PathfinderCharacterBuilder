@@ -3,11 +3,16 @@ package cPathfinderCharacterRaceObjects;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import cPathfinderCharacterFeatObjects.Feat;
 import cPathfinderCharacterObjects.CharacterModifier;
@@ -26,30 +31,12 @@ public abstract class Race implements CharacterModifier{
 
 	//Static Methods:
 	private static void setRaceDescriptions() {
-		String filePath = "C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterRaceObjects/RaceDescriptions.txt"; 
-		String line;
+		String fileName = "src/cPathfinderCharacterRaceObjects/RaceDescriptions.json"; 
 		try {
-			BufferedReader reader = new BufferedReader(new FileReader(filePath));
-			int lineCounter = -1;
-			String key = "";
-			String[] value = new String[6];
-			while ((line = reader.readLine()) != null ) {
-				//System.out.println(line);
-				if (lineCounter == 6) {
-					raceDescriptionsMap.put(key, value);
-					value = new String[6];
-				}
-				if (line.contains("*Race")) {
-					key = line.split(":")[1];
-					lineCounter = 0;
-					continue;
-				}
-				if (lineCounter < 6) {
-					value[lineCounter] = line;
-					lineCounter++;
-				}
-			}
-			reader.close();
+			byte[] jsonData = Files.readAllBytes(Paths.get(fileName));
+			ObjectMapper mapper = new ObjectMapper();
+			
+			Race.raceDescriptionsMap = mapper.readValue(jsonData, new TypeReference<HashMap<String, String[]>>(){});
 		}
 		catch (IOException e) {
 			System.out.println("Failed to load raceDescriptionsMap");

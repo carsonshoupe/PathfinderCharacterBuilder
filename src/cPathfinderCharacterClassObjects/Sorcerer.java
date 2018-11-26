@@ -20,7 +20,7 @@ public class Sorcerer extends CharacterClass {
 	
 	protected static final Map<String, ClassFeature> sorcererClassFeatures = new HashMap<String, ClassFeature>();
 	static {
-		setSorcererClassFeatures("C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterClassObjects/SorcererClassFeatures.txt");
+		setSorcererClassFeatures("src/cPathfinderCharacterClassObjects/SorcererClassFeatures.txt");
 	}
 	
 	//Static Methods:

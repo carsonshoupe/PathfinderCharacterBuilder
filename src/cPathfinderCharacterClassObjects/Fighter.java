@@ -23,7 +23,7 @@ public class Fighter extends CharacterClass {
 	
 	protected static final Map<String, ClassFeature> fighterClassFeatures = new HashMap<String, ClassFeature>();
 	static {
-		setFighterClassFeatures("C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterClassObjects/FighterClassFeatures.txt");
+		setFighterClassFeatures("src/cPathfinderCharacterClassObjects/FighterClassFeatures.txt");
 	}
 	
 	//Static Methods:

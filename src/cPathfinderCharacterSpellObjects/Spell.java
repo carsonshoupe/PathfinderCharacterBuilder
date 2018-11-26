@@ -12,7 +12,7 @@ public class Spell {
 	public static Map<String, String[]> spellDescriptionsMap = new HashMap<String, String[]>();
 	public static final ArrayList<String> spellNames = new ArrayList<String>();
 	static {
-		setSpellMaps("C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterSpellObjects/AbbreviatedSpellDescriptions.txt");
+		setSpellMaps("src/cPathfinderCharacterSpellObjects/AbbreviatedSpellDescriptions.txt");
 	}
 	
 	//Static Methods:

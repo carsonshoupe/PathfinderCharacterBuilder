@@ -1,0 +1,268 @@
+[
+	{
+		"name": "ACROBATICS",
+		"description": "Ability to traverse narrow or treacherous surfaces",
+		"trainedOnly": false,
+		"abilityModifier": "DEX",
+		"pageInCoreRuleBook": 87
+	},
+	{
+		"name": "APPRAISE",
+		"description": "Evaluate the monetary value of an object",
+		"trainedOnly": false,
+		"abilityModifier": "INT",
+		"pageInCoreRuleBook": 90
+	},
+	{
+		"name": "BLUFF",
+		"description": "Skill to lie",
+		"trainedOnly": false,
+		"abilityModifier": "CHA",
+		"pageInCoreRuleBook": 90
+	},
+	{
+		"name": "CLIMB",
+		"description": "Ability to scale vertical surfaces from smooth city walls to rocky cliffs",
+		"trainedOnly": false,
+		"abilityModifier": "STR",
+		"pageInCoreRuleBook": 90
+	},
+	{
+		"name": "CRAFT1",
+		"description": "Skill to craft a specific group of items",
+		"trainedOnly": false,
+		"abilityModifier": "CHA",
+		"pageInCoreRuleBook": 90
+	},
+	{
+		"name": "CRAFT2",
+		"description": "Skill to craft a specific group of items",
+		"trainedOnly": false,
+		"abilityModifier": "CHA",
+		"pageInCoreRuleBook": 90
+	},
+	{
+		"name": "CRAFT3",
+		"description": "Skill to craft a specific group of items",
+		"trainedOnly": false,
+		"abilityModifier": "CHA",
+		"pageInCoreRuleBook": 90
+	},
+	{
+		"name": "DIPLOMACY",
+		"description": "Skill to persuade others",
+		"trainedOnly": false,
+		"abilityModifier": "CHA",
+		"pageInCoreRuleBook": 93
+	},
+	{
+		"name": "DISABLE_DEVICE",
+		"description": "Skill to disarm traps and open locks",
+		"trainedOnly": true,
+		"abilityModifier": "DEX",
+		"pageInCoreRuleBook": 94
+	},
+	{
+		"name": "ESCAPE_ARTIST",
+		"description": "Skill to slip out of bonds and escape from grapples",
+		"trainedOnly": false,
+		"abilityModifier": "DEX",
+		"pageInCoreRuleBook": 95
+	},
+	{
+		"name": "FLY",
+		"description": "Skill to perform daring or complex airborne maneuvers -- Note - This skill does not give you the ability to fly",
+		"trainedOnly": false,
+		"abilityModifier": "DEX",
+		"pageInCoreRuleBook": 96
+	},
+	{
+		"name": "HANDLE_ANIMAL",
+		"description": "Skill with animals, including tricks and simple commands",
+		"trainedOnly": true,
+		"abilityModifier": "CHA",
+		"pageInCoreRuleBook": 97
+	},
+	{
+		"name": "HEAL",
+		"description": "Skill tending to wounds and ailments",
+		"trainedOnly": false,
+		"abilityModifier": "WIS",
+		"pageInCoreRuleBook": 98
+	},
+	{
+		"name": "INTIMIDATE",
+		"description": "Skill to frighten others to act in a way that benefits you",
+		"trainedOnly": false,
+		"abilityModifier": "CHA",
+		"pageInCoreRuleBook": 99
+	},
+	{
+		"name": "KNOWLEDGE_ARCANA",
+		"description": "Knolwedge of ancient mysteries, magic traditions, arcane symbols, constructs, dragons, and magical beasts",
+		"trainedOnly": true,
+		"abilityModifier": "INT",
+		"pageInCoreRuleBook": 99
+	},
+	{
+		"name": "KNOWLEDGE_DUNGEONEERING",
+		"description": "Knowldge of aberrations, caverns, oozes, and spelunking",
+		"trainedOnly": true,
+		"abilityModifier": "INT",
+		"pageInCoreRuleBook": 99
+	},
+	{
+		"name": "KNOWLEDGE_ENGINEERING",
+		"description": "Knowldge of buildings, aqueducts, bridges, and fortifications",
+		"trainedOnly": true,
+		"abilityModifier": "INT",
+		"pageInCoreRuleBook": 99
+	},
+	{
+		"name": "KNOWLEDGE_GEOGRAPHY",
+		"description": "Knowldge of lands, terrain, climate, and people",
+		"trainedOnly": true,
+		"abilityModifier": "INT",
+		"pageInCoreRuleBook": 99
+	},
+	{
+		"name": "KNOWLEDGE_HISTORY",
+		"description": "Knowldge of wars, colonies, migrations, and founding of cities",
+		"trainedOnly": true,
+		"abilityModifier": "INT",
+		"pageInCoreRuleBook": 99
+	},
+	{
+		"name": "KNOWLEDGE_LOCAL",
+		"description": "Knowldge of legends, personalities, inhabitants, laws, customs, traditions, and humanoids",
+		"trainedOnly": true,
+		"abilityModifier": "INT",
+		"pageInCoreRuleBook": 99
+	},
+	{
+		"name": "KNOWLEDGE_NATURE",
+		"description": "Knowldge of animals, fey, monstrous humanoids, plants, seasons and cycles, weather, and vermin",
+		"trainedOnly": true,
+		"abilityModifier": "INT",
+		"pageInCoreRuleBook": 99
+	},
+	{
+		"name": "KNOWLEDGE_NOBILITY",
+		"description": "Knowldge of lineages, heraldry, personalities, and royalty",
+		"trainedOnly": true,
+		"abilityModifier": "INT",
+		"pageInCoreRuleBook": 99
+	},
+	{
+		"name": "KNOWLEDGE_PLANES",
+		"description": "Knowldge of the Inner Planes, the Outer Planes, the Astral Plane, the Ethereal Plane, outsiders, and planar magic",
+		"trainedOnly": true,
+		"abilityModifier": "INT",
+		"pageInCoreRuleBook": 99
+	},
+	{
+		"name": "KNOWLEDGE_RELIGION",
+		"description": "Knowldge of gods and goddesses, mythic history, ecclesiastic tradition, holy symbols, and undead",
+		"trainedOnly": true,
+		"abilityModifier": "INT",
+		"pageInCoreRuleBook": 99
+	},
+	{
+		"name": "LINGUISTICS",
+		"description": "Skill working with languages",
+		"trainedOnly": true,
+		"abilityModifier": "INT",
+		"pageInCoreRuleBook": 100
+	},
+	{
+		"name": "PERCEPTION",
+		"description": "Sense to notice finer details and alert you to danger",
+		"trainedOnly": true,
+		"abilityModifier": "INT",
+		"pageInCoreRuleBook": 100
+	},
+	{
+		"name": "PERFORM1",
+		"description": "Skill in a form of entertainment",
+		"trainedOnly": false,
+		"abilityModifier": "CHA",
+		"pageInCoreRuleBook": 102
+	},
+	{
+		"name": "PERFORM2",
+		"description": "Skill in a form of entertainment",
+		"trainedOnly": false,
+		"abilityModifier": "CHA",
+		"pageInCoreRuleBook": 102
+	},
+	{
+		"name": "PROFESSION1",
+		"description": "Skill in a specific job",
+		"trainedOnly": true,
+		"abilityModifier": "WIS",
+		"pageInCoreRuleBook": 103
+	},
+	{
+		"name": "PROFESSION2",
+		"description": "Skill in a specific job",
+		"trainedOnly": true,
+		"abilityModifier": "WIS",
+		"pageInCoreRuleBook": 103
+	},
+	{
+		"name": "RIDE",
+		"description": "Skill to ride animals",
+		"trainedOnly": false,
+		"abilityModifier": "DEX",
+		"pageInCoreRuleBook": 103
+	},
+	{
+		"name": "SENSE_MOTIVE",
+		"description": "Skill to detect falsehood and true intentions",
+		"trainedOnly": false,
+		"abilityModifier": "WIS",
+		"pageInCoreRuleBook": 104
+	},
+	{
+		"name": "SLIGHT_OF_HAND",
+		"description": "Skill to pick pockets, draw hidden weapons, and take a variety of actions without being noticed",
+		"trainedOnly": true,
+		"abilityModifier": "DEX",
+		"pageInCoreRuleBook": 104
+	},
+	{
+		"name": "SPELLCRAFT",
+		"description": "Skill at the art of casting spells, identifying magic items, crafting magic items, and identifying spells as they are being cast",
+		"trainedOnly": true,
+		"abilityModifier": "INT",
+		"pageInCoreRuleBook": 106
+	},
+	{
+		"name": "STEALTH",
+		"description": "Skill at avoiding detection, allowing you to slip past foes or strike from an unseen position",
+		"trainedOnly": false,
+		"abilityModifier": "DEX",
+		"pageInCoreRuleBook": 106
+	},
+	{
+		"name": "SURVIVAL",
+		"description": "Skill to navigate the wilderness",
+		"trainedOnly": false,
+		"abilityModifier": "WIS",
+		"pageInCoreRuleBook": 107
+	},
+	{
+		"name": "SWIM",
+		"description": "Skill to swim",
+		"trainedOnly": false,
+		"abilityModifier": "STR",
+		"pageInCoreRuleBook": 108
+	},
+	{
+		"name": "USE_MAGICAL_DEVICE",
+		"description": "Skill to activate magical items",
+		"trainedOnly": true,
+		"abilityModifier": "CHA",
+		"pageInCoreRuleBook": 108
+	}
+]

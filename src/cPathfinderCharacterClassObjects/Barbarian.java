@@ -27,7 +27,7 @@ public class Barbarian extends CharacterClass {
 	
 	protected static final Map<String, ClassFeature> barbarianClassFeatures = new HashMap<String, ClassFeature>();
 	static {
-		setBarbarianClassFeatures("C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterClassObjects/BarbarianClassFeatures.txt");
+		setBarbarianClassFeatures("src/cPathfinderCharacterClassObjects/BarbarianClassFeatures.txt");
 	}
 	
 	//Static Methods:

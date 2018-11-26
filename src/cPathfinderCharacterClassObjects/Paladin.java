@@ -19,7 +19,7 @@ public class Paladin extends CharacterClass {
 	
 	protected static final Map<String, ClassFeature> paladinClassFeatures = new HashMap<String, ClassFeature>();
 	static {
-		setPaladinClassFeatures("C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterClassObjects/PaladinClassFeatures.txt");
+		setPaladinClassFeatures("src/cPathfinderCharacterClassObjects/PaladinClassFeatures.txt");
 	}
 	
 	//Static Methods:

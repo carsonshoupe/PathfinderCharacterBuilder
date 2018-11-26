@@ -28,7 +28,7 @@ public class Cleric extends CharacterClass {
 		
 		protected static final Map<String, ClassFeature> clericClassFeatures = new HashMap<String, ClassFeature>();
 		static {
-			setClericClassFeatures("C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterClassObjects/ClericClassFeatures.txt");
+			setClericClassFeatures("src/cPathfinderCharacterClassObjects/ClericClassFeatures.txt");
 		}
 		
 		//Static Methods:

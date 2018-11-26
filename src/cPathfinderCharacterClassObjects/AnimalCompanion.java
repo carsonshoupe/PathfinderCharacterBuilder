@@ -19,8 +19,8 @@ public class AnimalCompanion {
 	public static Map<String, ClassFeature> animalCompanionFeaturesMap = new HashMap<String, ClassFeature>();
 	
 	static {
-		setLevelDecidedStatsMap("C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterClassObjects/AnimalCompanionLevelDecidedStats.txt");
-		setAnimalCompanionFeaturesMap("C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterClassObjects/AnimalCompanionFeatures.txt");
+		setLevelDecidedStatsMap("src/cPathfinderCharacterClassObjects/AnimalCompanionLevelDecidedStats.txt");
+		setAnimalCompanionFeaturesMap("src/cPathfinderCharacterClassObjects/AnimalCompanionFeatures.txt");
 		
 	}
 	

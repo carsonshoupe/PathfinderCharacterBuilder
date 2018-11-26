@@ -25,7 +25,7 @@ public class Feat {
 	
 	private static void setFeatMap() {
 		HashMap<String, String[]> outputMap = new HashMap<String, String[]>();
-		String filePath = "C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterFeatObjects/FeatsChartAsText.txt"; 
+		String filePath = "src/cPathfinderCharacterFeatObjects/FeatsChartAsText.txt"; 
 		String line;
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader(filePath));
@@ -52,7 +52,7 @@ public class Feat {
 	}
 	
 	private static void setFeatNames() {
-		String filePath = "C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterFeatObjects/FeatNames.txt"; 
+		String filePath = "src/cPathfinderCharacterFeatObjects/FeatNames.txt"; 
 		String line; 
 		Feat.featNames = new ArrayList<String>();
 		try {

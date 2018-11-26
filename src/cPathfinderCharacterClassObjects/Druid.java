@@ -21,7 +21,7 @@ public class Druid extends CharacterClass {
 	
 	protected static final Map<String, ClassFeature> druidClassFeatures = new HashMap<String, ClassFeature>();
 	static {
-		setDruidClassFeatures("C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterClassObjects/DruidClassFeatures.txt");
+		setDruidClassFeatures("src/cPathfinderCharacterClassObjects/DruidClassFeatures.txt");
 	}
 	
 	//Static Methods:

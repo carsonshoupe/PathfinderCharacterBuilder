@@ -18,7 +18,7 @@ public class Bloodline {
 	public static Map<String, String[]> bloodlineMap = new HashMap<String, String[]>();
 	
 	static {
-		setBloodlinesMap("C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterClassObjects/SorcererBloodlines.txt");
+		setBloodlinesMap("src/cPathfinderCharacterClassObjects/SorcererBloodlines.txt");
 	}
 	
 	//Static Methods:

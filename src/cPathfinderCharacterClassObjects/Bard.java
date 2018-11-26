@@ -27,7 +27,7 @@ public class Bard extends CharacterClass {
 	protected static Map<Integer, int[]> spellsKnownByLevel = new HashMap<Integer, int[]>();
 	public static ArrayList<Spell> bardSpells = new ArrayList<Spell>(); 
 	static {
-		setBardClassFeatures("C:/Users/carso/Documents/GitHub/PathfinderCharacterBuilder/src/cPathfinderCharacterClassObjects/BardClassFeatures.txt");
+		setBardClassFeatures("src/cPathfinderCharacterClassObjects/BardClassFeatures.txt");
 		setSpellsKnownByLevel();
 		setBardSpells();
 	}
