@@ -8,5 +8,13 @@
 	<classpathentry kind="lib" path="C:/Program Files (x86)/Oracle/Jackson/jackson-annotations-2.9.7.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files (x86)/Oracle/Jackson/jackson-core-2.3.1.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files (x86)/Oracle/Jackson/jackson-databind-2.1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/Oracle/commons-logging-1.2/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/Oracle/commons-logging-1.2/commons-logging-1.2-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/Oracle/PDFBox/fontbox-2.0.12.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/Oracle/PDFBox/pdfbox-2.0.12.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/Oracle/PDFBox/pdfbox-debugger-2.0.12.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/Oracle/PDFBox/pdfbox-tools-2.0.12.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/Oracle/PDFBox/preflight-2.0.12.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/Oracle/PDFBox/xmpbox-2.0.12.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

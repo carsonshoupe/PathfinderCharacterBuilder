@@ -123,7 +123,7 @@ public class Skill implements Comparable<Skill> {
 	public boolean isTrainedOnly() {return this.trainedOnly.get();}
 	public String getAbilityModifier() {return this.abilityModifier.get();}
 	
-	private void setTrainedOnly(Boolean bool) {this.trainedOnly = new SimpleBooleanProperty(bool);} //No idea why I need this but don't need it for simpleStringProperties or IntegerProperties
+	private void setTrainedOnly(Boolean bool) {this.trainedOnly = new SimpleBooleanProperty(bool);} //No idea why I need this but don't need it for SimpleStringProperties or SimpleIntegerProperties
 	
 	@Override
 	public int hashCode() {

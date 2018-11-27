@@ -4,12 +4,16 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.Set;
 
+import cPathfinderCharacterClassObjects.CharacterClass;
+import cPathfinderCharacterClassObjects.ClassFeature;
+import cPathfinderCharacterFeatObjects.Feat;
 import cPathfinderCharacterSkillObjects.Skill;
 import cPathfinderCharacterViewModelObjects.PathfinderCharacterViewModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
@@ -27,6 +31,8 @@ public class ClassTabControl implements Initializable {
 	@FXML private ComboBox<String> bondSelectorComboBox;
 	@FXML private ComboBox<String> classInformationComboBox;
 	@FXML private TextArea classInformationTA;
+	@FXML private ListView<ClassFeature> classFeaturesLV;
+	@FXML private TextArea classFeatureDescriptionTA;
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -35,6 +41,13 @@ public class ClassTabControl implements Initializable {
 		classSelectorComboBox.getItems().addAll("Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Wizard");
 		this.bondSelectorComboBox.setVisible(false);
 		this.classInformationComboBox.getItems().addAll("Description", "Role");
+		
+		//Click on Class Feature in classFeaturesLV to display text
+		this.classFeaturesLV.getSelectionModel().selectedItemProperty().addListener(cl -> {
+			ClassFeature classFeature = this.classFeaturesLV.getSelectionModel().getSelectedItem();
+			if (classFeature != null) {this.classFeatureDescriptionTA.setText(classFeature.getFullDescription());}
+			else {this.classFeatureDescriptionTA.clear();}
+		});
 	}
 	
 	@FXML public void classSelected(ActionEvent event) {
@@ -60,6 +73,10 @@ public class ClassTabControl implements Initializable {
 		//Resetting classInfomrationTA
 		this.classInformationComboBox.setValue("Description");
 		this.classInformationTA.setText(pcViewModel.getCharacterClass().getDescription());
+		
+		//Add Class Features to ListView
+		this.classFeaturesLV.getItems().clear();
+		this.classFeaturesLV.getItems().addAll(CharacterClass.stringToClass(classSelectorComboBox.getValue(), Integer.parseInt(this.levelTF.getText())).getClassFeatures());
 	}
 	
 	private String classSkillsToString(Set<Skill> classSkills) {

@@ -21,7 +21,7 @@ public class CharacterBuilderMainPageView extends Application {
 		Bard b = new Bard(1);
 		pcViewModel.setClassSkills(b.getClassSkills());
 		pcViewModel.setAbilityScores(13, 8, 15, 17, 9, 12);
-		pcViewModel.setCharacterName("Bob");
+		//pcViewModel.setCharacterName("Bob");
 		
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/cPathfinderCharacterViewObjects/CharacterBuilderMainPage.fxml"));
 		stage.setScene(new Scene(loader.load()));

@@ -65,7 +65,7 @@ public class SkillsTabControl implements Initializable {
 		pcViewModel.getCharacterSkills().comparatorProperty().bind(this.skillsTable.comparatorProperty());
 		
 		//Name Col
-		this.skillNameCol.setCellValueFactory(new PropertyValueFactory<Skill, String>("skillName"));
+		this.skillNameCol.setCellValueFactory(new PropertyValueFactory<Skill, String>("name"));
 		
 		//Trained Only Col
 		this.trainedOnlyCol.setCellValueFactory(ov -> {
@@ -74,7 +74,7 @@ public class SkillsTabControl implements Initializable {
 		trainedOnlyCol.setCellFactory(CheckBoxTableCell.forTableColumn(trainedOnlyCol));
 		
 		//Ability Modifier Cols
-		this.abilityModifierTypeCol.setCellValueFactory(new PropertyValueFactory<Skill, Integer>("skillAbilityModifier"));
+		this.abilityModifierTypeCol.setCellValueFactory(new PropertyValueFactory<Skill, Integer>("abilityModifier"));
 		
 		this.abilityModifierValueCol.setCellValueFactory(ov -> {
 			return new SimpleStringProperty(Integer.toString(pcViewModel.getAbilityScoreModifier(pcViewModel.abilityModifierToInt(ov.getValue().abilityModifierProperty().getValue()))));

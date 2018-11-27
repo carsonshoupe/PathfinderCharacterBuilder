@@ -30,12 +30,15 @@ public class ClassFeature {
 	
 	@Override
 	public boolean equals(Object classFeature) {
-		ClassFeature typeCastedClassFeature = (ClassFeature) classFeature;
-		if (this.getName().equals(typeCastedClassFeature.getName())) {
-			return true;
-		}
+		if (!(classFeature instanceof ClassFeature)) {return false;}
 		else {
-			return false;
+			ClassFeature typeCastedClassFeature = (ClassFeature) classFeature;
+			if (this.getName().equals(typeCastedClassFeature.getName())) {
+				return true;
+			}
+			else {
+				return false;
+			}
 		}
 	}
 	

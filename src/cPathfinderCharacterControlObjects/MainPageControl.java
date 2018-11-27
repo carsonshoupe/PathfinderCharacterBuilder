@@ -70,6 +70,7 @@ public class MainPageControl implements Initializable {
 	@FXML private RaceTabControl raceTabController;
 	@FXML private SkillsTabControl skillsTabFieldController;
 	@FXML private ClassTabControl classTabFieldController;
+	@FXML private CharacterOverviewTabControl characterOverviewTabFieldController;
 	
 	//FXML Tabs
 	@FXML Tab skillsTab;
@@ -90,6 +91,10 @@ public class MainPageControl implements Initializable {
 	@FXML public void loadAbilityScoreTab(Event e) {
 		abilityScoreTabController.intializeRaceTF();
 	}
+	
+	@FXML public void loadCharacterOverviewTab(Event e) {
+		this.characterOverviewTabFieldController.handleCharacterOverviewTabClick();
+	}
 
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
@@ -103,6 +108,7 @@ public class MainPageControl implements Initializable {
 		this.raceTabController.setPcViewModel(pcViewModel);
 		this.skillsTabFieldController.setPcViewModel(pcViewModel);
 		this.classTabFieldController.setPcViewModel(pcViewModel);
+		this.characterOverviewTabFieldController.setPcViewModel(pcViewModel);
 	}
 	
 	

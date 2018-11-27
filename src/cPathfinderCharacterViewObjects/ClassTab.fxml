@@ -53,9 +53,9 @@
       </VBox>
       <TextArea fx:id="classInformationTA" editable="false" layoutX="402.0" layoutY="100.0" prefHeight="264.0" prefWidth="349.0" wrapText="true" />
       <ComboBox fx:id="classInformationComboBox" layoutX="402.0" layoutY="56.0" onAction="#classInformationSelected" prefHeight="25.0" prefWidth="190.0" promptText="-- Class Information --" />
-      <ListView layoutX="28.0" layoutY="498.0" prefHeight="162.0" prefWidth="198.0" />
+      <ListView fx:id="classFeaturesLV" layoutX="28.0" layoutY="498.0" prefHeight="162.0" prefWidth="198.0" />
       <Label layoutX="28.0" layoutY="481.0" prefHeight="17.0" prefWidth="88.0" text="Class Features" />
-      <TextArea layoutX="255.0" layoutY="496.0" prefHeight="162.0" prefWidth="544.0" />
+      <TextArea fx:id="classFeatureDescriptionTA" layoutX="255.0" layoutY="496.0" prefHeight="162.0" prefWidth="544.0" />
       <Label layoutX="255.0" layoutY="481.0" prefHeight="17.0" prefWidth="88.0" text="Description" />
    </children>
 </AnchorPane>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="696.0" maxWidth="833.0" minHeight="696.0" minWidth="833.0" prefHeight="696.0" prefWidth="833.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cPathfinderCharacterControlObjects.CharacterOverviewTabControl">
+   <children>
+      <ScrollPane prefHeight="696.0" prefWidth="833.0">
+         <content>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <ImageView fx:id="characterSheetIV1" fitHeight="10000.0" fitWidth="817.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="characterSheetIV2" fitHeight="10000.0" fitWidth="817.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

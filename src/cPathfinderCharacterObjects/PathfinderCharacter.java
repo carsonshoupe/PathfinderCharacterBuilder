@@ -76,7 +76,7 @@ public class PathfinderCharacter {
 	
 	 //Aesthetic Character Methods
 	public String getCharacterName() {return this.characterName;}
-	public void setCharacterName(String playerName) {this.characterName = playerName;}
+	public void setCharacterName(String name) {this.characterName = name;}
 	
 	public String getGender() {return this.gender;}
 	public void setGender(String gender) {this.gender = gender;}
