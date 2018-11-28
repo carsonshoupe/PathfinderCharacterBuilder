@@ -333,6 +333,13 @@ public class AbilityScoreTabControl implements Initializable {
 		this.wisdomScoreCB.getItems().addAll(scores);
 		this.charismaScoreCB.getItems().addAll(scores);
 		
+		this.strengthScoreCB.setValue(0);
+		this.dexterityScoreCB.setValue(0);
+		this.constitutionScoreCB.setValue(0);
+		this.intelligenceScoreCB.setValue(0);
+		this.wisdomScoreCB.setValue(0);
+		this.charismaScoreCB.setValue(0);
+		
 		this.strengthTotalTF.setText("");
 		this.dexterityTotalTF.setText("");
 		this.constitutionTotalTF.setText("");

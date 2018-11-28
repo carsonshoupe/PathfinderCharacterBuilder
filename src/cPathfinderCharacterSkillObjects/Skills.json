@@ -63,6 +63,13 @@
 		"pageInCoreRuleBook": 94
 	},
 	{
+		"name": "DISGUISE",
+		"description": "Skill disguise one's self",
+		"trainedOnly": false,
+		"abilityModifier": "CHA",
+		"pageInCoreRuleBook": 95
+	},
+	{
 		"name": "ESCAPE_ARTIST",
 		"description": "Skill to slip out of bonds and escape from grapples",
 		"trainedOnly": false,

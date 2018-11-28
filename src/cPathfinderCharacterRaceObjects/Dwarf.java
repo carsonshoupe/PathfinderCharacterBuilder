@@ -14,6 +14,9 @@ public class Dwarf extends Race {
 	public Dwarf(){
 		this.raceType = "Dwarf";
 		
+		//String value = null;
+		//value.getBytes();
+		
 		setStrengthModifier(0);
 		setDexterityModifier(0);
 		setConstitutionModifier(2);

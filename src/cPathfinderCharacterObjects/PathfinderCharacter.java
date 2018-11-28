@@ -46,7 +46,7 @@ public class PathfinderCharacter {
 	protected int miscArmorClassModifier = 0;
 
 	 //Race
-	protected Race race = new Dwarf();
+	protected Race race;
 	protected int miscSpeedBonus = 0;
 	
 	 //Character Class

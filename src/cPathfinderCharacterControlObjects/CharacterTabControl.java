@@ -38,7 +38,6 @@ public class CharacterTabControl implements Initializable {
 	@FXML public void saveButtonpress(ActionEvent event) {
 		if (this.playerNameField.getText() != null) {pcViewModel.setPlayerName(playerNameField.getText());}
 		if (this.characterNameField.getText() != null) {pcViewModel.setCharacterName(characterNameField.getText());}
-		System.out.println("Character Name: " + pcViewModel.getCharacterName());
 		pcViewModel.setGender(((RadioButton) this.genderToggleGroup.getSelectedToggle()).getText());
 		//Age, Height, and Weight will be configured after they select a race
 		if (this.hairColorField.getText() != null) {pcViewModel.setHairColor(hairColorField.getText());}
