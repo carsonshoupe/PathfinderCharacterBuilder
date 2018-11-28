@@ -67,7 +67,32 @@ public class CharacterOverviewTabControl implements Initializable {
 	private void updateCharacterSheet() {
 		PDAcroForm form = this.characterSheet.getDocumentCatalog().getAcroForm();
 		try {
+			//Aesthetic Character Properties 
 			form.getField("Character Name").setValue(this.pcViewModel.getCharacterName());
+			
+			//Race
+			form.getField("Race").setValue(this.pcViewModel.getRace().getName());
+			
+			
+			//Ability Score
+			form.getField("Ability Score Strength").setValue(Integer.toString(this.pcViewModel.getStrength()));
+			form.getField("Ability Modifier Strength").setValue(Integer.toString(this.pcViewModel.getStrenghModifier()));
+			
+			form.getField("Ability Score Dexterity").setValue(Integer.toString(this.pcViewModel.getDexterity()));
+			form.getField("Ability Modifier Dexterity").setValue(Integer.toString(this.pcViewModel.getDexterityModifier()));
+			
+			form.getField("Ability Score Constitution").setValue(Integer.toString(this.pcViewModel.getConstitution()));
+			form.getField("Ability Modifier Constitution").setValue(Integer.toString(this.pcViewModel.getConstitutionModifier()));
+			
+			form.getField("Ability Score Intelligence").setValue(Integer.toString(this.pcViewModel.getIntelligence()));
+			form.getField("Ability Modifier Intelligence").setValue(Integer.toString(this.pcViewModel.getIntelligenceModifier()));
+			
+			form.getField("Ability Score Wisdom").setValue(Integer.toString(this.pcViewModel.getWisdom()));
+			form.getField("Ability Modifier Wisdom").setValue(Integer.toString(this.pcViewModel.getWisdomModifier()));
+			
+			form.getField("Ability Score Charisma").setValue(Integer.toString(this.pcViewModel.getCharisma()));
+			form.getField("Ability Modifier Charisma").setValue(Integer.toString(this.pcViewModel.getCharismaModifier()));
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

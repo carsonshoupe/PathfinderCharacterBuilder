@@ -201,6 +201,9 @@ public class AbilityScoreTabControl implements Initializable {
 			this.strengthCostTF.setText(Integer.toString(AbilityScore.abilityScoreCost(strengthScoreCB.getValue())));
 			this.strengthModifierTF.setText(Integer.toString(AbilityScore.abilityScoreToModifier(Integer.parseInt(this.strengthTotalTF.getText()))));
 			this.totalCostTF.setText(calculateTotalCost());
+			
+			this.pcViewModel.setStrength(Integer.parseInt(this.strengthTotalTF.getText()));
+			
 			if (Integer.parseInt(this.totalCostTF.getText()) > this.pointsToSpend) {
 				this.spentTooManyPointsTF.setText("You've spent too many points.  Reassign your points to cost less than the selected budget.");
 			}
@@ -216,6 +219,9 @@ public class AbilityScoreTabControl implements Initializable {
 			this.dexterityCostTF.setText(Integer.toString(AbilityScore.abilityScoreCost(dexterityScoreCB.getValue())));
 			this.dexterityModifierTF.setText(Integer.toString(AbilityScore.abilityScoreToModifier(Integer.parseInt(this.dexterityTotalTF.getText()))));
 			this.totalCostTF.setText(calculateTotalCost());
+			
+			this.pcViewModel.setDexterity(Integer.parseInt(this.dexterityTotalTF.getText()));
+			
 			if (Integer.parseInt(this.totalCostTF.getText()) > this.pointsToSpend) {
 				this.spentTooManyPointsTF.setText("You've spent too many points.  Reassign your points to cost less than the selected budget.");
 			}
@@ -230,6 +236,9 @@ public class AbilityScoreTabControl implements Initializable {
 			this.constitutionCostTF.setText(Integer.toString(AbilityScore.abilityScoreCost(constitutionScoreCB.getValue())));
 			this.constitutionModifierTF.setText(Integer.toString(AbilityScore.abilityScoreToModifier(Integer.parseInt(this.constitutionTotalTF.getText()))));
 			this.totalCostTF.setText(calculateTotalCost());
+			
+			this.pcViewModel.setConstitution(Integer.parseInt(this.constitutionTotalTF.getText()));
+			
 			if (Integer.parseInt(this.totalCostTF.getText()) > this.pointsToSpend) {
 				this.spentTooManyPointsTF.setText("You've spent too many points.  Reassign your points to cost less than the selected budget.");
 			}
@@ -244,6 +253,9 @@ public class AbilityScoreTabControl implements Initializable {
 			this.intelligenceCostTF.setText(Integer.toString(AbilityScore.abilityScoreCost(intelligenceScoreCB.getValue())));
 			this.intelligenceModifierTF.setText(Integer.toString(AbilityScore.abilityScoreToModifier(Integer.parseInt(this.intelligenceTotalTF.getText()))));
 			this.totalCostTF.setText(calculateTotalCost());
+			
+			this.pcViewModel.setIntelligence(Integer.parseInt(this.intelligenceTotalTF.getText()));
+			
 			if (Integer.parseInt(this.totalCostTF.getText()) > this.pointsToSpend) {
 				this.spentTooManyPointsTF.setText("You've spent too many points.  Reassign your points to cost less than the selected budget.");
 			}
@@ -258,6 +270,9 @@ public class AbilityScoreTabControl implements Initializable {
 			this.wisdomCostTF.setText(Integer.toString(AbilityScore.abilityScoreCost(wisdomScoreCB.getValue())));
 			this.wisdomModifierTF.setText(Integer.toString(AbilityScore.abilityScoreToModifier(Integer.parseInt(this.wisdomTotalTF.getText()))));
 			this.totalCostTF.setText(calculateTotalCost());
+			
+			this.pcViewModel.setWisdom(Integer.parseInt(this.wisdomTotalTF.getText()));
+			
 			if (Integer.parseInt(this.totalCostTF.getText()) > this.pointsToSpend) {
 				this.spentTooManyPointsTF.setText("You've spent too many points.  Reassign your points to cost less than the selected budget.");
 			}
@@ -272,6 +287,9 @@ public class AbilityScoreTabControl implements Initializable {
 			this.charismaCostTF.setText(Integer.toString(AbilityScore.abilityScoreCost(charismaScoreCB.getValue())));
 			this.charismaModifierTF.setText(Integer.toString(AbilityScore.abilityScoreToModifier(Integer.parseInt(this.charismaTotalTF.getText()))));
 			this.totalCostTF.setText(calculateTotalCost());	
+			
+			this.pcViewModel.setCharisma(Integer.parseInt(this.charismaTotalTF.getText()));
+			
 			if (Integer.parseInt(this.totalCostTF.getText()) > this.pointsToSpend) {
 				this.spentTooManyPointsTF.setText("You've spent too many points.  Reassign your points to cost less than the selected budget.");
 			}

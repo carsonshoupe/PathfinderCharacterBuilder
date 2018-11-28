@@ -137,6 +137,8 @@ public abstract class Race implements CharacterModifier{
 	
 	
 	//Methods: 
+	public String getName() {return this.raceType;}
+	
 	public int getStrengthModifier() {return this.abilityModifiers[0];}
 	public int getDexterityModifier() {return this.abilityModifiers[1];}
 	public int getConstitutionModifier() {return this.abilityModifiers[2];}
