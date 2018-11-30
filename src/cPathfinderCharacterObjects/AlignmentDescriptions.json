@@ -1,0 +1,38 @@
+{
+	"CHAOTICGOOD": [
+		"Description",
+		"Examples"
+	],
+	"NEUTRALGOOD": [
+		"Description",
+		"Examples"
+	],
+	"LAWFULGOOD": [
+		"Description",
+		"Examples"
+	],
+	"CHAOTICNEUTRAL": [
+		"Description",
+		"Examples"
+	],
+	"TRUENEUTRAL": [
+		"Description",
+		"Examples"
+	],
+	"LAWFULNEUTRAL": [
+		"Description",
+		"Examples"
+	],
+	"CHAOTICEVIL": [
+		"Description",
+		"Examples"
+	],
+	"NEUTRALEVIL": [
+		"Description",
+		"Examples"
+	],
+	"LAWFULEVIL": [
+		"Description",
+		"Examples"
+	]
+}

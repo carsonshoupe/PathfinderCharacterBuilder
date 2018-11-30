@@ -36,5 +36,26 @@ public class Human extends Race {
 	}
 	
 	//Methods:
+	public Integer generateAge(String ageRange) {
+		if (ageRange.equals("Young Adult")) {return (int) Math.floor((Math.random()*20 + 15));}
+		else if (ageRange.equals("Middle Age")) {return (int) Math.floor((Math.random()*18 + 35));}
+		else if (ageRange.equals("Old")) {return (int) Math.floor((Math.random()*17 + 53));}
+		else {return null;}
+	}
+	
+	public Integer generateHeight(String heightRange) {
+		if (heightRange.equals("Short")) {return 58;}
+		else if (heightRange.equals("Medium")) {return (int) Math.floor((Math.random()*16 + 60));}
+		else if (heightRange.equals("Tall")) {return 78;}
+		else {return null;}
+	}
+	
+	public Integer generateWeight(String weightRange) {
+		if (weightRange.equals("Light")) {return 120;}
+		else if (weightRange.equals("Medium")) {return (int) Math.floor((Math.random()*60 + 130));}
+		else if (weightRange.equals("Heavy")) {return 220;}
+		else {return null;}
+	}
+
 
 }

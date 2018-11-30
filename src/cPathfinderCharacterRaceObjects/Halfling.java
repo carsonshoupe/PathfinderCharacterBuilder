@@ -35,7 +35,28 @@ public class Halfling extends Race{
 		applyRacialTraitModifications();
 	}
 		
-		//Methods:
+	//Methods:
+	public Integer generateAge(String ageRange) {
+		if (ageRange.equals("Young Adult")) {return (int) Math.floor((Math.random()*30 + 20));}
+		else if (ageRange.equals("Middle Age")) {return (int) Math.floor((Math.random()*25 + 50));}
+		else if (ageRange.equals("Old")) {return (int) Math.floor((Math.random()*25 + 75));}
+		else {return null;}
+	}
+	
+	public Integer generateHeight(String heightRange) {
+		if (heightRange.equals("Short")) {return 32;}
+		else if (heightRange.equals("Medium")) {return (int) Math.floor((Math.random()*4 + 34));}
+		else if (heightRange.equals("Tall")) {return 40;}
+		else {return null;}
+	}
+	
+	public Integer generateWeight(String weightRange) {
+		if (weightRange.equals("Light")) {return 30;}
+		else if (weightRange.equals("Medium")) {return (int) Math.floor((Math.random()*4 + 32));}
+		else if (weightRange.equals("Heavy")) {return 38;}
+		else {return null;}
+	}
+
 	
 
 }

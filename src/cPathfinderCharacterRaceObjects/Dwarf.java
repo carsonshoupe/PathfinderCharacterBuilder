@@ -40,5 +40,26 @@ public class Dwarf extends Race {
 	}
 	
 	//Methods:
+	
+	public Integer generateAge(String ageRange) {
+		if (ageRange.equals("Young Adult")) {return (int) Math.floor((Math.random()*85 + 40));}
+		else if (ageRange.equals("Middle Age")) {return (int) Math.floor((Math.random()*63 + 125));}
+		else if (ageRange.equals("Old")) {return (int) Math.floor((Math.random()*62 + 188));}
+		else {return null;}
+	}
+	
+	public Integer generateHeight(String heightRange) {
+		if (heightRange.equals("Short")) {return 45;}
+		else if (heightRange.equals("Medium")) {return (int) Math.floor((Math.random()*4 + 47));}
+		else if (heightRange.equals("Tall")) {return 53;}
+		else {return null;}
+	}
+	
+	public Integer generateWeight(String weightRange) {
+		if (weightRange.equals("Light")) {return 150;}
+		else if (weightRange.equals("Medium")) {return (int) Math.floor((Math.random()*20 + 160));}
+		else if (weightRange.equals("Heavy")) {return 206;}
+		else {return null;}
+	}
 
 }

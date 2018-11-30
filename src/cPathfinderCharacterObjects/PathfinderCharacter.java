@@ -29,9 +29,9 @@ public class PathfinderCharacter {
 	 //Aesthetic Character Variables
 	protected String characterName;
 	protected String gender; 
-	protected int age;
-	protected int height; //in inches
-	protected int weight; 
+	protected String age = "Young Adult";
+	protected String height = "Medium";
+	protected String weight = "Medium"; 
 	protected String hairColor; 
 	protected String eyeColor; 
 	protected String deity; 
@@ -81,14 +81,14 @@ public class PathfinderCharacter {
 	public String getGender() {return this.gender;}
 	public void setGender(String gender) {this.gender = gender;}
 	
-	public int getAge() {return this.age;}
-	public void setAge(int age) {this.age = age;}
+	public String getAge() {return this.age;}
+	public void setAge(String age) {this.age = age;}
 	
-	public int getHeight() {return this.height;}
-	public void setHeight(int height) {this.height = height;} //in inches
+	public String getHeight() {return this.height;}
+	public void setHeight(String height) {this.height = height;} //in inches
 	
-	public int getWeight() {return this.weight;}
-	public void setWeight(int weight) {this.weight = weight;} 
+	public String getWeight() {return this.weight;}
+	public void setWeight(String weight) {this.weight = weight;} 
 	
 	public String getHairColor() {return this.hairColor;}
 	public void setHairColor(String hairColor) {this.hairColor = hairColor;}

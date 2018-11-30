@@ -36,5 +36,26 @@ public class Elf extends Race{
 	}
 	
 	//Methods:
+	public Integer generateAge(String ageRange) {
+		if (ageRange.equals("Young Adult")) {return (int) Math.floor((Math.random()*65 + 110));}
+		else if (ageRange.equals("Middle Age")) {return (int) Math.floor((Math.random()*88 + 175));}
+		else if (ageRange.equals("Old")) {return (int) Math.floor((Math.random()*87 + 263));}
+		else {return null;}
+	}
+	
+	public Integer generateHeight(String heightRange) {
+		if (heightRange.equals("Short")) {return 64;}
+		else if (heightRange.equals("Medium")) {return (int) Math.floor((Math.random()*12 + 66));}
+		else if (heightRange.equals("Tall")) {return 80;}
+		else {return null;}
+	}
+	
+	public Integer generateWeight(String weightRange) {
+		if (weightRange.equals("Light")) {return 100;}
+		else if (weightRange.equals("Medium")) {return (int) Math.floor((Math.random()*20 + 110));}
+		else if (weightRange.equals("Heavy")) {return 148;}
+		else {return null;}
+	}
+
 
 }

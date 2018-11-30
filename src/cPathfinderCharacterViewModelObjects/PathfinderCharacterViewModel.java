@@ -39,19 +39,23 @@ public class PathfinderCharacterViewModel {
 	public String getGender() {return pcModel.getGender();}
 	public void setGender(String gender) {pcModel.setGender(gender);}
 	
-	public int getAge() {return pcModel.getAge();}
-	public void setAge(int age) {pcModel.setAge(age);}
+	public String getAge(Race race) {
+		return Integer.toString(race.generateAge(this.pcModel.getAge()));
+	}
+	public void setAge(String age) {pcModel.setAge(age);}
 	
-	public String getHeight() {
-		int heightInInches =  pcModel.getHeight();
+	public String getHeight(Race race) {
+		int heightInInches = race.generateHeight(this.pcModel.getHeight());
 		int feet = heightInInches / 12;
 		int inches = heightInInches % 12;
 		return feet + "' " + inches + "''";		
 	} 
-	public void setHeight(int height) {pcModel.setHeight(height);} //in inches
+	public void setHeight(String height) {pcModel.setHeight(height);} //in inches
 	
-	public int getWeight() {return pcModel.getWeight();}
-	public void setWeight(int weight) {pcModel.setWeight(weight);} 
+	public String getWeight(Race race) {
+		return Integer.toString(race.generateWeight(this.pcModel.getWeight()));
+	}
+	public void setWeight(String weight) {pcModel.setWeight(weight);} 
 	
 	public String getHairColor() {return pcModel.getHairColor();}
 	public void setHairColor(String hairColor) {pcModel.setHairColor(hairColor);}

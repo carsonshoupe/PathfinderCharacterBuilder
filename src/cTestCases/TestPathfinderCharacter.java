@@ -32,6 +32,9 @@ import cPathfinderCharacterClassObjects.Sorcerer;
 import cPathfinderCharacterClassObjects.Wizard;
 import cPathfinderCharacterFeatObjects.CharacterFeats;
 import cPathfinderCharacterFeatObjects.Feat;
+import cPathfinderCharacterItems.Armor;
+import cPathfinderCharacterItems.Items;
+import cPathfinderCharacterObjects.Alignment;
 import cPathfinderCharacterObjects.PathfinderCharacter;
 import cPathfinderCharacterRaceObjects.Dwarf;
 import cPathfinderCharacterRaceObjects.Elf;
@@ -45,6 +48,7 @@ import cPathfinderCharacterSkillObjects.CharacterSkills;
 import cPathfinderCharacterSkillObjects.Skill;
 import cPathfinderCharacterSpellObjects.Spell;
 import javafx.collections.transformation.SortedList;
+import cPathfinderCharacterItems.Weapon;
 
 public class TestPathfinderCharacter {
 	
@@ -160,6 +164,12 @@ public class TestPathfinderCharacter {
 			System.out.println(spell.toString());
 			System.out.println(spell.getSpellClass());
 		}
+	}
+	
+	@Test
+	public void testAlignments() {
+		System.out.println(Alignment.CHAOTICEVIL.getDescription());
+		System.out.println(Alignment.CHAOTICNEUTRAL.getExamples());
 	}
 	
 	@Test
@@ -303,5 +313,19 @@ public class TestPathfinderCharacter {
 		System.out.println(Arrays.toString(AbilityScore.abilityScoresGenerator("Classic")));
 		System.out.println(Arrays.toString(AbilityScore.abilityScoresGenerator("Heroic")));
 		
+	}
+	
+	@Test
+	public void testWeapons() {
+		for (Weapon weapon : Items.getWeapons()) {
+			System.out.println(weapon.toString());
+		}
+	}
+	
+	@Test
+	public void testArmor() {
+		for (Armor armor : Items.getArmor()) {
+			System.out.println(armor.toString());
+		}
 	}
 }

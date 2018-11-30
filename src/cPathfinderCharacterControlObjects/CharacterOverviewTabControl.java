@@ -95,7 +95,13 @@ public class CharacterOverviewTabControl implements Initializable {
 	private void setCharacterTabFields(PDAcroForm form) throws IOException {
 		form.getField("Character Name").setValue(this.pcViewModel.getCharacterName());
 		form.getField("Player").setValue(this.pcViewModel.getPlayerName());
-		//form.getField("Alignment").setValue(this.pcViewModel.getAlignment().toString());
+		if (this.pcViewModel.getAlignment() != null) {form.getField("Alignment").setValue(this.pcViewModel.getAlignment().toString());}
+		form.getField("Gender").setValue(this.pcViewModel.getGender());
+		if (this.pcViewModel.getRace() != null) {
+			form.getField("Age").setValue(this.pcViewModel.getAge(this.pcViewModel.getRace()));
+			form.getField("Height").setValue(this.pcViewModel.getHeight(this.pcViewModel.getRace()));
+			form.getField("Weight").setValue(this.pcViewModel.getWeight(this.pcViewModel.getRace()));
+		}
 		form.getField("Hair").setValue(this.pcViewModel.getHairColor());
 		form.getField("Eyes").setValue(this.pcViewModel.getEyeColor());
 		form.getField("Deity").setValue(this.pcViewModel.getDeity());
@@ -105,6 +111,7 @@ public class CharacterOverviewTabControl implements Initializable {
 	private void setRaceTabFields(PDAcroForm form) throws IOException {
 		if (!(this.pcViewModel.getRace() == null)) {
 			
+			form.getField("Race").setValue(this.pcViewModel.getRace().getName());
 			form.getField("Size").setValue(this.pcViewModel.getRace().getSize().toString());
 			
 			String[] langaugesArr = this.pcViewModel.getRace().getKnownLanguages();
@@ -114,7 +121,11 @@ public class CharacterOverviewTabControl implements Initializable {
 			}
 			form.getField("Languages Line 1").setValue(languages.toString());
 			
+			//add racial trait names
 			RacialTrait[] racialTraitsArr = this.pcViewModel.getRace().getRacialTraits();
+			 //clears previous racial traits
+			for (int counter = 1; counter < 6; counter++) {form.getField("Special Abilities " + counter).setValue("");}
+			 //adds new racial traits
 			int counter = 1;
 			for (RacialTrait rt : racialTraitsArr) {
 				form.getField("Special Abilities " + counter).setValue(rt.getName()); 

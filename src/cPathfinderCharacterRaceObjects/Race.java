@@ -87,30 +87,14 @@ public abstract class Race implements CharacterModifier{
 	}
 	
 	public static Race stringToRace(String race) {
-		if (race == "Dwarf") {
-			return new Dwarf();
-		}
-		else if (race == "Elf") {
-			return  new Elf();
-		}
-		else if (race == "Gnome") {
-			return  new Gnome();
-		}
-		else if (race == "Half-Elf") {
-			return  new HalfElf();
-		}
-		else if (race == "Half-Orc") {
-			return  new HalfOrc();
-		}
-		else if (race == "Halfling") {
-			return  new Halfling();
-		}
-		else if (race == "Human") {
-			return  new Human();
-		}
-		else {
-			return null;
-		}
+		if (race == "Dwarf") {return new Dwarf();}
+		else if (race == "Elf") {return new Elf();}
+		else if (race == "Gnome") {return new Gnome();}		
+		else if (race == "Half-Elf") {return new HalfElf();}
+		else if (race == "Half-Orc") {return new HalfOrc();}
+		else if (race == "Halfling") {return new Halfling();}
+		else if (race == "Human") {return new Human();}
+		else {return null;}
 	}
 	
 	//Instance Variables: 
@@ -191,6 +175,10 @@ public abstract class Race implements CharacterModifier{
 		if (abilityChoice == 4) {setWisdomModifier(2);}
 		if (abilityChoice == 5) {setCharismaModifier(2);}
 	}
+	
+	public abstract Integer generateAge(String ageRange); 
+	public abstract Integer generateHeight(String heightRange);
+	public abstract Integer generateWeight(String weightRange);
 	
 	@Override
 	public String toString() {

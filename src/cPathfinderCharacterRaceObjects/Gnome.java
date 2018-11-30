@@ -37,6 +37,26 @@ public class Gnome extends Race {
 	}
 	
 	//Methods:
-		
+	public Integer generateAge(String ageRange) {
+		if (ageRange.equals("Young Adult")) {return (int) Math.floor((Math.random()*60 + 40));}
+		else if (ageRange.equals("Middle Age")) {return (int) Math.floor((Math.random()*50 + 100));}
+		else if (ageRange.equals("Old")) {return (int) Math.floor((Math.random()*50 + 150));}
+		else {return null;}
+	}
+	
+	public Integer generateHeight(String heightRange) {
+		if (heightRange.equals("Short")) {return 36;}
+		else if (heightRange.equals("Medium")) {return (int) Math.floor((Math.random()*4 + 38));}
+		else if (heightRange.equals("Tall")) {return 44;}
+		else {return null;}
+	}
+	
+	public Integer generateWeight(String weightRange) {
+		if (weightRange.equals("Light")) {return 35;}
+		else if (weightRange.equals("Medium")) {return (int) Math.floor((Math.random()*4 + 37));}
+		else if (weightRange.equals("Heavy")) {return 43;}
+		else {return null;}
+	}
+
 
 }
