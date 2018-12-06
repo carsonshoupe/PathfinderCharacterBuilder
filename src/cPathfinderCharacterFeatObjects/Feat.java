@@ -134,7 +134,7 @@ public class Feat {
 	}
 	
 	//Methods:
-	public String getFeatName() {return this.name;}
+	public String getName() {return this.name;}
 	public FeatPrerequisite getFeatPrerequisite() {return this.featPrerequisite;}
 	public String getFeatPrerequisiteAsString() {return this.featPrerequisiteAsString;}
 	public String getBenefit() {return this.benefit;}
@@ -146,6 +146,25 @@ public class Feat {
 	public boolean getIsMetaMagicFeat() {return this.isMetamagicFeat;}
 	public Set<String> getTags() {return this.tags;}
 	
+	@Override
+	public String toString() {
+		return this.name;
+	}
+	
+	@Override
+	public boolean equals(Object o) {
+		if (!(o instanceof Feat)) {return false;}
+		else {
+			Feat feat = (Feat) o;
+			if (feat.getName().equals(this.getName())) {return true;}
+			else {return false;}
+		}
+	}
+	
+	@Override
+	public int hashCode() {
+		return this.getName().hashCode();
+	}
 	
 
 }

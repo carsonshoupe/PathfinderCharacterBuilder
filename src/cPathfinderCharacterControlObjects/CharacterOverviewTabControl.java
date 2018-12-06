@@ -5,20 +5,24 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Set;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
 import org.apache.pdfbox.rendering.PDFRenderer;
 import org.apache.pdfbox.tools.imageio.ImageIOUtil;
 
+import cPathfinderCharacterFeatObjects.Feat;
 import cPathfinderCharacterRaceObjects.RacialTrait;
 import cPathfinderCharacterSkillObjects.Skill;
 import cPathfinderCharacterViewModelObjects.PathfinderCharacterViewModel;
 import javafx.collections.transformation.SortedList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ProgressIndicator;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
 
 public class CharacterOverviewTabControl implements Initializable {
 	PathfinderCharacterViewModel pcViewModel;
@@ -28,6 +32,8 @@ public class CharacterOverviewTabControl implements Initializable {
 	
 	@FXML ImageView characterSheetIV1;
 	@FXML ImageView characterSheetIV2;
+	@FXML ProgressIndicator progressIndicator;
+	@FXML VBox imageVB;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -51,27 +57,46 @@ public class CharacterOverviewTabControl implements Initializable {
 	}
 	
 	public void handleCharacterOverviewTabClick() {
-		try {
-			this.updateCharacterSheet();
-			
-			PDFRenderer renderer = new PDFRenderer(characterSheet);
-			BufferedImage image1 = renderer.renderImageWithDPI(0, 300);
-	    	BufferedImage image2 = renderer.renderImageWithDPI(1, 300);
-	    	  
-	    	Boolean imageOut1 = ImageIOUtil.writeImage(image1, "src/cPathfinderCharacterControlObjects/Editable-Pathfinder-Character-Sheet1.png", 300);
-	    	Boolean imageOut2 = ImageIOUtil.writeImage(image2, "src/cPathfinderCharacterControlObjects/Editable-Pathfinder-Character-Sheet2.png", 300);
-	    	//System.out.println(imageOut1);
-	    	//System.out.println(imageOut2);
-	    	
-	    	this.characterSheetIV1.setImage(new Image("File:src\\cPathfinderCharacterControlObjects\\Editable-Pathfinder-Character-Sheet1.png"));
-	    	this.characterSheetIV1.fitWidthProperty();
-	    	this.characterSheetIV1.preserveRatioProperty();
-			this.characterSheetIV2.setImage(new Image("File:src\\cPathfinderCharacterControlObjects\\Editable-Pathfinder-Character-Sheet2.png"));
-			this.characterSheetIV1.fitWidthProperty();
-	    	this.characterSheetIV1.preserveRatioProperty();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		this.progressIndicator.setVisible(true);
+		this.progressIndicator.setProgress(0);
+		Thread t = new Thread() {
+			@Override
+			public void run() {
+				try {
+					imageVB.setVisible(false);
+					
+					updateCharacterSheet();
+					PDFRenderer renderer = new PDFRenderer(characterSheet);
+					BufferedImage image1 = renderer.renderImageWithDPI(0, 300);
+			    	BufferedImage image2 = renderer.renderImageWithDPI(1, 300);
+			    	progressIndicator.setProgress(.25);
+			    	  
+			    	Boolean imageOut1 = ImageIOUtil.writeImage(image1, "src/cPathfinderCharacterControlObjects/Editable-Pathfinder-Character-Sheet1.png", 300);
+			    	progressIndicator.setProgress(.50);
+			    	Boolean imageOut2 = ImageIOUtil.writeImage(image2, "src/cPathfinderCharacterControlObjects/Editable-Pathfinder-Character-Sheet2.png", 300);
+			    	
+			    	characterSheetIV1.setImage(new Image("File:src\\cPathfinderCharacterControlObjects\\Editable-Pathfinder-Character-Sheet1.png"));
+			    	characterSheetIV1.fitWidthProperty();
+			    	characterSheetIV1.preserveRatioProperty();
+			    	progressIndicator.setProgress(.75);
+					characterSheetIV2.setImage(new Image("File:src\\cPathfinderCharacterControlObjects\\Editable-Pathfinder-Character-Sheet2.png"));
+					characterSheetIV1.fitWidthProperty();
+			    	characterSheetIV1.preserveRatioProperty();
+			    	progressIndicator.setProgress(1);
+			    	
+			    	try {
+			    		Thread.sleep(500);
+			    	} catch (InterruptedException e) {}
+			    	
+			    	progressIndicator.setVisible(false);
+			    	imageVB.setVisible(true);
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		};
+		
+		t.start();
 	}
 	
 	private void updateCharacterSheet() {
@@ -176,7 +201,18 @@ public class CharacterOverviewTabControl implements Initializable {
 	}
 	
 	private void setFeatsTabFields(PDAcroForm form) throws IOException {
-		//TODO
+		//Reset Feats
+		for (int counter = 1; counter < 14; counter++) {
+			form.getField("Feat " + counter).setValue("");
+		}
+		
+		//Set Feats
+		Set<Feat> feats = pcViewModel.getFeats();
+		int counter = 1;
+		for (Feat feat : feats) {
+			form.getField("Feat " + counter).setValue(feat.getName());
+			counter++;
+		}
 	}
 	
 	private void setSpellsTabFields(PDAcroForm form) throws IOException {

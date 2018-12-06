@@ -8,6 +8,7 @@ import java.util.ResourceBundle;
 
 import cPathfinderCharacterFeatObjects.Feat;
 import cPathfinderCharacterSkillObjects.Skill;
+import cPathfinderCharacterViewModelObjects.PathfinderCharacterViewModel;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -26,6 +27,9 @@ import javafx.util.Callback;
 import javafx.scene.control.cell.TextFieldListCell;
 
 public class FeatsTabControl implements Initializable {
+	private PathfinderCharacterViewModel pcViewModel;
+	public void setPcViewModel(PathfinderCharacterViewModel pcViewModel) {this.pcViewModel = pcViewModel;}
+	
 	private ObservableList<String> featNames;
 	private ObservableList<String> featNamesFiltered;
 	
@@ -113,6 +117,7 @@ public class FeatsTabControl implements Initializable {
 			}
 			else {
 				yourFeatsListView.getItems().add(featName);
+				this.pcViewModel.addFeat(new Feat(Feat.formatFeatName(featName)));
 			}
 		}
 	}
@@ -120,6 +125,7 @@ public class FeatsTabControl implements Initializable {
 	@FXML public void removeFeatButtonPress(ActionEvent event) {
 		int itemToRemove = this.yourFeatsListView.getSelectionModel().getSelectedIndex();
 		if (itemToRemove != -1) {
+			pcViewModel.removeFeat(new Feat(Feat.formatFeatName(this.yourFeatsListView.getItems().get(itemToRemove))));
 			this.yourFeatsListView.getItems().remove(itemToRemove);
 		}
 	}

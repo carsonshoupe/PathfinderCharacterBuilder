@@ -112,7 +112,7 @@
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="strengthRaceTF" alignment="CENTER" editable="false" maxWidth="40.0" prefWidth="40.0" />
+                  <TextField fx:id="strengthRaceTF" alignment="CENTER" editable="false" maxWidth="40.0" prefWidth="40.0" text="0" />
                </children>
             </HBox>
             <HBox prefHeight="100.0" prefWidth="70.0">
@@ -140,7 +140,7 @@
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="dexterityRaceTF" alignment="CENTER" editable="false" maxWidth="40.0" prefWidth="40.0" />
+                  <TextField fx:id="dexterityRaceTF" alignment="CENTER" editable="false" maxWidth="40.0" prefWidth="40.0" text="0" />
                </children>
             </HBox>
             <HBox prefHeight="100.0" prefWidth="70.0">
@@ -168,7 +168,7 @@
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="constitutionRaceTF" alignment="CENTER" editable="false" maxWidth="40.0" prefWidth="40.0" />
+                  <TextField fx:id="constitutionRaceTF" alignment="CENTER" editable="false" maxWidth="40.0" prefWidth="40.0" text="0" />
                </children>
             </HBox>
             <HBox prefHeight="100.0" prefWidth="70.0">
@@ -196,7 +196,7 @@
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="intelligenceRaceTF" alignment="CENTER" editable="false" maxWidth="40.0" prefWidth="40.0" />
+                  <TextField fx:id="intelligenceRaceTF" alignment="CENTER" editable="false" maxWidth="40.0" prefWidth="40.0" text="0" />
                </children>
             </HBox>
             <HBox prefHeight="100.0" prefWidth="70.0">
@@ -224,7 +224,7 @@
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="wisdomRaceTF" alignment="CENTER" editable="false" maxWidth="40.0" prefWidth="40.0" />
+                  <TextField fx:id="wisdomRaceTF" alignment="CENTER" editable="false" maxWidth="40.0" prefWidth="40.0" text="0" />
                </children>
             </HBox>
             <HBox prefHeight="100.0" prefWidth="70.0">
@@ -252,12 +252,12 @@
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="charismaRaceTF" alignment="CENTER" editable="false" maxWidth="40.0" prefWidth="40.0" />
+                  <TextField fx:id="charismaRaceTF" alignment="CENTER" editable="false" maxWidth="40.0" prefWidth="40.0" text="0" />
                </children>
             </HBox>
          </children>
       </VBox>
-      <Pane fx:id="rollPane" layoutX="417.0" layoutY="79.0" prefHeight="203.0" prefWidth="397.0">
+      <Pane fx:id="rollPane" layoutX="417.0" layoutY="79.0" prefHeight="203.0" prefWidth="397.0" visible="false">
          <children>
             <Label layoutX="12.0" layoutY="16.0" prefHeight="25.0" prefWidth="123.0" text="Choose Difficulty:" />
             <RadioButton layoutX="12.0" layoutY="51.0" mnemonicParsing="false" selected="true" text="Standard">
@@ -280,7 +280,7 @@
             <Label layoutX="263.0" layoutY="20.0" text="Scores" />
          </children>
       </Pane>
-      <Pane fx:id="purchasePane" layoutX="404.0" layoutY="85.0" prefHeight="203.0" prefWidth="422.0" visible="false">
+      <Pane fx:id="purchasePane" layoutX="404.0" layoutY="85.0" prefHeight="203.0" prefWidth="422.0">
          <children>
             <VBox layoutY="-6.0" maxHeight="-Infinity" prefHeight="203.0" prefWidth="40.0">
                <children>

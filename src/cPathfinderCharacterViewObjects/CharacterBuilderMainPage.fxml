@@ -61,7 +61,7 @@
                         </Tab>
                         <Tab text="Feats">
                            <content>
-                              <fx:include fx:id="featsTab" source="FeatsTab.fxml" />
+                              <fx:include fx:id="featsTabField" source="FeatsTab.fxml" />
                            </content>
                         </Tab>
                         <Tab text="Spells">

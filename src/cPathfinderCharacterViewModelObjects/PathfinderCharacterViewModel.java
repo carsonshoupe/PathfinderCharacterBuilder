@@ -1,8 +1,12 @@
 package cPathfinderCharacterViewModelObjects;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import cPathfinderCharacterClassObjects.CharacterClass;
+import cPathfinderCharacterFeatObjects.Feat;
 import cPathfinderCharacterObjects.Alignment;
 import cPathfinderCharacterObjects.PathfinderCharacter;
 import cPathfinderCharacterRaceObjects.Race;
@@ -153,6 +157,14 @@ public class PathfinderCharacterViewModel {
 	
 	public SimpleIntegerProperty getSkillBonus(Skill skill) {return new SimpleIntegerProperty(pcModel.getSkillBonus(skill));}
 	
+	 //Feat Methods:
+	public void addFeat(Feat feat) {pcModel.getCharacterFeats().addFeat(feat);}
+	public void removeFeat(Feat feat) {
+		Set<Feat> feats = pcModel.getCharacterFeats().getFeats();
+		if (feats.contains(feat)) {feats.remove(feat);}
+		else {}
+	}
+	public Set<Feat> getFeats() {return pcModel.getCharacterFeats().getFeats();}
 	
 	
 	

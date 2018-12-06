@@ -374,26 +374,28 @@ public class AbilityScoreTabControl implements Initializable {
 	
 	
 	public void intializeRaceTF() {
-		this.strengthRaceTF.setText(Integer.toString(pcViewModel.getRace().getAbilityModifiers()[0]));
-		this.dexterityRaceTF.setText(Integer.toString(pcViewModel.getRace().getAbilityModifiers()[1]));
-		this.constitutionRaceTF.setText(Integer.toString(pcViewModel.getRace().getAbilityModifiers()[2]));
-		this.intelligenceRaceTF.setText(Integer.toString(pcViewModel.getRace().getAbilityModifiers()[3]));
-		this.wisdomRaceTF.setText(Integer.toString(pcViewModel.getRace().getAbilityModifiers()[4]));
-		this.charismaRaceTF.setText(Integer.toString(pcViewModel.getRace().getAbilityModifiers()[5]));
-		
-		this.strengthTotalTF.setText(Integer.toString(this.strengthScoreCB.getValue() + Integer.parseInt(this.strengthRaceTF.getText())));
-		this.dexterityTotalTF.setText(Integer.toString(this.dexterityScoreCB.getValue() + Integer.parseInt(this.dexterityRaceTF.getText())));
-		this.constitutionTotalTF.setText(Integer.toString(this.constitutionScoreCB.getValue() + Integer.parseInt(this.constitutionRaceTF.getText())));
-		this.intelligenceTotalTF.setText(Integer.toString(this.intelligenceScoreCB.getValue() + Integer.parseInt(this.intelligenceRaceTF.getText())));
-		this.wisdomTotalTF.setText(Integer.toString(this.wisdomScoreCB.getValue() + Integer.parseInt(this.wisdomRaceTF.getText())));
-		this.charismaTotalTF.setText(Integer.toString(this.charismaScoreCB.getValue() + Integer.parseInt(this.charismaRaceTF.getText())));
-		
-		this.strengthModifierTF.setText(Integer.toString(AbilityScore.abilityScoreToModifier(Integer.parseInt(this.strengthTotalTF.getText()))));
-		this.dexterityModifierTF.setText(Integer.toString(AbilityScore.abilityScoreToModifier(Integer.parseInt(this.dexterityTotalTF.getText()))));
-		this.constitutionModifierTF.setText(Integer.toString(AbilityScore.abilityScoreToModifier(Integer.parseInt(this.constitutionTotalTF.getText()))));
-		this.intelligenceModifierTF.setText(Integer.toString(AbilityScore.abilityScoreToModifier(Integer.parseInt(this.intelligenceTotalTF.getText()))));
-		this.wisdomModifierTF.setText(Integer.toString(AbilityScore.abilityScoreToModifier(Integer.parseInt(this.wisdomTotalTF.getText()))));
-		this.charismaModifierTF.setText(Integer.toString(AbilityScore.abilityScoreToModifier(Integer.parseInt(this.charismaTotalTF.getText()))));
+		if (pcViewModel.getRace() != null) {
+			this.strengthRaceTF.setText(Integer.toString(pcViewModel.getRace().getAbilityModifiers()[0]));
+			this.dexterityRaceTF.setText(Integer.toString(pcViewModel.getRace().getAbilityModifiers()[1]));
+			this.constitutionRaceTF.setText(Integer.toString(pcViewModel.getRace().getAbilityModifiers()[2]));
+			this.intelligenceRaceTF.setText(Integer.toString(pcViewModel.getRace().getAbilityModifiers()[3]));
+			this.wisdomRaceTF.setText(Integer.toString(pcViewModel.getRace().getAbilityModifiers()[4]));
+			this.charismaRaceTF.setText(Integer.toString(pcViewModel.getRace().getAbilityModifiers()[5]));
+			
+			this.strengthTotalTF.setText(Integer.toString(this.strengthScoreCB.getValue() + Integer.parseInt(this.strengthRaceTF.getText())));
+			this.dexterityTotalTF.setText(Integer.toString(this.dexterityScoreCB.getValue() + Integer.parseInt(this.dexterityRaceTF.getText())));
+			this.constitutionTotalTF.setText(Integer.toString(this.constitutionScoreCB.getValue() + Integer.parseInt(this.constitutionRaceTF.getText())));
+			this.intelligenceTotalTF.setText(Integer.toString(this.intelligenceScoreCB.getValue() + Integer.parseInt(this.intelligenceRaceTF.getText())));
+			this.wisdomTotalTF.setText(Integer.toString(this.wisdomScoreCB.getValue() + Integer.parseInt(this.wisdomRaceTF.getText())));
+			this.charismaTotalTF.setText(Integer.toString(this.charismaScoreCB.getValue() + Integer.parseInt(this.charismaRaceTF.getText())));
+			
+			this.strengthModifierTF.setText(Integer.toString(AbilityScore.abilityScoreToModifier(Integer.parseInt(this.strengthTotalTF.getText()))));
+			this.dexterityModifierTF.setText(Integer.toString(AbilityScore.abilityScoreToModifier(Integer.parseInt(this.dexterityTotalTF.getText()))));
+			this.constitutionModifierTF.setText(Integer.toString(AbilityScore.abilityScoreToModifier(Integer.parseInt(this.constitutionTotalTF.getText()))));
+			this.intelligenceModifierTF.setText(Integer.toString(AbilityScore.abilityScoreToModifier(Integer.parseInt(this.intelligenceTotalTF.getText()))));
+			this.wisdomModifierTF.setText(Integer.toString(AbilityScore.abilityScoreToModifier(Integer.parseInt(this.wisdomTotalTF.getText()))));
+			this.charismaModifierTF.setText(Integer.toString(AbilityScore.abilityScoreToModifier(Integer.parseInt(this.charismaTotalTF.getText()))));
+		}
 	}
 
 }

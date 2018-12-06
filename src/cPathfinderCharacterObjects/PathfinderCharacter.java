@@ -194,7 +194,7 @@ public class PathfinderCharacter {
 	public CharacterFeats getCharacterFeats() {return this.characterFeats;}
 	public void setCharacterFeats(CharacterFeats characterFeats) {this.characterFeats = characterFeats;}
 	
-	public ArrayList<Feat> getFeats() {return this.characterFeats.getFeats();}
+	public Set<Feat> getFeats() {return this.characterFeats.getFeats();}
 	public ArrayList<String> getFeatDescriptions() {return this.characterFeats.getFeatDescriptions();}
 	
 	 //Special Ability Methods:

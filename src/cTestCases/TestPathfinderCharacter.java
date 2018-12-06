@@ -146,7 +146,7 @@ public class TestPathfinderCharacter {
 		for (String featName : featNames) {
 			String formattedFeatName = Feat.formatFeatName(featName);
 			Feat feat = new Feat(formattedFeatName);
-			System.out.println(feat.getFeatName() + feat.getTags().toString());
+			System.out.println(feat.getName() + feat.getTags().toString());
 			charFeats.addFeat(feat);
 		}
 		System.out.println(charFeats.modificationsToString());

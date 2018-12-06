@@ -134,6 +134,7 @@ public class SkillsTabControl implements Initializable {
                         totalSkillBonusCol.setCellValueFactory(ov -> {
                         	return pcViewModel.getSkillBonus(ov.getValue()).asObject();  
             			});
+                        
                         totalSkillBonusCol.setVisible(false);
                         totalSkillBonusCol.setVisible(true);
                         setGraphic(skillRanksSpinner);

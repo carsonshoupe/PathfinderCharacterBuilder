@@ -71,6 +71,7 @@ public class MainPageControl implements Initializable {
 	@FXML private SkillsTabControl skillsTabFieldController;
 	@FXML private ClassTabControl classTabFieldController;
 	@FXML private CharacterOverviewTabControl characterOverviewTabFieldController;
+	@FXML private FeatsTabControl featsTabFieldController;
 	
 	//FXML Tabs
 	@FXML Tab skillsTab;
@@ -109,6 +110,7 @@ public class MainPageControl implements Initializable {
 		this.skillsTabFieldController.setPcViewModel(pcViewModel);
 		this.classTabFieldController.setPcViewModel(pcViewModel);
 		this.characterOverviewTabFieldController.setPcViewModel(pcViewModel);
+		this.featsTabFieldController.setPcViewModel(pcViewModel);
 	}
 	
 	

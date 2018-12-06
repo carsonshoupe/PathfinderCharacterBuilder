@@ -3,6 +3,7 @@ package cPathfinderCharacterFeatObjects;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
@@ -12,7 +13,7 @@ import cPathfinderCharacterSkillObjects.Skill;
 
 public class CharacterFeats implements CharacterModifier {
 	//Instance Variables:
-	protected ArrayList<Feat> characterFeats = new ArrayList<Feat>();
+	protected Set<Feat> feats = new HashSet<Feat>();
 	protected Map<Skill, Integer> skillRanksToAdd = new HashMap<Skill, Integer>();
 	protected int[] savingThrowModifiers = {0, 0, 0};
 	protected int bonusSkillRanks = 0;
@@ -24,7 +25,7 @@ public class CharacterFeats implements CharacterModifier {
 	//Constructors:
 	
 	//Methods:
-	public ArrayList<Feat> getFeats() {return this.characterFeats;}
+	public Set<Feat> getFeats() {return this.feats;}
 	public ArrayList<String> getFeatDescriptions() {return this.featDescriptionsToAdd;}
 	public Map<Skill, Integer> getSkillRanks() {return this.skillRanksToAdd;}
 	
@@ -35,7 +36,7 @@ public class CharacterFeats implements CharacterModifier {
 	public int getInitiativeModifier() {return this.initiativeModifier;}
 	
 	public void addFeat(Feat feat) {
-		this.characterFeats.add(feat);
+		this.feats.add(feat);
 		if (feat.shouldUpdateCharacterSheet()) {
 			Map<String, String> featUpdateInfo = feat.getInfoToUpdateCharacterSheet();
 			Set<String> keys = featUpdateInfo.keySet();
@@ -64,15 +65,15 @@ public class CharacterFeats implements CharacterModifier {
 			}
 		}
 		else {
-			this.featDescriptionsToAdd.add(feat.getFeatName().replace("_", " ") + ": " + feat.getBenefit());
+			this.featDescriptionsToAdd.add(feat.getName().replace("_", " ") + ": " + feat.getBenefit());
 		}
 	}
 	
 	@Override 
 	public String toString() {
 		String outputString = "";
-		for (Feat feat : this.characterFeats) {
-			outputString += feat.getFeatName() + " ";
+		for (Feat feat : this.feats) {
+			outputString += feat.getName() + " ";
 		}
 		return outputString;
 	}
