@@ -57,6 +57,7 @@ public class Cleric extends CharacterClass {
 		
 		//Constructors:
 		public Cleric(int level) {
+			this.name = "Cleric";
 			this.level = level;
 			this.alignmentRestriction = "A cleric’s alignment must be within one step of her deity’s, along either the law/chaos axis or the good/evil axis.";
 			this.hitDie = 8;

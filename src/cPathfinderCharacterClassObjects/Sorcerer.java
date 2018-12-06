@@ -49,6 +49,7 @@ public class Sorcerer extends CharacterClass {
 	
 	//Constructors:
 	public Sorcerer(int level) {
+		this.name = "Sorcerer";
 		this.level = level;
 		this.alignmentRestriction = "None";
 		this.hitDie = 6;

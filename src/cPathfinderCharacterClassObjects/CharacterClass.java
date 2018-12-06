@@ -29,6 +29,7 @@ public abstract class CharacterClass implements CharacterModifier {
 	}
 	
 	//Instance Variables:
+	protected String name;
 	protected int level;
 	protected String alignmentRestriction;
 	protected int hitDie;
@@ -47,6 +48,7 @@ public abstract class CharacterClass implements CharacterModifier {
 	protected ArrayList<String> specialAbilityDescriptions = new ArrayList<String>();
 	
 	//Methods:
+	public String getName() {return this.name;}
 	public int getLevel() {return this.level;}
 	public String getAlignmentRestriction() {return this.alignmentRestriction;}
 	public int getHitDie() {return this.hitDie;}

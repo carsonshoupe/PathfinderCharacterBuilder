@@ -159,7 +159,10 @@ public class PathfinderCharacter {
 	
 	 //Class Methods: 
 	public CharacterClass getCharacterClass() {return this.characterClass;}
-	public void setCharacterClass(CharacterClass classChoice) {this.characterClass = classChoice;}
+	public void setCharacterClass(CharacterClass classChoice) {
+		this.characterClass = classChoice;
+		this.getCharacterSkills().setClassSkills(this.characterClass.getClassSkills());
+	}
 	public void setClassSkills(Set<Skill> classSkills) {this.getCharacterSkills().setClassSkills(classSkills);}
 	
 	public String getWeaponAndArmorProficiencies() {return this.characterClass.getWeaponAndArmorProficiencies();}

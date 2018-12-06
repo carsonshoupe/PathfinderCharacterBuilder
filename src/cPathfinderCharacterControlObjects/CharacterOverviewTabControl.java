@@ -160,6 +160,7 @@ public class CharacterOverviewTabControl implements Initializable {
 	}
 	
 	private void setClassTabFields(PDAcroForm form) throws IOException {
+		form.getField("Character Level").setValue(pcViewModel.getCharacterClass().getName() + " - " + pcViewModel.getCharacterClass().getLevel());
 		
 	}
 	

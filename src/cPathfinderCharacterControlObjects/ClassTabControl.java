@@ -107,5 +107,12 @@ public class ClassTabControl implements Initializable {
 			this.classInformationTA.setText(pcViewModel.getCharacterClass().getRole());
 		}
 	}
+	
+	@FXML public void saveButtonPress(ActionEvent event) {
+		if (this.classSelectorComboBox != null) {
+			this.pcViewModel.setCharacterClass(this.classSelectorComboBox.getValue(), Integer.parseInt(this.levelTF.getText()));
+		}
+		System.out.println(this.pcViewModel.getCharacterClass().toString());
+	}
 
 }

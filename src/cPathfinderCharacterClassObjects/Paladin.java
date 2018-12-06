@@ -47,6 +47,7 @@ public class Paladin extends CharacterClass {
 	
 	//Constructors:
 	public Paladin(int level) {
+		this.name = "Paladin";
 		this.level = level;
 		this.alignmentRestriction = "Lawful Good";
 		this.hitDie = 10;

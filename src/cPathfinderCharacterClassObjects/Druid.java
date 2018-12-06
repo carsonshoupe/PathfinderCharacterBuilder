@@ -47,6 +47,7 @@ public class Druid extends CharacterClass {
 	
 	//Constructors:
 	public Druid(int level) {
+		this.name = "Druid";
 		this.level = level;
 		this.alignmentRestriction = "Any Neutral";
 		this.hitDie = 8;

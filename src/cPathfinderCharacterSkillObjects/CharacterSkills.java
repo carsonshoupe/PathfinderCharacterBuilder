@@ -89,9 +89,8 @@ public class CharacterSkills {
 	
 	public void setClassSkills(Set<Skill> classSkills) {
 		for (Skill characterSkill : this.characterSkillsList) {
-			if (classSkills.contains(characterSkill)) {
-				setClassSkill(characterSkill, true);
-			}
+			if (classSkills.contains(characterSkill)) {setClassSkill(characterSkill, true);}
+			else {setClassSkill(characterSkill, false);}
 		}
 	}
 	

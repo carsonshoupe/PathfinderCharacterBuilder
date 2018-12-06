@@ -51,6 +51,7 @@ public class Fighter extends CharacterClass {
 	
 	//Constructors:
 	public Fighter(int level) {
+		this.name = "Fighter";
 		this.level = level;
 		this.alignmentRestriction = "None";
 		this.hitDie = 10;

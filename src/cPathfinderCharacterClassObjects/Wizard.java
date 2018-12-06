@@ -52,6 +52,7 @@ public class Wizard extends CharacterClass {
 	
 	//Constructors:
 	public Wizard(int level) {
+		this.name = "Wizard";
 		this.level = level;
 		this.alignmentRestriction = "None";
 		this.hitDie = 6;

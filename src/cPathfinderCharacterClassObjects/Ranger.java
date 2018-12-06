@@ -48,6 +48,7 @@ public class Ranger extends CharacterClass {
 	
 	//Constructors:
 	public Ranger(int level) {
+		this.name = "Ranger";
 		this.level = level;
 		this.alignmentRestriction = "None";
 		this.hitDie = 10;

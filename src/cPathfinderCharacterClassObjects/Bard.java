@@ -130,6 +130,7 @@ public class Bard extends CharacterClass {
 	
 	//Constructors:
 	public Bard(int level) {
+		this.name = "Bard";
 		this.level = level;
 		this.alignmentRestriction = "None";
 		this.hitDie = 8;

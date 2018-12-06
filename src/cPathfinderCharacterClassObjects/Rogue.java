@@ -59,6 +59,7 @@ public class Rogue extends CharacterClass {
 	
 	//Constructors:
 	public Rogue(int level) {
+		this.name = "Rogue";
 		this.level = level;
 		this.alignmentRestriction = "None";
 		this.hitDie = 8;

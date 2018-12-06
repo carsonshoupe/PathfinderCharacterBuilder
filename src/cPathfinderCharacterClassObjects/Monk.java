@@ -51,6 +51,7 @@ public class Monk extends CharacterClass {
 	
 	//Constructors:
 	public Monk(int level) {
+		this.name = "Monk";
 		this.level = level;
 		this.alignmentRestriction = "Any Lawful";
 		this.hitDie = 8;

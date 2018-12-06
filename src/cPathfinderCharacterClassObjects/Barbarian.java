@@ -66,6 +66,7 @@ public class Barbarian extends CharacterClass {
 	
 	//Constructors:
 	public Barbarian(int level) {
+		this.name = "Barbarian";
 		this.level = level;
 		this.alignmentRestriction = "Any Nonlawful";
 		this.hitDie = 12;
